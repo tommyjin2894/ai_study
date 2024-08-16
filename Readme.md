@@ -12,7 +12,7 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib_inline.backend_inline
 
-# 기본 설정
+# 기본 설정 
 
 matplotlib_inline.backend_inline.set_matplotlib_formats("png2x")
 mpl.style.use("seaborn-v0_8")
