@@ -23,12 +23,9 @@ plt.rcParams["axes.unicode_minus"] = False
 
 ## 파이썬 기본 코드 연습
 <details>
-<summary>basic of python</summary>
+<summary>numpy</summary>
 
 ```py
-
-# recap
-# numpy 요약
 import numpy as np
 
 a = np.array([1,2,3,4,5])
@@ -85,7 +82,14 @@ np.flip(np.array([[1,2,3],[1,2,3],[1,2,3]]),axis=0)
 
 np.save('file.npy',np.arange(1,10,1)*1000)
 np.load('file.npy')
-# pandas
+```
+</details>
+
+<details>
+<summary>pandas</summary>
+
+
+```py
 import pandas as pd
 
 dates = pd.date_range("20240510", periods=20)
@@ -219,34 +223,38 @@ pd.pivot_table(df, index=['C'], columns=['B'], values=['D'], aggfunc='var')
 
 df.to_excel('test.xlsx', sheet_name='sheet1', index=False)
 df = pd.read_excel('test.xlsx')
-df
 df.to_csv('test.csv', encoding='utf-8')
-
 df.plot.bar()
-# OpenCV
-# !pip install opencv-python
-#PIL 파이썬 내장 이미지 처리
-# cv2.__version__
+```
+</details>
+
+<details>
+<summary>OpenCV</summary>
+
+```py
 # !pip install opencv-python==4.6.0.66
 import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+
 print(cv2.__version__)
+
 ## 이미지 열기
-import cv2
 img = cv2.imread('images\cat.bmp')
 cv2.imshow('image', img)
 cv2.waitKey(1000) # 안의 값은 시간초
+
 while True:
     if cv2.waitKey() == ord('x'): # 또는 ascii 코드 를 입력하면 
         cv2.destroyAllWindows()
         break
+
 cv2.imwrite('new.jpg', img)
 ## matplotlib 을 이용한 이미지 열기
-import cv2
-import matplotlib.pyplot as plt
+
 img = cv2.imread('images\waldo.png')
 
 bgr_img = img
-
 
 # plt.imshow(rgb_img);
 inst_ = bgr_img.copy()
@@ -257,7 +265,6 @@ bgr_img[:,:,2] = inst_B
 plt.imshow(bgr_img);
 gray_img = cv2.imread('images\waldo.png', cv2.IMREAD_GRAYSCALE)
 plt.imshow(gray_img, cmap='gray');
-import numpy as np
 img = cv2.imread('images\cat.bmp')
 
 img[:,:,0].flatten() # B
