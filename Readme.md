@@ -155,23 +155,23 @@
 
 #### MSE
 - 특징 : 제곱, 이상치에 민감
-    $$ \text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y}) $$
+    $ \text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y}) $
 
 #### MAE
 - 특징 : 절대 값, 이상치에 둔감
-    $$ \text{MAE} = \frac{1}{N} \sum_{i=1}^{N} |y - \hat{y}| $$
+    $ \text{MAE} = \frac{1}{N} \sum_{i=1}^{N} |y - \hat{y}| $
 
 #### 허브 손실
 - 특징 : MSE + MAE, $\delta$ 는 임계 값
-    $$ L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ 
+    $ L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ 
 
     \delta |y - \hat{y}| - \frac{1}{2} \delta^2 & \text{if} \quad|y-\hat{y}| > \delta
 
-    \end{cases} $$
+    \end{cases} $
 
 #### 로그 코사인 유도
 특징 : 이상치에 매우 강함
-    $$ \log - \cosh = \frac{1}{N} \sum^{N}_{i = 1} \log({\cosh (\hat{y}-y)}) $$
+    $ \log - \cosh = \frac{1}{N} \sum^{N}_{i = 1} \log({\cosh (\hat{y}-y)}) $
 
 ### 분류 비용함수
 
