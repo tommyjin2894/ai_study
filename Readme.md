@@ -81,7 +81,7 @@
     |-|LSTM|Long, Short Term Memory|
     |-|Auto Encoder|Encoder->Latent Space->Decoder|
     |-|Transformer|Self Attention, ED Attention|
-    |기타|AdaBoost|약한 학습기 $\times$ N = 강한 학습기|
+    |기타|AdaBoost|약한 학습기$\times$N = 강한 학습기|
     |-|XGBoost|Gradient Boosting Machines 의 효율적이고 강력하게 개선|
 
 <br>
@@ -106,7 +106,7 @@
     |-|Grid search|모든 경우의수를 본다|
     |-|Randomized search|랜덤한 경우의수를 본다|
     |앙상블|bagging <br> (baseline Bootstrap baseline Aggregatbaseline ing)|1.baseline N 개의 샘플을 뽑기 ->집어넣고 baseline N 개의 샘플을 뽑는다. <br> 2. 중복이 생길 수 있음|
-    |-|Boosting|약한 학습기 $ \times $ N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat Boost 등|
+    |-|Boosting|약한 학습기$\times$N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat Boost 등|
     |-|Stacking|여러 개의 기초모델의 예측을 종합하여 새로운 메타모델 생성|
 
     <details>
@@ -155,23 +155,23 @@
 
 #### MSE
 - 특징 : 제곱, 이상치에 민감
-    $\text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y})$
+   $\text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y})$
 
 #### MAE
 - 특징 : 절대 값, 이상치에 둔감
-    $ \text{MAE} = \frac{1}{N} \sum_{i=1}^{N} |y - \hat{y}| $
+   $\text{MAE} = \frac{1}{N} \sum_{i=1}^{N} |y - \hat{y}|$
 
 #### 허브 손실
-- 특징 : MSE + MAE, $\delta$ 는 임계 값
-    $ L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ 
+- 특징 : MSE + MAE,$\delta$는 임계 값
+   $L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ 
 
     \delta |y - \hat{y}| - \frac{1}{2} \delta^2 & \text{if} \quad|y-\hat{y}| > \delta
 
-    \end{cases} $
+    \end{cases}$
 
 #### 로그 코사인 유도
 특징 : 이상치에 매우 강함
-    $ \log - \cosh = \frac{1}{N} \sum^{N}_{i = 1} \log({\cosh (\hat{y}-y)}) $
+   $\log - \cosh = \frac{1}{N} \sum^{N}_{i = 1} \log({\cosh (\hat{y}-y)})$
 
 ### 분류 비용함수
 
