@@ -296,19 +296,7 @@ plt.rcParams["axes.unicode_minus"] = False
     - 정밀도: 모델이 예측한 긍정 사례 중 실제 긍정 사례의 비율
     - F1-score: 재현율과 정밀도의 조화 평균
 
-3. R-squared(R2-Score):
-
-    - 회귀 모델 평가에 사용되는 지표
-    - 모델이 종속변수의 변동을 얼마나 잘 설명하는지 나타냄
-    - 0에서 1 사이의 값을 가지며, 1에 가까울수록 모델 성능이 좋음
-
-4. 교차 검증(Cross-Validation):
-
-    - k개의 폴드(fold)로 나누어 모델을 평가
-    - 훈련 ,검증 데이터를 분리 후 일반화 성능 평가
-    - 과적합을 방지하고, 안정성을 확인
-
-5. 혼동 행렬(Confusion Matrix):
+3. 혼동 행렬(Confusion Matrix):
     - 실제 값과 예측 값의 관계를 보여줌
     - 정확도, 재현율, 정밀도 지표
     - ROC 곡선 및 AUC(Area Under the Curve):
@@ -316,6 +304,20 @@ plt.rcParams["axes.unicode_minus"] = False
         - 임계값에 따른 True Positive Rate와 False Positive Rate를 나타냄
         - AUC 값이 1에 가까울수록 모델의 성능이 좋음, 0.5 는 넘어야 함
         - AUC = 0.5 -> 랜덤 분류기와 성능이 같다.
+
+4. R-squared(R2-Score):
+
+    - 회귀 모델 평가에 사용되는 지표
+    - 모델이 종속변수의 변동을 얼마나 잘 설명하는지 나타냄
+    - 0에서 1 사이의 값을 가지며, 1에 가까울수록 모델 성능이 좋음
+
+5. 교차 검증(Cross-Validation):
+
+    - k개의 폴드(fold)로 나누어 모델을 평가
+    - 훈련 ,검증 데이터를 분리 후 일반화 성능 평가
+    - 과적합을 방지하고, 안정성을 확인
+
+
 
 6. 도메인 지식 활용:
 
