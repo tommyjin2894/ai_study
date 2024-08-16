@@ -106,7 +106,7 @@
     |-|Grid search|모든 경우의수를 본다|
     |-|Randomized search|랜덤한 경우의수를 본다|
     |앙상블|bagging <br> (baseline Bootstrap baseline Aggregatbaseline ing)|1.baseline N 개의 샘플을 뽑기 ->집어넣고 baseline N 개의 샘플을 뽑는다. <br> 2. 중복이 생길 수 있음|
-    |-|Boosting|약한 학습기$\times$N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat Boost 등|
+    |-|Boosting|약한 학습기 X N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat Boost 등|
     |-|Stacking|여러 개의 기초모델의 예측을 종합하여 새로운 메타모델 생성|
 
     <details>
@@ -264,6 +264,17 @@
 
 </details>
 
+<details>
+<summary>객체 탐지 모델</summary>
+
+|이름|내용|특징|
+|-|-|-|
+|YOLO<br>(You Only Look Once)|One-Shot. 빠른 속도와 높은 실시간 성능|One-stage detector, Bounding box regression, Class prediction|
+|SSD<br>(Single Shot MultiBox Detector)|이미지의 다양한 크기에서 객체를 탐지하는 모델.<br>다양한 스케일의 특성을 활용하여 높은 성능을 제공|One-stage detector, Multi-scale feature maps, Default boxes|
+|Faster R-CNN|Region Proposal Network (RPN)과 Fast R-CNN을 결합하여 객체 탐지 성능을 향상시킨 모델|Two-stage detector, RPN for region proposals, ROI Pooling|
+|Mask R-CNN|Faster R-CNN의 확장으로, 객체 탐지와 함께 객체의 마스크를 생성하여 세그멘테이션을 지원|Instance segmentation, Two-stage detector, RoIAlign for mask prediction|
+
+</details>
 <!------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------------------------------------------------------------->
