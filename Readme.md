@@ -407,7 +407,8 @@ SMOTEENN
 
 </details>
 
-<details><summary>codes</summary>
+### code
+
 <details><summary>마이닝 알고리즘</summary>
 
 ```py
@@ -440,7 +441,6 @@ import matplotlib_inline.backend_inline
 
 import sklearn
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
-from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier # 잘쓰면 트리모델만큼 좋은게 없다.
 from sklearn import metrics
@@ -473,6 +473,9 @@ from sklearn import metrics
 <details><summary>sk-learn train-test spliting</summary>
 
 ```py
+from sklearn.model_selection import train_test_split
+
+
 x_train, x_test, y_train, y_test = train_test_split(
     x_data,y_data,
     test_size=0.3,
@@ -481,8 +484,6 @@ x_train, x_test, y_train, y_test = train_test_split(
     # stratify=y_data
     # y라벨의 비율 유지
 ```
-</details>
-
 </details>
 
 <br>
