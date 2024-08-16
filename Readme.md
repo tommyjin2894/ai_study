@@ -155,7 +155,7 @@
 
 #### MSE
 - 특징 : 제곱, 이상치에 민감
-    $ \text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y}) $
+    $\text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y})$
 
 #### MAE
 - 특징 : 절대 값, 이상치에 둔감
