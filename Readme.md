@@ -21,6 +21,283 @@ plt.rcParams["axes.unicode_minus"] = False
 ```
 <!------------------------------------------------------------------------------------------------------->
 
+## 파이썬 기본 코드 연습
+<details>
+<summary>basic of python</summary>
+
+```py
+
+# recap
+# numpy 요약
+import numpy as np
+
+a = np.array([1,2,3,4,5])
+np.arange(1,2,0.1)
+np.linspace(1,3,4)
+np.zeros((3,4))
+np.ones((3,4))
+np.empty((3,4,3))
+np.random.random((3,2))
+np.random.randint(1,20,(3,4,2))
+
+# 사이즈확인
+a.ndim
+a.size
+a.shape
+
+# 모양 바꾸기
+a.reshape(5,1)
+a.T
+a.transpose()
+a.flatten()
+a.ravel()
+
+a[:,np.newaxis,np.newaxis,np.newaxis,np.newaxis,np.newaxis,np.newaxis]
+np.expand_dims(a, axis=1)
+
+#indexing
+list_a = np.arange(1,11).reshape(2,5) #.tolist() #리스트로 바꾸기
+list_a[0,2]
+list_a[:,2]
+
+list_a[(5 >= list_a) | (list_a % 2 == 0)]
+list_a[(5 >= list_a) & (list_a % 2 == 0)]
+
+list_a = np.arange(1,10).reshape(3,3)
+list_b = np.arange(11,20).reshape(3,3)
+list_a + list_b
+list_a + 10 == list_b
+
+list_a + np.array([[1],[2],[3]])
+list_a + np.array([1,2,3])
+
+np.concatenate((list_a,list_b),axis=0)
+np.concatenate((list_a,list_b),axis=1)
+np.vstack((list_a,list_b))
+np.hstack((list_a,list_b))
+
+np.unique(np.array([2,2,3,4,4,4,3]))
+np.unique(np.array([2,2,3,4,4,4,3]), return_counts=True)
+np.unique(np.array([2,2,3,4,4,4,3]), return_counts=True, return_index=True, return_inverse= True)
+
+np.flip(np.array([1,2,3]))
+np.flip(np.array([[1,2,3],[1,2,3],[1,2,3]]),axis=0)
+
+np.save('file.npy',np.arange(1,10,1)*1000)
+np.load('file.npy')
+# pandas
+import pandas as pd
+
+dates = pd.date_range("20240510", periods=20)
+df = pd.DataFrame(np.random.randint(1,4,(20,4)),
+                  index=dates,
+                  columns=list('ABCD'))
+
+df.head(2) # df.tail(2)
+df.to_numpy() # df.values
+df.describe()
+df.sort_index(axis=1,ascending=False)
+df.sort_index(axis=0,ascending=False)
+df.sort_values(['A','B'], ascending=[True,False]) # 순위 매기기
+# df.sample(6)
+
+df['A'] # 시리즈
+df[['A','B']] # 데이터 프레임 으로
+
+df["2024-05-10":"2024-05-20"] # index로 슬라이싱
+df.loc["2024-05-10"] # 시리즈
+df.loc[["2024-05-10"]] # 데이터 프레임 으로
+
+df.loc["2024-05-10",['B']] # 시리즈
+df.loc[["2024-05-10"],['B']] # 데이터 프레임 으로
+
+df.loc["2024-05-10":"2024-05-20",'B':'C'] # 데이터 프레임 으로
+df.loc[["2024-05-10","2024-05-20"],'B':'C'] # 데이터 프레임 으로
+
+df.loc["2024-05-10",'A'] # 단일값
+df.at["2024-05-10",'A'] # 단일값
+
+df.iloc[3] # 시리즈
+df.iloc[2:3] # 데이터 프레임 으로
+df.iloc[2,3] # 데이터 프레임 으로
+df.iat[2,3] # 데이터 프레임 으로
+# New std
+dates = pd.date_range("20230515", periods=10)
+s1 = pd.Series(1, index=dates)
+
+df.at['2024-05-15','A'] = 100
+# df['E'] = s1
+df_1 = df.copy()
+df_1.iloc[3:5,2:3] = np.nan
+df_1.iloc[5:12,1:3] = np.nan
+
+df_1.dropna(how='any') # 하나라도 있으면 날리겠다
+df_1.dropna(how='all') # 컬럼전체가 nan이면 날리겠다.
+
+df_1.isna().sum() # 커럼별로
+(~df_1.isna()).sum() # na가 아닌값찾기
+df_1.isna().sum(axis=1) # 로우별로
+
+df_1.fillna(value=999,inplace=True)
+
+# 통계정보
+df_1.mean(axis=1)
+df_1.median(axis=1)
+s_2 = pd.Series(np.random.randint(0,5,10))
+s_2.unique()
+s_2.nunique() # = len(s_2.unique())
+s_2.value_counts().sort_index().sort_values() # 등등등
+
+s_3 = pd.Series(['ASD','asd',np.nan])
+
+# 스트링을 가정하여 한다. https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html
+s_3.str.lower()
+s_3.str.lower()
+
+
+# pandas
+import pandas as pd
+
+dates = pd.date_range("20240510", periods=20)
+df = pd.DataFrame(np.random.randint(1,4,(20,4)),
+                  index=dates,
+                  columns=list('ABCD'))
+
+df.head(2) # df.tail(2)
+df.to_numpy() # df.values
+df.describe()
+df.sort_index(axis=1,ascending=False)
+df.sort_index(axis=0,ascending=False)
+df.sort_values(['A','B'], ascending=[True,False]) # 순위 매기기
+# df.sample(6)
+df = pd.DataFrame(np.random.randn(10,4))
+
+a = df[:3]
+b = df[3:6]
+c = df[6:]
+list_of_abc = [a,b,c]
+pd.concat(list_of_abc)
+left = pd.DataFrame({"key": ["foo", "foo"], "lval": [1, 2]})
+right = pd.DataFrame({"key": ["foo", "foo"], "rval": [4, 5]})
+
+pd.merge(left, right) # 키값이 유니크 하지 않기 때문에 각키별로 각각 붙인다.
+left = pd.DataFrame({"key1": ["foo1", "foo2"], "lval": [1, 2]})
+right = pd.DataFrame({"key2": ["foo1", "foo2"], "rval": [4, 5]})
+
+pd.merge(left, right, left_on='key1', right_on='key2')
+pd.merge(left, right, left_on='key1', right_on='key2', how='outer')
+pd.merge(left, right, left_on='key1', right_on='key2', how='left')
+pd.merge(left, right, left_on='key1', right_on='key2', how='right')
+
+pd.merge(left, right, how='cross', indicator=True)
+# gruoping
+df = pd.DataFrame(
+    {
+        "A": ["foo", "bar", "foo", "bar", "foo", "bar", "foo", "foo"],
+        "B": ["one", "one", "two", "three", "two", "two", "one", "three"],
+        "C": np.random.randint(1,10,8),
+        "D": np.random.randint(1,10,8),
+    }
+)
+df
+df.groupby(by=['A','B'])[['C','D']].sum() # A, B의 컬럼을 그룹화 하고, C끼리 D끼리 더하기
+df.groupby(by=['A','B'])[['C','D']].mean() # A, B의 컬럼을 그룹화 하고, C끼리 D끼리 더하기
+df.groupby(by=['A','B'])[['C','D']].median() # A, B의 컬럼을 그룹화 하고, C끼리 D끼리 더하기
+df2=df.groupby(by=['B','A'])[['C','D']].sum()
+
+print(df2.stack())
+display(df2.stack().unstack(0))
+df = pd.DataFrame({
+    "A": ["one", "one", "two", "three"] * 3,
+    "B": ["A", "B", "C"] * 4,
+    "C": ["foo", "foo", "foo", "bar", "bar", "bar"] * 2,
+    "D": np.random.randn(12),
+    "E": np.random.randn(12),
+})
+
+pd.pivot_table(df, index=['C'], columns=['B'], values=['D'], aggfunc='var')
+
+df.to_excel('test.xlsx', sheet_name='sheet1', index=False)
+df = pd.read_excel('test.xlsx')
+df
+df.to_csv('test.csv', encoding='utf-8')
+
+df.plot.bar()
+# OpenCV
+# !pip install opencv-python
+#PIL 파이썬 내장 이미지 처리
+# cv2.__version__
+# !pip install opencv-python==4.6.0.66
+import cv2
+print(cv2.__version__)
+## 이미지 열기
+import cv2
+img = cv2.imread('images\cat.bmp')
+cv2.imshow('image', img)
+cv2.waitKey(1000) # 안의 값은 시간초
+while True:
+    if cv2.waitKey() == ord('x'): # 또는 ascii 코드 를 입력하면 
+        cv2.destroyAllWindows()
+        break
+cv2.imwrite('new.jpg', img)
+## matplotlib 을 이용한 이미지 열기
+import cv2
+import matplotlib.pyplot as plt
+img = cv2.imread('images\waldo.png')
+
+bgr_img = img
+
+
+# plt.imshow(rgb_img);
+inst_ = bgr_img.copy()
+inst_B = bgr_img[:,:,0].copy()
+bgr_img[:,:,0] = bgr_img[:,:,2]
+bgr_img[:,:,2] = inst_B
+
+plt.imshow(bgr_img);
+gray_img = cv2.imread('images\waldo.png', cv2.IMREAD_GRAYSCALE)
+plt.imshow(gray_img, cmap='gray');
+import numpy as np
+img = cv2.imread('images\cat.bmp')
+
+img[:,:,0].flatten() # B
+img[:,:,1].flatten() # G
+img[:,:,2].flatten() # R
+img.dtype
+
+black_img = np.zeros((20, 20, 3), dtype=np.uint8)
+white_img = np.ones((20, 20, 3), dtype=np.uint8) * 255
+# rgb_img = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB)
+# # rgb_img[세로 픽셀 범위 , 가로 픽셀 범위, BGR 값]
+# plt.imshow(rgb_img[30:330,250:550]);
+
+#흰도화지 만들기
+# img = np.ones((400,400,3), np.uint8) * 255
+# gray_img = cv2.imread('new.png', cv2.IMREAD_GRAYSCALE)
+# cv2.rectangle(img, (50,200 ,150,100), (100,24,24), 5)
+rgb_img_coppied = gray_img.copy()
+rectpoint = [(250,340), (500,100)]
+color = (100,24,24)
+line_width = 2
+cv2.rectangle(rgb_img_coppied, rectpoint[0], rectpoint[1], color, line_width)
+cv2.putText(rgb_img_coppied, 'Cat',(250, 90), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 2, (0,0,255), 1,cv2.LINE_AA)
+plt.imshow(rgb_img_coppied);
+gray_img = cv2.imread('images\waldo.png', cv2.IMREAD_GRAYSCALE)
+
+#numpy np.clip 이랑 비슷하다 cv2.add(src, 100) 는 255가 넘어가면 다시 0부터 시작한다.
+plt.imshow(cv2.add(gray_img, 200), cmap='gray');
+
+## 사각형 그리기
+import pandas as pd
+df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+isin_result = df.isin([2, 5])
+print(isin_result)
+
+
+```
+
+</details>
+
 ## 모델 설계
 <details>
 <summary>모델 설계 시 가이드</summary>
@@ -50,21 +327,20 @@ plt.rcParams["axes.unicode_minus"] = False
 
 주의 : 편향적인 데이터가 되지 않게
 
-### 샘플링 
-- 언더 샘플링
-    ```py
-        RandomUnderSampler
-        EditedNearestNeighbours 
-    ```
-- 오버 샘플링
-    ```py
-        RandomOverSampler
-        SMOTE
-    ```
-- Both
-    ```py
-        SMOTEENN
-    ```
+### 샘플링 기법 코드
+
+```
+# 언더 샘플링
+RandomUnderSampler
+EditedNearestNeighbours 
+
+# 오버 샘플링
+RandomOverSampler
+SMOTE
+
+# Both
+SMOTEENN
+```
 
 </details>
 
