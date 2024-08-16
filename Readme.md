@@ -113,7 +113,7 @@
     <summary>K-fold 교차 검증</summary>
     
     - 훈련 데이터를 k 개로 분할해 번갈아 가면서 훈련 평가
-        |||||||
+        |학습 모델|데이터1|데이터2|데이터3|데이터4|데이터5|
         | ---   | --- | --- | --- | --- | --- |
         | 학습 1 | train | train | train | train | test |
         | 학습 2 | train | train | train | test | train |
