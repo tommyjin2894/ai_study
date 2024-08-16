@@ -1,5 +1,24 @@
 # 정리
 
+## 기본 시각화 코드
+```py
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import matplotlib_inline.backend_inline
+
+matplotlib_inline.backend_inline.set_matplotlib_formats("png2x") # svg, retina, png2x ...
+mpl.style.use("seaborn-v0_8")
+mpl.rcParams.update({"figure.constrained_layout.use": True})
+sns.set_context("paper") 
+sns.set_palette("Set2") 
+sns.set_style("whitegrid") 
+
+plt.rc("font", family = "Malgun Gothic")
+plt.rcParams["axes.unicode_minus"] = False
+```
 <!------------------------------------------------------------------------------------------------------->
 
 ## 모델 설계
