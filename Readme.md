@@ -76,11 +76,6 @@
     |회귀|Linear Regression|선형 관계 모델링|
     |-|Logistic Regression|이진 분류를 위한 회귀 분석 기법,<br> baseline 확률로 출력값을 변환|
     |인공 신경망|NN|여러층의 뉴런|
-    |-|CNN|Convolution NN|
-    |-|RNN|Recurrent NN|
-    |-|LSTM|Long, Short Term Memory|
-    |-|Auto Encoder|Encoder->Latent Space->Decoder|
-    |-|Transformer|Self Attention, ED Attention|
     |기타|AdaBoost|약한 학습기 x N = 강한 학습기|
     |-|XGBoost|Gradient Boosting Machines 의 효율적이고 강력하게 개선|
 
