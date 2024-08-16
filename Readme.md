@@ -269,10 +269,13 @@
 
 |이름|내용|특징|
 |-|-|-|
-|YOLO<br>(You Only Look Once)|One-Shot. 빠른 속도와 높은 실시간 성능|One-stage detector, Bounding box regression, Class prediction|
-|SSD<br>(Single Shot MultiBox Detector)|이미지의 다양한 크기에서 객체를 탐지하는 모델.<br>다양한 스케일의 특성을 활용하여 높은 성능을 제공|One-stage detector, Multi-scale feature maps, Default boxes|
-|Faster R-CNN|Region Proposal Network (RPN)과 Fast R-CNN을 결합하여 객체 탐지 성능을 향상시킨 모델|Two-stage detector, RPN for region proposals, ROI Pooling|
-|Mask R-CNN|Faster R-CNN의 확장으로, 객체 탐지와 함께 객체의 마스크를 생성하여 세그멘테이션을 지원|Instance segmentation, Two-stage detector, RoIAlign for mask prediction|
+|YOLO<br>(You Only Look Once)|One-Shot. 빠른 속도와 높은 실시간 성능|One-stage detector,<br>Bounding box regression,<br>Class prediction|
+|SSD<br>(Single Shot MultiBox Detector)|이미지의 다양한 크기에서 객체를 탐지하는 모델.<br>다양한 스케일의 특성을 활용하여 높은 성능을 제공|One-stage detector,<br>Multi-scale feature maps,<br>Default boxes|
+|R-CNN<br>(Regions with CNN features)|전통적인 객체 탐지 방법<br>먼저 Selective Search로 영역을 제안한 뒤 각 영역을 CNN으로 피처 벡터로 변환하여 분류 및 경계 상자를 예측|Two-stage detector, Selective Search, CNN-based feature extraction|
+|Fast R-CNN|R-CNN의 개선, 전체 이미지에 대해 CNN을 한 번만 실행하고,<br>RoI Pooling로 각 제안 영역의 피처를 추출 분류 및 회귀|Two-stage detector, RoI Pooling, End-to-end training, Faster processing compared to R-CNN|
+|Faster R-CNN|Region Proposal Network (RPN)과<br>Fast R-CNN을 결합|Two-stage detector,<br>RPN for region proposals,<br>ROI Pooling|
+
+> RoI : Region of interest
 
 </details>
 <!------------------------------------------------------------------------------------------------------->
