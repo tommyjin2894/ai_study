@@ -323,9 +323,10 @@ print(isin_result)
 
 
 ## 마이닝 알고리즘
-<details><summary>다양한 마이닝 알고리즘 정리</summary>
 
-- 머신러닝 모델(지도 학습) <br>
+### 내용 정리
+- <details><summary>머신러닝 모델(지도 학습)</summary>
+    
     |모델|이름|설명|
     |---|---|---|
     |분류|Decision Tree|트리구조로 데이터를 분류, 조건 분기|
@@ -333,14 +334,14 @@ print(isin_result)
     |-|KNN|가까운 K 개의 데이터를 기반으로 결정 <br> baseline L1 및 L2 거리|
     |-|SVM|클래스 간의 경계를 최대화하여 초평면을 찾는다.|
     |회귀|Linear Regression|선형 관계 모델링|
-    |-|Logistic Regression|이진 분류를 위한 회귀 분석 기법,<br> baseline 확률로 출력값을 변환|
+    |-|Logistic Regression|이진 분류를 위한 회귀 분석 기법,<br> baseline 확률로     출력값을 변환|
     |인공 신경망|NN|여러층의 뉴런|
     |기타|AdaBoost|약한 학습기 x N = 강한 학습기|
     |-|XGBoost|Gradient Boosting Machines 의 효율적이고 강력하게 개선|
+</details>
 
-<br>
+- <details><summary>비지도 학습</summary>
 
-- 비지도 학습
     |종류|이름|설명|
     |-|-|-|
     |클러스터링|k-means|비슷한 포인트를 가깝게 위치|
@@ -351,21 +352,22 @@ print(isin_result)
     |-|t-SNE|2~3 차원으로 시각화, 비슷한 데이터 그룹화|
 
     baseline 클러스터링 : 유사도 기준 L1(manhatten), L2(Euclidean) 으로 군집화
-<br>
+</details>
 
-- 기법
+- <details><summary>비지도 학습</summary>
+
     |종류|이름|설명|
     |---|---|---|
     |기법|K-fold 교차 검증|점수 평균|
     |-|Grid search|모든 경우의수를 본다|
     |-|Randomized search|랜덤한 경우의수를 본다|
-    |앙상블|bagging <br> (baseline Bootstrap baseline Aggregatbaseline ing)|1.baseline N 개의 샘플을 뽑기 ->집어넣고 baseline N 개의 샘플을 뽑는다. <br> 2. 중복이 생길 수 있음|
-    |-|Boosting|약한 학습기 X N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat Boost 등|
-    |-|Stacking|여러 개의 기초모델의 예측을 종합하여 새로운 메타모델 생성|
+    |앙상블|bagging<br> (bootstrap aggregating)|1. baseline N 개의 샘플을 뽑기<br>->집어넣고 N 개의 샘플을 뽑는다. <br> 2. 중복이 생길 수 있음|
+    |-|Boosting|약한 학습기 X N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat     Boost 등|
+    |-|Stacking|여러 개의 기초모델의 예측<br>종합하여 새로운 메타모델 생성|
 
     <details>
     <summary>K-fold 교차 검증</summary>
-    
+
     - 훈련 데이터를 k 개로 분할해 번갈아 가면서 훈련 평가
         |학습 모델|데이터1|데이터2|데이터3|데이터4|데이터5|
         | ---   | --- | --- | --- | --- | --- |
@@ -376,151 +378,150 @@ print(isin_result)
         | 학습 5 | test | train | train | train | train |
 
     </details>
-
 </details>
 
-### code
+### codes
 
-<details><summary>전처리</summary>
+- <details><summary>전처리</summary>
 
-```py
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
+    ```py
+    from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 
-```
+    ```
 </details>
 
-<details><summary>트레인 테스트 데이터 분할</summary>
+- <details><summary>트레인 테스트 데이터 분할</summary>
 
-```py
-from sklearn.model_selection import train_test_split
-
-
-x_train, x_test, y_train, y_test = train_test_split(
-    x_data,y_data,
-    test_size=0.3,
-    random_state=42,
-    )
-    # stratify=y_data
-    # y라벨의 비율 유지
-```
-</details>
-
-<details><summary>마이닝 알고리즘</summary>
-
-```py
-# 머신러닝 라이브러리
-import sklearn
-
-# Main Models
-from sklearn.neighbors import KNeighborsClassifier # KNN
-from sklearn.tree import DecisionTreeClassifier # 의사결정나무
-from sklearn.linear_model import LogisticRegression # 로지스틱 회귀
-from sklearn.svm import SVC # 서포트 벡터 분류
-from sklearn.ensemble import RandomForestClassifier # 랜덤 포레스트 분류
-from sklearn.ensemble import GradientBoostingClassifier # 그래디언트 부스팅 분류
-from sklearn.naive_bayes import GaussianNB # 가우시안 나이브 베이즈
-from xgboost import XGBRegressor # XGB 회귀
-
-# Extras
-from sklearn.svm import NuSVC # Nu 서포트 벡터 분류
-from sklearn.svm import LinearSVC # 선형 서포트 벡터 분류
-from sklearn.ensemble import AdaBoostClassifier # AdaBoost 분류
-from sklearn.ensemble import ExtraTreesClassifier # Extra Trees 분류
-from sklearn.ensemble import HistGradientBoostingClassifier # 히스토그램 기반 그래디언트 부스팅 분류
-from sklearn.ensemble import BaggingClassifier # 배깅 분류
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis # 선형 판별 분석
-from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis # 이차 판별 분석
-from sklearn.linear_model import RidgeClassifier # 릿지 분류
-from sklearn.linear_model import Perceptron # 퍼셉트론
-from sklearn.neural_network import MLPClassifier # 다층 퍼셉트론 분류
-from sklearn.gaussian_process import GaussianProcessClassifier # 가우시안 프로세스 분류
-from sklearn.naive_bayes import ComplementNB # 보완 나이브 베이즈
-from sklearn.naive_bayes import BernoulliNB # 베르누이 나이브 베이즈
-import xgboost as xgb # xgb (별칭)
+    ```py
+    from sklearn.model_selection import train_test_split
 
 
-```
-</details>
-
-<details><summary>교차 검증</summary>
-
-```py
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.pipeline import Pipeline
-from sklearn.impute import SimpleImputer
-from sklearn.model_selection import cross_val_score
-
-# 전처리기 na값 자동채움과
-# 랜덤 포레스트의 모델을 파이프라인으로 구축,
-# 동일한 결과를 위한 random_state=0
-my_pipe = Pipeline(steps=[
-    ('preprocessor', SimpleImputer()) ,
-    ('model', RandomForestRegressor(n_estimators=50, random_state=0))
-])
-
-#neg_mab_error 의 결과는 -으로 나오기 때문에 -1 을 곱해준다.
-scores = -1 * cross_val_score(
-    my_pipe, X, y,
-    cv=4,
-    scoring='neg_mean_absolute_error')
-
-print(scores.mean())
-
-```
-</details>
-
-<details><summary>PCA</summary>
-
-```py
-from sklearn.decomposition import PCA
-
-# 주성분 분석 n = 차원 수
-pca = PCA(n_components = 2).fit_transform(feature_df)
-```
-</details>
-
-<details><summary>Metrics</summary>
-
-```py
-from sklearn import metrics
-
-```
-</details>
-
-<details><summary>Confusion Matrix</summary>
-
-```py
-
-```
-</details>
-
-<details><summary>그리드 서치, 랜더마이즈드 서치</summary>
-
-```py
-from sklearn.model_selection import GridSearchCV
-from sklearn.model_selection import RandomizedSearchCV
-from sklearn.model_selection import StratifiedKFold
-
-def grid_search(x_train, y_train, params, base_model):
-    model_base = GridSearchCV( # or Randomized Search
-        # n_iter=10 # for Randomized Search
-        base_model,
-        params,
-        cv = StratifiedKFold(3,shuffle=True, random_state = 209), # Cross Valid
-        return_train_score=True,
-        n_jobs = -1 # CPU or GPU?
+    x_train, x_test, y_train, y_test = train_test_split(
+        x_data,y_data,
+        test_size=0.3,
+        random_state=42,
         )
+        # stratify=y_data
+        # y라벨의 비율 유지
+    ```
+</details>
 
-    model_base.fit(x_train, y_train)
-    
-    best_model = model_base.best_estimator_
-    best_pred = best_model.predict(x_test)
-    print("최고 정확도", metrics.accuracy_score(best_pred,y_test))
-    return best_model, grid_model.cv_results_ # 최고성능 모델과 ,교차검증 결과
+- <details><summary>마이닝 알고리즘</summary>
 
-params = {} # dict 형식 {"파라미터": list,}
+    ```py
+    # 머신러닝 라이브러리
+    import sklearn
 
-```
+    # Main Models
+    from sklearn.neighbors import KNeighborsClassifier # KNN
+    from sklearn.tree import DecisionTreeClassifier # 의사결정나무
+    from sklearn.linear_model import LogisticRegression # 로지스틱 회귀
+    from sklearn.svm import SVC # 서포트 벡터 분류
+    from sklearn.ensemble import RandomForestClassifier # 랜덤 포레스트 분류
+    from sklearn.ensemble import GradientBoostingClassifier # 그래디언트 부스팅 분류
+    from sklearn.naive_bayes import GaussianNB # 가우시안 나이브 베이즈
+    from xgboost import XGBRegressor # XGB 회귀
+
+    # Extras
+    from sklearn.svm import NuSVC # Nu 서포트 벡터 분류
+    from sklearn.svm import LinearSVC # 선형 서포트 벡터 분류
+    from sklearn.ensemble import AdaBoostClassifier # AdaBoost 분류
+    from sklearn.ensemble import ExtraTreesClassifier # Extra Trees 분류
+    from sklearn.ensemble import HistGradientBoostingClassifier # 히스토그램 기반 그래디언트 부스팅 분류
+    from sklearn.ensemble import BaggingClassifier # 배깅 분류
+    from sklearn.discriminant_analysis import LinearDiscriminantAnalysis # 선형 판별 분석
+    from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis # 이차 판별 분석
+    from sklearn.linear_model import RidgeClassifier # 릿지 분류
+    from sklearn.linear_model import Perceptron # 퍼셉트론
+    from sklearn.neural_network import MLPClassifier # 다층 퍼셉트론 분류
+    from sklearn.gaussian_process import GaussianProcessClassifier # 가우시안 프로세스 분류
+    from sklearn.naive_bayes import ComplementNB # 보완 나이브 베이즈
+    from sklearn.naive_bayes import BernoulliNB # 베르누이 나이브 베이즈
+    import xgboost as xgb # xgb (별칭)
+
+
+    ```
+</details>
+
+- <details><summary>교차 검증</summary>
+
+    ```py
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.pipeline import Pipeline
+    from sklearn.impute import SimpleImputer
+    from sklearn.model_selection import cross_val_score
+
+    # 전처리기 na값 자동채움과
+    # 랜덤 포레스트의 모델을 파이프라인으로 구축,
+    # 동일한 결과를 위한 random_state=0
+    my_pipe = Pipeline(steps=[
+        ('preprocessor', SimpleImputer()) ,
+        ('model', RandomForestRegressor(n_estimators=50, random_state=0))
+    ])
+
+    #neg_mab_error 의 결과는 -으로 나오기 때문에 -1 을 곱해준다.
+    scores = -1 * cross_val_score(
+        my_pipe, X, y,
+        cv=4,
+        scoring='neg_mean_absolute_error')
+
+    print(scores.mean())
+
+    ```
+</details>
+
+- <details><summary>PCA</summary>
+
+    ```py
+    from sklearn.decomposition import PCA
+
+    # 주성분 분석 n = 차원 수
+    pca = PCA(n_components = 2).fit_transform(feature_df)
+    ```
+</details>
+
+- <details><summary>Metrics</summary>
+
+    ```py
+    from sklearn import metrics
+
+    ```
+</details>
+
+- <details><summary>Confusion Matrix</summary>
+
+    ```py
+
+    ```
+</details>
+
+- <details><summary>그리드 서치, 랜더마이즈드 서치</summary>
+
+    ```py
+    from sklearn.model_selection import GridSearchCV
+    from sklearn.model_selection import RandomizedSearchCV
+    from sklearn.model_selection import StratifiedKFold
+
+    def grid_search(x_train, y_train, params, base_model):
+        model_base = GridSearchCV( # or Randomized Search
+            # n_iter=10 # for Randomized Search
+            base_model,
+            params,
+            cv = StratifiedKFold(3,shuffle=True, random_state = 209), # Cross Valid
+            return_train_score=True,
+            n_jobs = -1 # CPU or GPU?
+            )
+
+        model_base.fit(x_train, y_train)
+
+        best_model = model_base.best_estimator_
+        best_pred = best_model.predict(x_test)
+        print("최고 정확도", metrics.accuracy_score(best_pred,y_test))
+        return best_model, grid_model.cv_results_ # 최고성능 모델과 ,교차검증 결과
+
+    params = {} # dict 형식 {"파라미터": list,}
+
+    ```
 </details>
 <br>
 
