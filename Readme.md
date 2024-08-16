@@ -311,11 +311,10 @@ print(isin_result)
 ## 모델 설계
 <details><summary>모델 설계 시 가이드</summary>
 
-- baseline baseline 모델을 설정하고, 이보다 좋은성능 내기
-- 데이터 불균형 30% 정도 일때 부터 조치를 취해야함
-- 데이터 불균형 시 baseline 다양하게  metrics 설정
-    - 정확도, 정밀도, 재현율, F1 점수, AUC-ROC, 회귀 - RMSE, MAE 등 
-- 표로 잘 정리하기
+- # 데이터 불균형 30% 일때 부터 특별한 조치
+    - # 다양한 샘플링 및 다양한 metrics 설정
+        - 정확도, 정밀도, 재현율, F1 점수, AUC-ROC, 회귀 - RMSE, MAE 등 
+- # 표로 잘 정리하기
 
 </details>
 
