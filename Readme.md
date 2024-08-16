@@ -156,23 +156,10 @@
 |회귀 문제|단층 퍼셉트론|XOR 같은 비선형 문제에 대한 한계<br>역전파는 존재하지 않았다|단층 구조|
 |-|MSE|제곱, 이상치에 민감|$\text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y})$|
 |-|MAE|절대 값, 이상치에 둔감|$\text{MSE} = \frac{1}{N} \sum_{i=1}^{N} (y - \hat{y})$|
-|-|허브 손실|MSE + MAE,$\delta$는 임계 값|$L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ \delta |y - \hat{y}| - \frac{1}{2} \delta^2 & \text{if} \quad|y-\hat{y}| > \delta \end{cases}$|
-|분류 문제|다층 퍼셉트론|범용 근사자:<br>충분히 크고 복잡한 어떠한 문제라도 이론적으로 학습 가능|다층 구조|
+|-|허브 손실|MSE + MAE|MSE + MAE 의 구조|
+|-|로그 코사인 유사도|이상치에 매우 강함|$\log - \cosh = \frac{1}{N} \sum^{N}_{i = 1} \log({\cosh (\hat{y}-y)})$|
+|분류 문제|Cross Entropy Error|이진 분류 : binary CEE<br>다중 분류 : Categorical CEE|$CEE = -\sum_{k=1}^i t_k\text{log}\hat{y}$|
 
-
-#### 허브 손실
-- 특징 : MSE + MAE,$\delta$는 임계 값
-$L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ \delta |y - \hat{y}| - \frac{1}{2} \delta^2 & \text{if} \quad|y-\hat{y}| > \delta \end{cases}$
-
-#### 로그 코사인 유도
-특징 : 이상치에 매우 강함
-   $\log - \cosh = \frac{1}{N} \sum^{N}_{i = 1} \log({\cosh (\hat{y}-y)})$
-
-### 분류 비용함수
-
-#### Cross Entropy Error
-- 이진 분류 : binary CEE
-- 다중 분류 : Categorical CEE
 
 #### 힌지 손실
 - SVM 에서 사용
