@@ -308,13 +308,14 @@ print(isin_result)
 
 </details>
 
-## 모델 설계
-<details><summary>모델 설계 시 가이드</summary>
+## 모델 설계 시 고려사항
+<details><summary>How To</summary>
 
-- # 데이터 불균형 30% 일때 부터 특별한 조치
-    - # 다양한 샘플링 및 다양한 metrics 설정
-        - 정확도, 정밀도, 재현율, F1 점수, AUC-ROC, 회귀 - RMSE, MAE 등 
-- # 표로 잘 정리하기
+- 데이터 불균형 30% 기준
+- 다양한 샘플링 및 다양한 metrics 설정
+  - 정확도, 정밀도, 재현율, F1 스코어, AUC-ROC,
+  - 회귀 : RMSE, MAE 등 
+- 표로 잘 정리하기
 
 </details>
 
