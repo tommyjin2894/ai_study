@@ -2,14 +2,19 @@
 
 ## 기본 시각화 코드
 ```py
+# 기본 라이브러리
 import numpy as np
 import pandas as pd
 import seaborn as sns
+
+# 그래프 라이브러리
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib_inline.backend_inline
 
-matplotlib_inline.backend_inline.set_matplotlib_formats("png2x") # svg, retina, png2x ...
+# 기본 설정
+
+matplotlib_inline.backend_inline.set_matplotlib_formats("png2x")
 mpl.style.use("seaborn-v0_8")
 mpl.rcParams.update({"figure.constrained_layout.use": True})
 sns.set_context("paper") 
@@ -312,43 +317,10 @@ print(isin_result)
     - 정확도, 정밀도, 재현율, F1 점수, AUC-ROC, 회귀 - RMSE, MAE 등 
 - 표로 잘 정리하기
 
+</details>
 
 <!------------------------------------------------------------------------------------------------------->
 
-</details>
-
-## 다양한 샘플링 기법
-<details><summary>다양한 샘플링 기법 설명</summary>
-
-### 샘플링 기법
-- 임의 추출
-- 계통 추출 (공장)
-- 층화 추출 (나이 및 성별별 추출)
-- 군집 추출 (전국 -> 서울)
-- 다 단계 추출 (전국 -> 서울 -> 남성)
-- 비 확률적 추출 (임의 추출)
-
-주의 : 편향적인 데이터가 되지 않게
-
-### 샘플링 기법 코드
-
-```
-# 언더 샘플링
-RandomUnderSampler
-EditedNearestNeighbours 
-
-# 오버 샘플링
-RandomOverSampler
-SMOTE
-
-# Both
-SMOTEENN
-```
-
-</details>
-
-
-<!------------------------------------------------------------------------------------------------------->
 
 ## 마이닝 알고리즘
 <details><summary>다양한 마이닝 알고리즘 정리</summary>
@@ -409,42 +381,60 @@ SMOTEENN
 
 ### code
 
+<details><summary>전처리</summary>
+
+```py
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
+
+```
+</details>
+
+<details><summary>트레인 테스트 데이터 분할</summary>
+
+```py
+from sklearn.model_selection import train_test_split
+
+
+x_train, x_test, y_train, y_test = train_test_split(
+    x_data,y_data,
+    test_size=0.3,
+    random_state=42,
+    )
+    # stratify=y_data
+    # y라벨의 비율 유지
+```
+</details>
+
 <details><summary>마이닝 알고리즘</summary>
 
 ```py
-# 기본 라이브러리
-import numpy as np
-import pandas as pd
-import seaborn as sns
-
 # 머신러닝 라이브러리
 import sklearn
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
-from sklearn.model_selection import train_test_split
 
 #Models
 from sklearn.neighbors import KNeighborsClassifier # KNN
-from sklearn.tree import DecisionTreeClassifier # DT
-from sklearn.linear_model import LogisticRegression # 분류 문제 로지스틱 회귀
-from sklearn import svm
-from xgboost import XGBRegressor
-
-from sklearn import metrics
-
-import numpy as np
-import pandas as pd
-import seaborn as sns
-
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import matplotlib_inline.backend_inline
-
-import sklearn
-from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier # 잘쓰면 트리모델만큼 좋은게 없다.
-from sklearn import metrics
-
+from sklearn.tree import DecisionTreeClassifier # 의사결정나무
+from sklearn.linear_model import LogisticRegression # 로지스틱 회귀
+from sklearn.svm import SVC # 서포트 벡터 분류
+from sklearn.svm import NuSVC # Nu 서포트 벡터 분류
+from sklearn.svm import LinearSVC # 선형 서포트 벡터 분류
+from sklearn.ensemble import AdaBoostClassifier # AdaBoost 분류
+from sklearn.ensemble import RandomForestClassifier # 랜덤 포레스트 분류
+from sklearn.ensemble import GradientBoostingClassifier # 그래디언트 부스팅 분류
+from sklearn.ensemble import ExtraTreesClassifier # Extra Trees 분류
+from sklearn.ensemble import HistGradientBoostingClassifier # 히스토그램 기반 그래디언트 부스팅 분류
+from sklearn.ensemble import BaggingClassifier # 배깅 분류
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis # 선형 판별 분석
+from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis # 이차 판별 분석
+from sklearn.linear_model import RidgeClassifier # 릿지 분류
+from sklearn.linear_model import Perceptron # 퍼셉트론
+from sklearn.neural_network import MLPClassifier # 다층 퍼셉트론 분류
+from sklearn.gaussian_process import GaussianProcessClassifier # 가우시안 프로세스 분류
+from sklearn.naive_bayes import GaussianNB # 가우시안 나이브 베이즈
+from sklearn.naive_bayes import ComplementNB # 보완 나이브 베이즈
+from sklearn.naive_bayes import BernoulliNB # 베르누이 나이브 베이즈
+from xgboost import XGBRegressor # XGB 회귀
+import xgboost as xgb # xgb (별칭)
 
 ```
 </details>
@@ -452,6 +442,26 @@ from sklearn import metrics
 <details><summary>교차 검증</summary>
 
 ```py
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.model_selection import cross_val_score
+
+# 전처리기 na값 자동채움과
+# 랜덤 포레스트의 모델을 파이프라인으로 구축,
+# 동일한 결과를 위한 random_state=0
+my_pipe = Pipeline(steps=[
+    ('preprocessor', SimpleImputer()) ,
+    ('model', RandomForestRegressor(n_estimators=50, random_state=0))
+])
+
+#neg_mab_error 의 결과는 -으로 나오기 때문에 -1 을 곱해준다.
+scores = -1 * cross_val_score(
+    my_pipe, X, y,
+    cv=4,
+    scoring='neg_mean_absolute_error')
+
+print(scores.mean())
 
 ```
 </details>
@@ -459,6 +469,17 @@ from sklearn import metrics
 <details><summary>PCA</summary>
 
 ```py
+from sklearn.decomposition import PCA
+
+# 주성분 분석 n = 차원 수
+pca = PCA(n_components = 2).fit_transform(feature_df)
+```
+</details>
+
+<details><summary>Metrics</summary>
+
+```py
+from sklearn import metrics
 
 ```
 </details>
@@ -470,23 +491,68 @@ from sklearn import metrics
 ```
 </details>
 
-<details><summary>sk-learn train-test spliting</summary>
+<details><summary>그리드 서치, 랜더마이즈드 서치</summary>
 
 ```py
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV
+from sklearn.model_selection import RandomizedSearchCV
+from sklearn.model_selection import StratifiedKFold
 
+def grid_search(x_train, y_train, params, base_model):
+    model_base = GridSearchCV( # or Randomized Search
+        # n_iter=10 # for Randomized Search
+        base_model,
+        params,
+        cv = StratifiedKFold(3,shuffle=True, random_state = 209), # Cross Valid
+        return_train_score=True,
+        n_jobs = -1 # CPU or GPU?
+        )
 
-x_train, x_test, y_train, y_test = train_test_split(
-    x_data,y_data,
-    test_size=0.3,
-    random_state=97,
-    )
-    # stratify=y_data
-    # y라벨의 비율 유지
+    model_base.fit(x_train, y_train)
+    
+    best_model = model_base.best_estimator_
+    best_pred = best_model.predict(x_test)
+    print("최고 정확도", metrics.accuracy_score(best_pred,y_test))
+    return best_model, grid_model.cv_results_ # 최고성능 모델과 ,교차검증 결과
+
+params = {} # dict 형식 {"파라미터": list,}
+
 ```
 </details>
-
 <br>
+
+<!------------------------------------------------------------------------------------------------------->
+
+## 다양한 샘플링 기법
+<details><summary>다양한 샘플링 기법 설명</summary>
+
+### 샘플링 기법
+- 임의 추출
+- 계통 추출 (공장)
+- 층화 추출 (나이 및 성별별 추출)
+- 군집 추출 (전국 -> 서울)
+- 다 단계 추출 (전국 -> 서울 -> 남성)
+- 비 확률적 추출 (임의 추출)
+
+주의 : 편향적인 데이터가 되지 않게
+
+### 샘플링 기법 코드
+
+```
+# 언더 샘플링
+RandomUnderSampler
+EditedNearestNeighbours 
+
+# 오버 샘플링
+RandomOverSampler
+SMOTE
+
+# Both
+SMOTEENN
+```
+
+</details>
+
 
 <!------------------------------------------------------------------------------------------------------->
 
