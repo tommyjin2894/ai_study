@@ -174,11 +174,11 @@
     |-|-|-|
     |Sigmoid|$\phi = \frac{1}{1+e^{-x}}$|0 ~ 1|
     |tanh|$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$|-1 ~ 1|
-    |ReLU|$f(z) = max(0, z)$|0 ~ 1|
-    |Leaky ReLU|$f(z) = max(\epsilon z, z)$|0 ~ 1|
-    |ELU|$f(x) = x \space \text{if } x \geq 0$<br>$f(x) = \alpha (e^x - 1) \space \text{if } x < 0$|0 ~ 1|
-    |SoftPlus|$f(z) =  \ln(1 + e^x)$|0 ~ 1|
-    |GeLU|$0.5 \cdot x \cdot \left( 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \cdot \left( x + 0.044715 \cdot x^3 \right) \right) \right)$|0 ~ 1|
+    |ReLU|$f(z) = max(0, z)$|$0 \leq f(x)$|
+    |Leaky ReLU|$f(z) = max(\epsilon z, z)$|$0 \leq f(x)$|
+    |ELU|$f(x) = x \space \text{if } x \geq 0$<br>$f(x) = \alpha (e^x - 1) \space \text{if } x < 0$|$0 \leq f(x)$|
+    |SoftPlus|$f(z) =  \ln(1 + e^x)$|$0 \leq f(x)$|
+    |GeLU|$0.5 \cdot x \cdot \left( 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \cdot \left( x + 0.044715 \cdot x^3 \right) \right) \right)$|free <br>ReLU 계열 그래프와 비슷|
 
 </details>
 
