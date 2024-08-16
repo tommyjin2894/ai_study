@@ -20,8 +20,10 @@ plt.rc("font", family = "Malgun Gothic")
 plt.rcParams["axes.unicode_minus"] = False
 ```
 <!------------------------------------------------------------------------------------------------------->
-
 ## 파이썬 기본 코드 연습
+
+### codes
+
 <details>
 <summary>numpy</summary>
 
@@ -87,7 +89,6 @@ np.load('file.npy')
 
 <details>
 <summary>pandas</summary>
-
 
 ```py
 import pandas as pd
@@ -412,6 +413,56 @@ SMOTEENN
 
 </details>
 
+### codes
+
+<details>
+
+<summary>마이닝 알고리즘</summary>
+
+```py
+# 기본 라이브러리
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+# 머신러닝 라이브러리
+import sklearn
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
+from sklearn.model_selection import train_test_split
+
+#Models
+from sklearn.neighbors import KNeighborsClassifier # KNN
+from sklearn.tree import DecisionTreeClassifier # DT
+from sklearn.linear_model import LogisticRegression # 분류 문제 로지스틱 회귀
+from sklearn import svm
+from xgboost import XGBRegressor
+
+from sklearn import metrics
+```
+</details>
+
+<details><summary>교차 검증</summary>
+
+```py
+
+```
+</details>
+
+<details><summary>PCA</summary>
+
+```py
+
+```
+</details>
+
+<details><summary>Confusion Matrix</summary>
+
+```py
+
+```
+</details>
+
+<br>
 
 <!------------------------------------------------------------------------------------------------------->
 
