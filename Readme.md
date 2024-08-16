@@ -411,16 +411,20 @@ x_train, x_test, y_train, y_test = train_test_split(
 # 머신러닝 라이브러리
 import sklearn
 
-#Models
+# Main Models
 from sklearn.neighbors import KNeighborsClassifier # KNN
 from sklearn.tree import DecisionTreeClassifier # 의사결정나무
 from sklearn.linear_model import LogisticRegression # 로지스틱 회귀
 from sklearn.svm import SVC # 서포트 벡터 분류
+from sklearn.ensemble import RandomForestClassifier # 랜덤 포레스트 분류
+from sklearn.ensemble import GradientBoostingClassifier # 그래디언트 부스팅 분류
+from sklearn.naive_bayes import GaussianNB # 가우시안 나이브 베이즈
+from xgboost import XGBRegressor # XGB 회귀
+
+# Extras
 from sklearn.svm import NuSVC # Nu 서포트 벡터 분류
 from sklearn.svm import LinearSVC # 선형 서포트 벡터 분류
 from sklearn.ensemble import AdaBoostClassifier # AdaBoost 분류
-from sklearn.ensemble import RandomForestClassifier # 랜덤 포레스트 분류
-from sklearn.ensemble import GradientBoostingClassifier # 그래디언트 부스팅 분류
 from sklearn.ensemble import ExtraTreesClassifier # Extra Trees 분류
 from sklearn.ensemble import HistGradientBoostingClassifier # 히스토그램 기반 그래디언트 부스팅 분류
 from sklearn.ensemble import BaggingClassifier # 배깅 분류
@@ -430,11 +434,10 @@ from sklearn.linear_model import RidgeClassifier # 릿지 분류
 from sklearn.linear_model import Perceptron # 퍼셉트론
 from sklearn.neural_network import MLPClassifier # 다층 퍼셉트론 분류
 from sklearn.gaussian_process import GaussianProcessClassifier # 가우시안 프로세스 분류
-from sklearn.naive_bayes import GaussianNB # 가우시안 나이브 베이즈
 from sklearn.naive_bayes import ComplementNB # 보완 나이브 베이즈
 from sklearn.naive_bayes import BernoulliNB # 베르누이 나이브 베이즈
-from xgboost import XGBRegressor # XGB 회귀
 import xgboost as xgb # xgb (별칭)
+
 
 ```
 </details>
