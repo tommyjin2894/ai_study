@@ -163,11 +163,7 @@
 
 #### 허브 손실
 - 특징 : MSE + MAE,$\delta$는 임계 값
-   $L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ 
-
-    \delta |y - \hat{y}| - \frac{1}{2} \delta^2 & \text{if} \quad|y-\hat{y}| > \delta
-
-    \end{cases}$
+   $L_\delta(y,\hat{y}) = \begin{cases} \frac{1}{2} (y - \hat{y})^2 & \text{if} \quad|y - \hat{y}| \leq \delta \\ \delta |y - \hat{y}| - \frac{1}{2} \delta^2 & \text{if} \quad|y-\hat{y}| > \delta \end{cases}$
 
 #### 로그 코사인 유도
 특징 : 이상치에 매우 강함
