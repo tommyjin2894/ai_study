@@ -81,7 +81,7 @@
     |-|LSTM|Long, Short Term Memory|
     |-|Auto Encoder|Encoder->Latent Space->Decoder|
     |-|Transformer|Self Attention, ED Attention|
-    |기타|AdaBoost|약한 학습기$\times$N = 강한 학습기|
+    |기타|AdaBoost|약한 학습기 x N = 강한 학습기|
     |-|XGBoost|Gradient Boosting Machines 의 효율적이고 강력하게 개선|
 
 <br>
@@ -135,14 +135,12 @@
 <details>
 <summary>다양한 딥러닝 layers</summary>
 
-### 단층 퍼셉트론
-- XOR 같은 비선형 문제에 대한 한계
-- 역전파는 존재하지 않았다
-### 다층 퍼셉트론
-- 범용 근사자 <br>
-    : 충분히 크고 복잡한 어떠한 문제라도 이론적으로 학습 가능
-### 
-### 
+|이름|특징|구조|
+|-|-|-|
+|단층 퍼셉트론|XOR 같은 비선형 문제에 대한 한계<br>역전파는 존재하지 않았다|단층 구조|
+|다층 퍼셉트론|범용 근사자:<br>충분히 크고 복잡한 어떠한 문제라도 이론적으로 학습 가능|다층 구조|
+
+ 
 
 </details>
 
