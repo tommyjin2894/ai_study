@@ -24,8 +24,7 @@ plt.rcParams["axes.unicode_minus"] = False
 
 ### codes
 
-<details>
-<summary>numpy</summary>
+<details><summary>numpy</summary>
 
 ```py
 import numpy as np
@@ -87,8 +86,7 @@ np.load('file.npy')
 ```
 </details>
 
-<details>
-<summary>pandas</summary>
+<details><summary>pandas</summary>
 
 ```py
 import pandas as pd
@@ -229,8 +227,7 @@ df.plot.bar()
 ```
 </details>
 
-<details>
-<summary>OpenCV</summary>
+<details><summary>OpenCV</summary>
 
 ```py
 # !pip install opencv-python==4.6.0.66
@@ -307,8 +304,7 @@ print(isin_result)
 </details>
 
 ## 모델 설계
-<details>
-<summary>모델 설계 시 가이드</summary>
+<details><summary>모델 설계 시 가이드</summary>
 
 - baseline baseline 모델을 설정하고, 이보다 좋은성능 내기
 - 데이터 불균형 30% 정도 일때 부터 조치를 취해야함
@@ -322,8 +318,7 @@ print(isin_result)
 </details>
 
 ## 다양한 샘플링 기법
-<details>
-<summary>다양한 샘플링 기법 설명</summary>
+<details><summary>다양한 샘플링 기법 설명</summary>
 
 ### 샘플링 기법
 - 임의 추출
@@ -356,8 +351,7 @@ SMOTEENN
 <!------------------------------------------------------------------------------------------------------->
 
 ## 마이닝 알고리즘
-<details>
-<summary>다양한 마이닝 알고리즘 정리</summary>
+<details><summary>다양한 마이닝 알고리즘 정리</summary>
 
 - 머신러닝 모델(지도 학습) <br>
     |모델|이름|설명|
@@ -413,11 +407,8 @@ SMOTEENN
 
 </details>
 
-### codes
-
-<details>
-
-<summary>마이닝 알고리즘</summary>
+<details><summary>codes</summary>
+<details><summary>마이닝 알고리즘</summary>
 
 ```py
 # 기본 라이브러리
@@ -438,6 +429,23 @@ from sklearn import svm
 from xgboost import XGBRegressor
 
 from sklearn import metrics
+
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import matplotlib_inline.backend_inline
+
+import sklearn
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier # 잘쓰면 트리모델만큼 좋은게 없다.
+from sklearn import metrics
+
+
 ```
 </details>
 
@@ -462,13 +470,27 @@ from sklearn import metrics
 ```
 </details>
 
+<details><summary>sk-learn train-test spliting</summary>
+
+```py
+x_train, x_test, y_train, y_test = train_test_split(
+    x_data,y_data,
+    test_size=0.3,
+    random_state=97,
+    )
+    # stratify=y_data
+    # y라벨의 비율 유지
+```
+</details>
+
+</details>
+
 <br>
 
 <!------------------------------------------------------------------------------------------------------->
 
 ## 딥러닝
-<details>
-<summary>다양한 딥러닝 모델 구조</summary>
+<details><summary>다양한 딥러닝 모델 구조</summary>
 
 |이름|특징|구조|
 |-|-|-|
@@ -487,8 +509,7 @@ from sklearn import metrics
 
 </details>
 
-<details>
-<summary>비용 함수</summary>
+<details><summary>비용 함수</summary>
 
 ### 비용함수 및 손실함수
 - 손실 함수 : 데이터 포인트 하나에 대한 오차 함수
@@ -508,8 +529,7 @@ from sklearn import metrics
 
 </details>
 
-<details>
-<summary>활성화 함수</summary>
+<details><summary>활성화 함수</summary>
 
 ### 비용함수 및 손실함수
 - 손실 함수 : 데이터 포인트 하나에 대한 오차 함수
@@ -527,8 +547,7 @@ from sklearn import metrics
 
 </details>
 
-<details>
-<summary>옵티마이저</summary>
+<details><summary>옵티마이저</summary>
 
 ### 옵티 마이저
 - 옵티 마이저 : 수치 최적화 알고리즘
@@ -543,8 +562,7 @@ from sklearn import metrics
 
 </details>
 
-<details>
-<summary>딥러닝 문제 해결 기법</summary>
+<details><summary>딥러닝 문제 해결 기법</summary>
 
 ### 문제 및 완화법
 - 경사 소실 문제
@@ -568,8 +586,7 @@ from sklearn import metrics
 <!------------------------------------------------------------------------------------------------------->
 
 ## 다양한 Pretraind 모델
-<details>
-<summary>CNN 기반</summary>
+<details><summary>CNN 기반</summary>
 
 |이름|내용|특징|레이어|
 |-|-|-|-|
@@ -585,8 +602,7 @@ from sklearn import metrics
 </details>
 
 
-<details>
-<summary>자연어 처리 기반</summary>
+<details><summary>자연어 처리 기반</summary>
 
 |이름|내용|특징|
 |-|-|-|
@@ -596,8 +612,7 @@ from sklearn import metrics
 
 </details>
 
-<details>
-<summary>객체 탐지 모델</summary>
+<details><summary>객체 탐지 모델</summary>
 
 |Shots|이름|내용|특징|
 |-|-|-|-|
@@ -614,8 +629,7 @@ from sklearn import metrics
 <!-------------------------------------------------------------------------------------------------------> 
 
 ## 모델 평가 하기
-<details>
-<summary>모델 평가</summary>
+<details><summary>모델 평가</summary>
 
 
 1. 정확도(Accuracy):
@@ -662,8 +676,7 @@ from sklearn import metrics
 <!-------------------------------------------------------------------------------------------------------> 
 
 ## 분류 및 회귀 문제
-<details>
-<summary>여러 종류의 분류 회귀 문제 유형</summary>
+<details><summary>여러 종류의 분류 회귀 문제 유형</summary>
 
 ### 분류 문제
 |이름|내용|
