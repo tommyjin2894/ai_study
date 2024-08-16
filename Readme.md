@@ -169,17 +169,17 @@
 ### 비용함수 및 손실함수
 - 손실 함수 : 데이터 포인트 하나에 대한 오차 함수
 - 비용 함수 : 전체 데이터에 대한 오차 함수
-    
+
     |이름|공식|출력 범위
     |-|-|-|
     |Sigmoid|$\phi = \frac{1}{1+e^{-x}}$|0 ~ 1|
     |tanh|$\tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$|-1 ~ 1|
     |ReLU|$f(z) = max(0, z)$|0 ~ 1|
     |Leaky ReLU|$f(z) = max(\epsilon z, z)$|0 ~ 1|
-    |ELU|$f(x) = \begin{cases} x & \text{if } x \geq 0 \\ \alpha (e^x - 1) & \text{if } x < 0 \end{cases}$|0 ~ 1|
+    |ELU|$f(x) = x \space \text{if } x \geq 0$<br>$f(x) = \alpha (e^x - 1) \space \text{if } x < 0$|0 ~ 1|
     |SoftPlus|$f(z) =  \ln(1 + e^x)$|0 ~ 1|
     |GeLU|$0.5 \cdot x \cdot \left( 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \cdot \left( x + 0.044715 \cdot x^3 \right) \right) \right)$|0 ~ 1|
-    
+
 </details>
 
 <!------------------------------------------------------------------------------------------------------->
