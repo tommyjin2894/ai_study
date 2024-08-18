@@ -1036,10 +1036,186 @@ print(isin_result)
 </details>
 
 ### codes
+- 이미지 분류
+    - <details><summary>이미지 기본 전처리</summary>
 
-- <details><summary>e</summary>
+        ```py
+        import tensorflow as tf
+        from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
+        # 이미지 데이터 전처리
+        def preprocess_image(image_size=(224, 224), batch_size=32):
+            datagen = ImageDataGenerator(
+                rescale=1./255,
+                shear_range=0.2,
+                zoom_range=0.2,
+                horizontal_flip=True,
+                validation_split=0.2
+            )
+
+            train_generator = datagen.flow_from_directory(
+                'path/to/dataset',
+                target_size=image_size,
+                batch_size=batch_size,
+                class_mode='categorical',
+                subset='training'
+            )
+
+            validation_generator = datagen.flow_from_directory(
+                'path/to/dataset',
+                target_size=image_size,
+                batch_size=batch_size,
+                class_mode='categorical',
+                subset='validation'
+            )
+
+            return train_generator, validation_generator
+
+        ```
+    </details>
+
+    - <details><summary>다양한 CNN based models</summary>
+
+        ```py
+        from tensorflow.keras.applications import (
+            VGG16, VGG19,
+            ResNet50, ResNet101, ResNet152, 
+            InceptionV3, InceptionResNetV2,
+            Xception,
+            DenseNet121, DenseNet169, DenseNet201,
+            MobileNet, MobileNetV2, MobileNetV3Small, MobileNetV3Large,
+            NASNetMobile, NASNetLarge,
+            EfficientNetB0, EfficientNetB1, EfficientNetB2, EfficientNetB3, 
+            EfficientNetB4, EfficientNetB5, EfficientNetB6, EfficientNetB7
+        )
+        from tensorflow.keras.models import Sequential
+        from tensorflow.keras.layers import Dense, GlobalAveragePooling2D
+        
+        # 모델 딕셔너리 생성
+        models_dict = {
+            'VGG16': VGG16,
+            'VGG19': VGG19,
+            'ResNet50': ResNet50,
+            'ResNet101': ResNet101,
+            'ResNet152': ResNet152,
+            'InceptionV3': InceptionV3,
+            'InceptionResNetV2': InceptionResNetV2,
+            'Xception': Xception,
+            'DenseNet121': DenseNet121,
+            'DenseNet169': DenseNet169,
+            'DenseNet201': DenseNet201,
+            'MobileNet': MobileNet,
+            'MobileNetV2': MobileNetV2,
+            'MobileNetV3Small': MobileNetV3Small,
+            'MobileNetV3Large': MobileNetV3Large,
+            'NASNetMobile': NASNetMobile,
+            'NASNetLarge': NASNetLarge,
+            'EfficientNetB0': EfficientNetB0,
+            'EfficientNetB1': EfficientNetB1,
+            'EfficientNetB2': EfficientNetB2,
+            'EfficientNetB3': EfficientNetB3,
+            'EfficientNetB4': EfficientNetB4,
+            'EfficientNetB5': EfficientNetB5,
+            'EfficientNetB6': EfficientNetB6,
+            'EfficientNetB7': EfficientNetB7
+        }
+        
+        # 모델 생성 함수
+        def create_model(model_name, input_shape=(224, 224, 3), num_classes=1000):
+            base_model = models_dict[model_name](weights='imagenet', include_top=False, input_shape=input_shape)
+        
+            # 모델 구조 정의
+            model = Sequential()
+            model.add(base_model)
+            model.add(GlobalAveragePooling2D())
+            model.add(Dense(1024, activation='relu'))
+            model.add(Dense(num_classes, activation='softmax'))
+            
+            return model
+        
+        # 모델 생성 예시
+        model_name = 'ResNet50'
+        input_shape = (224, 224, 3)
+        num_classes = 10  # 데이터셋에 따른 클래스 수
+        model = create_model(model_name, input_shape, num_classes)
+        
+        # 모델 요약 출력
+        model.summary()
+        
+        ```
 </details>
+        
+- LM Models
+    - <details><summary>BERTopic</summary>
+        : 텍스트의 토픽 추출 및 시각화 - 트랜스 포머 기반, 대량 문서 자동 토픽 추출, 토픽 사이의 관계 파악<br>
+        : 주요 기능 - 자동 토픽 수 검출, 유사한 토픽 제거, 시각화, 동적 토픽 모델링(시간에 따라 변하는 트렌드 추척)<br>
+
+        ```py
+        !pip install update BERTopic
+        ``` 
+
+        ```py
+        from bertopic import BERTopic
+
+        import pandas as pd
+        import numpy as np
+
+        # 데이터 읽어오기
+        df = pd.read_csv('topic_example.csv', engine='python')
+
+        # 내용 처리 하기
+        docs = df['text'].to_list()
+        docs = [re.sub(r'[^ㄱ-ㅎㅏ-ㅣ가-힣 .]', '', s) for s in docs]
+        docs = [re.sub(r'\s+', ' ', s) for s in docs]
+
+        model = BERTopic(language='korean', nr_topics=10, calculate_probabilities=True)
+        topics, probabilities = model.fit_transform(docs)
+
+        # 토픽 요약
+        model.get_topic_info()
+
+        # 토픽 (3) 의 상세 내용 확인
+        model.get_topic(3)
+
+        # 다양한 시각화
+        model.visualize_barchart(top_n_topics=8) # 바 차트
+        model.visualize_topics() # 주제간 거리 차트
+        model.visualize_hierarchy(top_n_topics=10) # 계층적 클러스터링
+        model.visualize_heatmap(top_n_topics=10) # 히트맵
+        model.visualize_distribution(model.probabilities_[0], min_probability=0.015) # 특정 문서 주제 분포 시각화
+        ```
+        외부 모델
+        ```py
+        embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        topic_model = BERTopic(embedding_model=embedding_model)
+
+        topics, probabilities = topic_model.fit_transform(docs)
+
+        # 임베딩 벡터 만들기
+        embeddings = embedding_model.encode(docs)
+        print("임베딩 차원:", embeddings.shape)
+        print("첫 번째 문서의 임베딩 벡터:", embeddings[0])
+        ```
+        
+    </details>
+        
+    - <details><summary>GPT</summary>
+        
+    </details>
+        
+    - <details><summary>bert</summary>
+        
+    </details>
+
+- Object Detection Models
+    - <details><summary>SSD</summary>
+
+    </details>
+
+    - <details><summary>YOLO</summary>
+
+    </details>
+
 
 <!-------------------------------------------------------------------------------------------------------> 
 
