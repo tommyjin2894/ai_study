@@ -751,30 +751,30 @@ print(isin_result)
     import tensorflow as tf
     from tensorflow.keras.models import Model
     from tensorflow.keras.layers import Input, LSTM, Dense
-    
+
     # 인코더
     encoder_inputs = Input(shape=(None, 50))
     encoder_lstm = LSTM(256, return_state=True)
     encoder_outputs, state_h, state_c = encoder_lstm(encoder_inputs)
     encoder_states = [state_h, state_c]
-    
+
     # 디코더
     decoder_inputs = Input(shape=(None, 50))
     decoder_lstm = LSTM(256, return_sequences=True, return_state=True)
-    
+
     decoder_outputs, _, _ = decoder_lstm(decoder_inputs, initial_state=encoder_states)
     decoder_dense = Dense(50, activation='softmax')
     decoder_outputs = decoder_dense(decoder_outputs)
-    
+
     # 모델 컴파일
     model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-    
+
     # 모델 요약
     model.summary()
     ```
     ```
-    
+
     ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
     ┃ Layer (type)        ┃ Output Shape      ┃    Param # ┃ Connected to      ┃
     ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
@@ -798,6 +798,100 @@ print(isin_result)
     ```
     
 </details>
+
+- <details><summary>Transformer</summary>
+
+    ```py
+    from tensorflow.keras import layers
+
+    class EncoderBlock(layers.Layer):
+        def __init__(self, embed_dim, num_heads, ff_dim, rate=0.1):
+            super().__init__()
+            self.att = layers.MultiHeadAttention(num_heads=num_heads, key_dim=embed_dim)
+            self.ffn = keras.Sequential(
+                [layers.Dense(ff_dim, activation="relu"), layers.Dense(embed_dim),]
+            )
+
+            # 레이어 정규화
+            self.layernorm1 = layers.LayerNormalization()
+            self.layernorm2 = layers.LayerNormalization()
+
+            self.dropout1 = layers.Dropout(rate)
+            self.dropout2 = layers.Dropout(rate)
+
+        def call(self, inputs, training):
+            attn_output = self.att(inputs, inputs)
+            attn_output = self.dropout1(attn_output, training=training)
+            out1 = self.layernorm1(inputs + attn_output)
+            ffn_output = self.ffn(out1)
+            ffn_output = self.dropout2(ffn_output, training=training)
+            return self.layernorm2(out1 + ffn_output)
+    ```
+
+    ```py
+    # 토큰 및 위치 임베딩 정의
+    class TokenAndPositionEmbedding(layers.Layer):
+        def __init__(self, maxlen, vocab_size, embed_dim):
+
+            super().__init__()
+            self.token_emb = layers.Embedding(input_dim=vocab_size, output_dim=embed_dim)
+            self.pos_emb = layers.Embedding(input_dim=maxlen, output_dim=embed_dim)
+
+        def call(self, x):
+            maxlen = tf.shape(x)[-1]
+            positions = tf.range(start=0, limit=maxlen, delta=1)
+            positions = self.pos_emb(positions)
+            x = self.token_emb(x)
+            return x + positions
+    ```
+
+    ```py
+    # 모델 설계
+
+    embed_dim = 32  # 각 토큰의 임베딩 벡터 크기
+    num_heads = 2  # 어텐션 헤드의 수
+    ff_dim = 32  # 완전연결층의 노드 수
+
+    inputs = layers.Input(shape=(maxlen,))
+    embedding_layer = TokenAndPositionEmbedding(maxlen, vocab_size, embed_dim)
+    x = embedding_layer(inputs)
+    x = EncoderBlock(embed_dim, num_heads, ff_dim)(x, training=True)
+    x = EncoderBlock(embed_dim, num_heads, ff_dim)(x, training=True)
+    x = layers.GlobalAveragePooling1D()(x)
+    x = layers.Dropout(0.1)(x)
+    x = layers.Dense(20, activation="relu")(x)
+    x = layers.Dropout(0.1)(x)
+    outputs = layers.Dense(2, activation="softmax")(x)
+    ```
+
+    ```py
+    model = keras.Model(inputs=inputs, outputs=outputs)
+    model.summary()
+    ```
+
+    ```py
+    ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+    ┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+    ┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+    │ input_layer_10 (InputLayer)     │ (None, 200)            │             0 │
+    ├─────────────────────────────────┼────────────────────────┼───────────────┤
+    │ token_and_position_embedding_2  │ (None, 200, 512)       │    10,342,400 │
+    │ (TokenAndPositionEmbedding)     │                        │               │
+    ├─────────────────────────────────┼────────────────────────┼───────────────┤
+    │ encoder_block_8 (EncoderBlock)  │ (None, 200, 512)       │     6,336,544 │
+    ├─────────────────────────────────┼────────────────────────┼───────────────┤
+    │ global_average_pooling1d_2      │ (None, 512)            │             0 │
+    │ (GlobalAveragePooling1D)        │                        │               │
+    ├─────────────────────────────────┼────────────────────────┼───────────────┤
+    │ dropout_31 (Dropout)            │ (None, 512)            │             0 │
+    ├─────────────────────────────────┼────────────────────────┼───────────────┤
+    │ dense_22 (Dense)                │ (None, 20)             │        10,260 │
+    ├─────────────────────────────────┼────────────────────────┼───────────────┤
+    │ dropout_32 (Dropout)            │ (None, 20)             │             0 │
+    ├─────────────────────────────────┼────────────────────────┼───────────────┤
+    │ dense_23 (Dense)                │ (None, 2)              │            42 │
+    └─────────────────────────────────┴────────────────────────┴───────────────┘
+    ```
 
 <!------------------------------------------------------------------------------------------------------->
 
