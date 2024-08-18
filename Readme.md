@@ -746,9 +746,7 @@ print(isin_result)
 
 ## 데이터 증강 기법
 
-<details><summary></summary>
-
-- <details><summary>keras 증강</summary>
+- <details><summary>keras 변형 증강</summary>
 
     ```py
     from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -791,7 +789,7 @@ print(isin_result)
     ```
 </details>
 
-- <details><summary>AE 증강</summary>
+- <details><summary>AE 학습 증강</summary>
 
     ```py
     import os
@@ -842,6 +840,7 @@ print(isin_result)
         augment_images(autoencoder, images, save_folder)
         ```
 
+</details>
 </details>
 
 ## 다양한 Pretraind 모델
