@@ -696,9 +696,9 @@ SMOTEENN
   2. 재현율(Recall), 정밀도(Precision), F1-score:
       - 데이터의 불균형 30% 이상일때
       - 재현율: 실제 양성 중 양성 비율 <br>
-         : $\frac{\text{TP}}{\text{FP} + {\text{FP}}}$
+         : $$\frac{\text{TP}}{\text{FP} + {\text{FP}}}$$
       - 정밀도: 예측한 양성 중 실제 양성비율 <br>
-         : $\frac{\text{TP}}{\text{FP} + {\text{FN}}}$
+         : $$\frac{\text{TP}}{\text{FP} + {\text{FN}}}$$
       - F1-score: 재현율과 정밀도의 조화 평균
   
   3. 혼동 행렬(Confusion Matrix):
