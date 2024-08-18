@@ -711,7 +711,7 @@ print(isin_result)
 
     ```py
     from tensorflow.keras.models import Model
-    from tensorflow.keras.layers import Dense, Input, Embedding, Flatten # Input 모델의 입력을 정의할 때 
+    from tensorflow.keras.layers import Dense, Input, Embedding, Flatten
     from tensorflow.keras.datasets import mnist
     from tensorflow.keras.regularizers import l1 # 정규화 과적합 방지
     from tensorflow.keras.optimizers import Adam
@@ -742,6 +742,63 @@ print(isin_result)
     ```
     
 </details>
+
+
+- <details><summary>seq2seq</summary>
+
+    ```py
+    import numpy as np
+    import tensorflow as tf
+    from tensorflow.keras.models import Model
+    from tensorflow.keras.layers import Input, LSTM, Dense
+    
+    # 인코더
+    encoder_inputs = Input(shape=(None, 50))
+    encoder_lstm = LSTM(256, return_state=True)
+    encoder_outputs, state_h, state_c = encoder_lstm(encoder_inputs)
+    encoder_states = [state_h, state_c]
+    
+    # 디코더
+    decoder_inputs = Input(shape=(None, 50))
+    decoder_lstm = LSTM(256, return_sequences=True, return_state=True)
+    
+    decoder_outputs, _, _ = decoder_lstm(decoder_inputs, initial_state=encoder_states)
+    decoder_dense = Dense(50, activation='softmax')
+    decoder_outputs = decoder_dense(decoder_outputs)
+    
+    # 모델 컴파일
+    model = Model([encoder_inputs, decoder_inputs], decoder_outputs)
+    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+    
+    # 모델 요약
+    model.summary()
+    ```
+    ```
+    
+    ┏━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━┓
+    ┃ Layer (type)        ┃ Output Shape      ┃    Param # ┃ Connected to      ┃
+    ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━┩
+    │ input_layer         │ (None, None, 50)  │          0 │ -                 │
+    │ (InputLayer)        │                   │            │                   │
+    ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+    │ input_layer_1       │ (None, None, 50)  │          0 │ -                 │
+    │ (InputLayer)        │                   │            │                   │
+    ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+    │ lstm (LSTM)         │ [(None, 256),     │    314,368 │ input_layer[0][0] │
+    │                     │ (None, 256),      │            │                   │
+    │                     │ (None, 256)]      │            │                   │
+    ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+    │ lstm_1 (LSTM)       │ [(None, None,     │    314,368 │ input_layer_1[0]… │
+    │                     │ 256), (None,      │            │ lstm[0][1],       │
+    │                     │ 256), (None,      │            │ lstm[0][2]        │
+    │                     │ 256)]             │            │                   │
+    ├─────────────────────┼───────────────────┼────────────┼───────────────────┤
+    │ dense (Dense)       │ (None, None, 50)  │     12,850 │ lstm_1[0][0]      │
+    └─────────────────────┴───────────────────┴────────────┴───────────────────┘
+    ```
+    
+</details>
+
 <!------------------------------------------------------------------------------------------------------->
 
 ## 데이터 증강 기법
@@ -884,6 +941,12 @@ print(isin_result)
 
 </details>
 
+### codes
+
+- <details><summary>e</summary>
+
+</details>
+
 <!-------------------------------------------------------------------------------------------------------> 
 
 ## 모델 평가 하기
@@ -969,6 +1032,19 @@ print(isin_result)
 |주택 가격 예측|가격 예측|
 |주식 가격 예측|가격 예측|
 |온도 예측|기상 데이터로 온도 예측|
+
+</details>
+
+<!-------------------------------------------------------------------------------------------------------> 
+
+## 시계열
+<details><summary>시계열 이론</summary>
+
+
+</details>
+
+<details><summary>시계열 코드</summary>
+
 
 </details>
 
