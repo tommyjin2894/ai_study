@@ -354,7 +354,7 @@ print(isin_result)
     baseline 클러스터링 : 유사도 기준 L1(manhatten), L2(Euclidean) 으로 군집화
 </details>
 
-- <details><summary>비지도 학습</summary>
+- <details><summary>다양한 기법</summary>
 
     |종류|이름|설명|
     |---|---|---|
@@ -387,6 +387,14 @@ print(isin_result)
     ```py
     from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 
+    # StandardScaler
+    model_std = StandardScaler()
+
+    # MinMaxScaler
+    model_minmax = MinMaxScaler()
+
+    # RobustScaler
+    model_robust = RobustScaler()
     ```
 </details>
 
@@ -394,7 +402,6 @@ print(isin_result)
 
     ```py
     from sklearn.model_selection import train_test_split
-
 
     x_train, x_test, y_train, y_test = train_test_split(
         x_data,y_data,
@@ -472,10 +479,22 @@ print(isin_result)
 - <details><summary>PCA</summary>
 
     ```py
+    import pandas as pd
     from sklearn.decomposition import PCA
+    import matplotlib.pyplot as plt
 
-    # 주성분 분석 n = 차원 수
+    train = pd.read_csv("table.csv")
+    feature_df = train[train.columns[1:6]]
     pca = PCA(n_components = 2).fit_transform(feature_df)
+
+    colors = {0:"blue", 1:"red"}
+    c = train["attrition"].replace(colors)
+    ```
+    그래프 그리기
+    ```py
+    fig, ax = plt.subplots(figsize=(4,4))
+    ax.scatter(pca[:,0], pca[:,1], alpha=0.6, color=c)
+    ax.set(xlabel=R"X", ylabel=R"Y", title="PCA");
     ```
 </details>
 
@@ -512,34 +531,44 @@ print(isin_result)
 <!------------------------------------------------------------------------------------------------------->
 
 ## 다양한 샘플링 기법
-<details><summary>다양한 샘플링 기법 설명</summary>
 
-### 샘플링 기법
-- 임의 추출
-- 계통 추출 (공장)
-- 층화 추출 (나이 및 성별별 추출)
-- 군집 추출 (전국 -> 서울)
-- 다 단계 추출 (전국 -> 서울 -> 남성)
-- 비 확률적 추출 (임의 추출)
+### 내용 정리
+- <details><summary>다양한 샘플링 기법 설명</summary>
+  
+  ### 샘플링 기법
+  - 임의 추출
+  - 계통 추출 (공장)
+  - 층화 추출 (나이 및 성별별 추출)
+  - 군집 추출 (전국 -> 서울)
+  - 다 단계 추출 (전국 -> 서울 -> 남성)
+  - 비 확률적 추출 (임의 추출)
+  
+  주의 : 편향적인 데이터가 되지 않게
+  
+  </details>
 
-주의 : 편향적인 데이터가 되지 않게
-
-### 샘플링 기법 코드
-
-```
-# 언더 샘플링
-RandomUnderSampler
-EditedNearestNeighbours 
-
-# 오버 샘플링
-RandomOverSampler
-SMOTE
-
-# Both
-SMOTEENN
-```
-
-</details>
+### codes
+- <details><summary>다양한 샘플링 기법</summary>
+  
+  ### 샘플링 기법 코드
+  
+  ```py
+  # 언더 샘플링
+  from imblearn.under_sampling import RandomUnderSampler, EditedNearestNeighbours
+  from imblearn.over_sampling import RandomOverSampler, SMOTE
+  from imblearn.combine import SMOTEENN
+  
+  RandomUnderSampler
+  EditedNearestNeighbours 
+  
+  # 오버 샘플링
+  RandomOverSampler
+  SMOTE
+  
+  # Both
+  SMOTEENN
+  ```
+  </details>
 
 
 <!------------------------------------------------------------------------------------------------------->
@@ -631,14 +660,189 @@ SMOTEENN
     |Early Stop|더 이상 학습이 진행되지 않을떄 학습 중단|
     |데이터 증강|비슷한 데이터를 복제하여 학습 데이터로 만듬<br>테스트 할떄 증강 금지|
 
-
-
-
 </details>
 
+### codes
+                                                                        
+- <details><summary>다양한 layers</summary>
 
+    - 기본 라이브러리
+        ```py
+        import tensorflow as tf
+        from tensorflow.keras import datasets, layers, models, optimizers
+        ```
+    - CNN
+        ```py
+        model = models.Sequential()
+        model.add(layers.Conv2D(32, (3, 3), activation='relu',
+                            input_shape=input_shape))
+        model.add(layers.MaxPooling2D(pool_size=(2, 2)))
+        model.add(layers.Dropout(0.25))
 
+        model.add(layers.Flatten())
+        model.add(layers.Dense(512, activation='relu'))
+        model.add(layers.Dropout(0.5))
+        model.add(layers.Dense(classes, activation='softmax'))
+        ```
+    -  RNN
+        ```py
+        model = models.Sequential()
+        model.add(layers.Embedding(max_features, 64, input_length=max_len))
+        model.add(layers.SimpleRNN(32, activation='tanh', return_sequences=False))
+        model.add(layers.Dense(16, activation='tanh'))
+        model.add(layers.Dense(2, activation = 'softmax'))
+        model.summary()
+        ```
+    - LSTM
+        ```py
+        model1 = models.Sequential()
+        model1.add(layers.Embedding(max_features, 128, input_length=maxlen))
+
+        # return_sequence=True - 모든 스테이트를 내보냄
+        model1.add(layers.Bidirectional(layers.LSTM(64, return_sequences=True)))
+        model1.add(layers.Bidirectional(layers.LSTM(64)))
+        model1.add(layers.Dense(2, activation = 'softmax'))
+        model1.summary()
+        ```
+    
+</details>
+
+- <details><summary>Auto Encoder</summary>
+
+    ```py
+    from tensorflow.keras.models import Model
+    from tensorflow.keras.layers import Dense, Input, Embedding, Flatten # Input 모델의 입력을 정의할 때 
+    from tensorflow.keras.datasets import mnist
+    from tensorflow.keras.regularizers import l1 # 정규화 과적합 방지
+    from tensorflow.keras.optimizers import Adam
+
+    import matplotlib.pyplot as plt
+    import numpy as np
+    import pandas as pd
+    ```
+
+    ```py
+    input_size = 784
+    hidden_size = 128
+    code_size = 32 # 잠재 공간 벡터의 크기
+
+    input_img = Input(shape=(input_size,)) # 인풋
+
+    hidden_1 = Dense(hidden_size, activation='relu')(input_img) # 인코더 부분
+
+    code = Dense(code_size, activation='relu')(hidden_1) # 잠재 공간
+
+    hidden_2 = Dense(hidden_size, activation='relu')(code) # 디코더 부분(인코더와 같다)
+    output_img = Dense(input_size, activation='sigmoid')(hidden_2)
+    # 인코더 부분과 디코더 부분 둘다 있어야 한다면,
+    # 출력 층의 사이즈는 입력층의 사이즈와 같아야 한다.
+
+    # 인코더부분과 디코더 부분의 결합
+    autoencoder = Model(input_img, output_img)
+    ```
+    
+</details>
 <!------------------------------------------------------------------------------------------------------->
+
+## 데이터 증강 기법
+
+<details><summary></summary>
+
+- <details><summary>keras 증강</summary>
+
+    ```py
+    from tensorflow.keras.preprocessing.image import ImageDataGenerator
+    from tensorflow.keras.preprocessing.image import load_img, img_to_array, array_to_img
+
+    # 별표 위주로 쓰임
+    tf.keras.preprocessing.image.ImageDataGenerator(
+        featurewise_center=False,
+        samplewise_center=False,
+        featurewise_std_normalization=False,
+        samplewise_std_normalization=False,
+        zca_whitening=False,
+        zca_epsilon=1e-06,
+        rotation_range=0, #***
+        width_shift_range=0.0, #***
+        height_shift_range=0.0, #***
+        brightness_range=None, #***
+        shear_range=0.0,
+        zoom_range=0.0, #***
+        channel_shift_range=0.0,
+        fill_mode='nearest',
+        cval=0.0,
+        horizontal_flip=False, #***
+        vertical_flip=False, #***
+        rescale=None,
+        preprocessing_function=None,
+        data_format=None,
+        validation_split=0.0,
+        interpolation_order=1,
+        dtype=None
+    )
+    ```
+
+    ```py
+    # 이미지 로드 (예시로 하나의 이미지를 사용)
+    img = load_img('image.jpg')  # 이미지 경로
+    x = img_to_array(img)  # 이미지를 배열로 변환
+    x = x.reshape((1,) + x.shape)  # (1, height, width, channels) # 배치 차원 추가
+
+    ```
+</details>
+
+- <details><summary>AE 증강</summary>
+
+    ```py
+    import os
+    import numpy as np
+    import tensorflow as tf
+    from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, UpSampling2D
+    from tensorflow.keras.models import Model
+    from tensorflow.keras.preprocessing.image import load_img, img_to_array, array_to_img
+    ```
+    - 함수정의
+        ```py
+        # 이미지 파일 로드 및 전처리 - 로컬
+        def load_images_local(folder_path, target_size=(128, 128)):
+            images = []
+            filenames = os.listdir(folder_path)
+            for filename in filenames:
+                try:
+                    img_path = os.path.join(folder_path, filename)
+                    img = load_img(img_path, target_size=target_size)
+                    img = img_to_array(img) / 255.0
+                    images.append(img)
+                except:
+                    pass
+            return np.array(images)
+
+            # 이미지 증강 및 저장
+        def augment_images(autoencoder, images, save_dir):
+            decoded_images = autoencoder.predict(images)
+            if not os.path.exists(save_dir):
+                os.makedirs(save_dir)
+            for i, img_array in enumerate(decoded_images):
+                img = array_to_img(img_array)
+                img.save(os.path.join(save_dir, f'augmented_image_{i}.png'))
+        ```
+    - 증강 시작
+        ```py
+        data_folder = '../data/data_mw/woman'  # 이미지 폴더
+        save_folder = '../data/data_mw_add/woman_new'  # 증강된 이미지를 저장할 폴더
+
+        # 이미지 로드 - 로컬
+        images = load_images_local(data_folder)
+
+        # 오토인코더 모델 구성 및 훈련
+        autoencoder = build_autoencoder(input_shape=(128, 128, 3))
+        autoencoder.fit(images, images, epochs=20, batch_size=20)
+
+        # 이미지 증강 및 저장
+        augment_images(autoencoder, images, save_folder)
+        ```
+
+</details>
 
 ## 다양한 Pretraind 모델
 <details><summary>CNN 기반</summary>
