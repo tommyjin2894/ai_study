@@ -1343,14 +1343,33 @@ print(isin_result)
 
         ```py
         from ultralytics import YOLO
-
+        
         from pathlib import Path
         
         rel_path = "roboflow_yolo/test__-1/data.yaml"
         full_path = Path(rel_path).resolve()
         model = YOLO("roboflow_yolo/yolov8n.pt")
-
         ```
+
+        ```py
+        model.train(data=full_path, epochs=100, imgsz=640, plots=True)
+        ```
+        ```py
+        model = YOLO('runs/detect/train/weights/best.pt')  # load a custom model
+        ```
+        ```py
+        results = model.predict("data/_09_OD/images/Abyssinian_24.jpg", conf=0.05)  # predict on an image
+
+        from PIL import Image
+
+        # Show the results
+        for r in results:
+            im_array = r.plot()  # plot a BGR numpy array of predictions
+            im = Image.fromarray(im_array[..., ::-1])  # RGB PIL image
+            im.show()  # show image
+            # im.save('results.jpg')  # save image
+        ```
+        ![yolo_result](github_pics\000001.png)
     </details>
 
 
