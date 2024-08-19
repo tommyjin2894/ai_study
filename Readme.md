@@ -1200,20 +1200,157 @@ print(isin_result)
     </details>
         
     - <details><summary>GPT</summary>
-        
-    </details>
-        
-    - <details><summary>bert</summary>
-        
+
+        ```py
+        import torch
+        from transformers import GPT2LMHeadModel, PreTrainedTokenizerFast
+
+        tokenizer = PreTrainedTokenizerFast.from_pretrained("skt/kogpt2-base-v2",
+        bos_token='</s>', eos_token='</s>', unk_token='<unk>',
+        pad_token='<pad>', mask_token='<mask>')
+
+        model = GPT2LMHeadModel.from_pretrained('skt/kogpt2-base-v2')
+        text = '''우리 삶에 가장 필요한 덕목은 무엇일까? 그건 바로 취'''
+
+        input_ids = tokenizer.encode(text, return_tensors='pt')
+        gen_ids = model.generate(input_ids,
+                                   max_length=100,
+                                   repetition_penalty=2.0,
+                                   pad_token_id=tokenizer.pad_token_id,
+                                   eos_token_id=tokenizer.eos_token_id,
+                                   bos_token_id=tokenizer.bos_token_id,
+                                   use_cache=True)
+        generated = tokenizer.decode(gen_ids[0])
+        print(generated)
+        ```
+        ```
+        우리 삶에 가장 필요한 덕목은 무엇일까? 그건 바로 취업과 승진이다.
+        그런데 이게 왜 중요한지 알 수 없다.
+        이렇게 취업난에 허덕이는 청년들이 어떻게 하면 좋은 직장을 구할까 고민하는 것은 당연한 일이다.
+        하지만 이런 고민을 하는 이유는 뭘까?
+        바로 '취업' 때문이다.
+        취업을 위해선 무엇보다 자신의 적성과 능력에 맞는 일자리를 찾아야 한다.
+        그래야 자신이 원하는 직장에 갈 확률이 높아진다.
+        또한 자기계발을 위한 노력도 필요하다.
+        자신의 능력을 최대한 발휘할 기회를 만들어주는 것이
+        ```
     </details>
 
 - Object Detection Models
     - <details><summary>SSD</summary>
+        
+        ```py
+        !pip install torchvisionz
+        ```
 
+        ```py
+        def load_pretrained_ssd_model():
+        # 사전 학습된 SSD300 모델 호출.
+        model = ssd300_vgg16(pretrained=True) # 사전에 학습된 가중치를 사용
+        model.eval()  # 평가 모드로 설정
+        return model
+
+        ```
+
+        ```py
+        img_path = 'test_imgs.png'
+
+        # 이미지 로드, 전처리
+        img = Image.open(img_path).convert("RGB")
+
+        # 이미지 크기 얻기
+        orig_width, orig_height = img.size
+
+        transform = transforms.Compose([
+            transforms.Resize((300, 300)),  # 모델 입력 크기에 맞춰 조정
+            transforms.ToTensor(),  # 텐서로 변환
+            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # 이미지 정규화
+        ])
+
+        img = transform(img).unsqueeze(0)  # 배치 차원 추가
+        ```
+        - 예측 결과 처리
+            
+            ```py
+            import matplotlib.pyplot as plt
+            import matplotlib.patches as patches
+
+            # COCO 2017 클래스 이름 목록
+            COCO_INSTANCE_CATEGORY_NAMES = [
+                'background', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus','train', 'truck', 'boat', 'traffic light',
+                'fire hydrant', '???', 'stop sign','parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep',
+                'cow', 'elephant', 'bear', 'zebra', 'giraffe', '????', 'backpack', 'umbrella', '?_?', '?????',
+                'handbag', 'tie','suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat',
+                'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', '?', 'wine glass','cup','fork','knife','spoon',
+                'bowl','banana','apple','sandwich','orange','broccoli','carrot','hot dog','pizza','donut',
+                'cake','chair','couch','potted plant','bed','???','dining table','???','???','toilet',
+                '???', 'tv','laptop','mouse','remote','keyboard','cell phone','microwave','oven','toaster',
+                'sink','refrigerator','book','clock','???','vase','scissors','teddy bear','hair drier','toothbrush']
+            ```
+            ```py
+            # 예측 결과 가져오기
+            pred_scores = predictions[0]['scores'].numpy()
+            pred_boxes = predictions[0]['boxes'].numpy()
+            pred_labels = predictions[0]['labels'].numpy()
+            ```
+            ```py
+            # 신뢰도가 가장 높은 결과 가져오기
+            max_score_idx = pred_scores.argmax()
+            score = pred_scores[max_score_idx]
+            ```
+        - 결과 시각화
+            
+            ```py
+            # 결과 시각화
+            img = Image.open(img_path).convert("RGB")
+            plt.figure(figsize=(12, 12))
+            plt.imshow(img)
+            ax = plt.gca()
+
+            for idxeee in range(1,2):
+                if score > 0.1:
+                    box = pred_boxes[max_score_idx]
+                    # 경계 상자 좌표를 원본 이미지 크기에 맞게 조정
+                    box = [
+                        (box[0] / 300) * orig_width,
+                        (box[1] / 300) * orig_height,
+                        (box[2] / 300) * orig_width,
+                        (box[3] / 300) * orig_height
+                    ]
+
+                    # print(box)
+                    label = pred_labels[max_score_idx]
+                    # print(label) # 88
+                    x_min, y_min, x_max, y_max = box
+                    rect = patches.Rectangle((x_min, y_min), x_max - x_min, y_max - y_min,
+                        linewidth=2, edgecolor='red', facecolor='none')
+                    ax.add_patch(rect)
+                    label_name = COCO_INSTANCE_CATEGORY_NAMES[max_score_idx]
+                    # label_name = COCO_INSTANCE_CATEGORY_NAMES[pred_labels[max_score_idx]]
+                    # print(label_name)
+                    ax.text(x_min, y_min, f'{label_name} {score:.2f}', color='white',
+                            bbox=dict(facecolor='red', alpha=0.5))
+
+
+            plt.axis('off')
+            plt.show()
+
+            ```
     </details>
 
     - <details><summary>YOLO</summary>
+        - [로보 플로우](https://roboflow.com/)
 
+        ```py
+        from ultralytics import YOLO
+
+        from pathlib import Path
+        
+        rel_path = "roboflow_yolo/test__-1/data.yaml"
+        full_path = Path(rel_path).resolve()
+        model = YOLO("roboflow_yolo/yolov8n.pt")
+
+        ```
     </details>
 
 
