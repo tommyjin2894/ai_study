@@ -1369,7 +1369,7 @@ print(isin_result)
             im.show()  # show image
             # im.save('results.jpg')  # save image
         ```
-        ![yolo_result](github_pics\000001.png)
+        ![yolo_result](github_pics/000001.png)
     </details>
 
 
