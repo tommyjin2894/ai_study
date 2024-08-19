@@ -1339,7 +1339,7 @@ print(isin_result)
     </details>
 
     - <details><summary>YOLO</summary>
-        - [로보 플로우](https://roboflow.com/)
+        - 로보 플로우 : https://roboflow.com/
 
         ```py
         from ultralytics import YOLO
