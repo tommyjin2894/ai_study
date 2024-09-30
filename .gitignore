@@ -1,4 +1,5 @@
 # to ignores
+/.vscode
 /.obsidian
 /1. all_content_summary.ipynb
 /2. Graph_setting_template.ipynb
