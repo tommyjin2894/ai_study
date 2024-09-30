@@ -1,27 +1,22 @@
-# 정리 
+# [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
 
 ## 기본 시각화 코드
 ```py
-# 기본 라이브러리
 import numpy as np
 import pandas as pd
 import seaborn as sns
-
-# 그래프 라이브러리
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib_inline.backend_inline
 
-# 기본 설정 
-
-matplotlib_inline.backend_inline.set_matplotlib_formats("png2x")
+matplotlib_inline.backend_inline.set_matplotlib_formats("png2x") # svg, retina, png2x ...
 mpl.style.use("seaborn-v0_8")
 mpl.rcParams.update({"figure.constrained_layout.use": True})
 sns.set_context("paper") 
 sns.set_palette("Set2") 
 sns.set_style("whitegrid") 
 
-plt.rc("font", family = "Malgun Gothic")
+plt.rc("font", family = "NanumSquareRound")
 plt.rcParams["axes.unicode_minus"] = False
 ```
 <!------------------------------------------------------------------------------------------------------->
