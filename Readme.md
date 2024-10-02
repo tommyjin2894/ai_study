@@ -1,5 +1,20 @@
 # [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
 
+# [전체 파일 구조](file_hirachy.md)
+
+### 참고 링크
+[roboflow](https://roboflow.com/) <br>
+[ultraytics](https://docs.ultralytics.com/integrations/roboflow/) <br>
+learn open cv .com <br>
+supervisely <br>
+superb ai <br>
+labelstudio.com -> 오디오에서 감성 분석 가능 <br>
+
+[Label Studio](https://labelstud.io/guide/) <br>
+[Label Me](https://github.com/labelmeai/labelme) <br>
+[Anylabeling](https://github.com/vietanhdev/anylabeling) <br>
+[X-Anylabeling](https://github.com/CVHub520/X-AnyLabeling) <br>
+ 
 ## 기본 시각화 코드
 ```py
 import numpy as np
