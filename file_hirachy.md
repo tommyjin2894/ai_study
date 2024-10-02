@@ -3,6 +3,8 @@
 ```
 /
     file_hirachey.ipynb
+    수료증_박진형.pdf
+    우수 수료생_박진형.pdf
 _Generative Deep Learning 2nd/
     2.3 다층 퍼셉트론 구현.ipynb
     2.4 합성곱 신경망.ipynb
@@ -70,9 +72,6 @@ __KDT__season_1/
         통계특강_2.ipynb
     api_keys/
         도서관정보나루_API_Manual.pdf
-    new_env_east/
-        2024 05 20/
-        env_data/
     selfstudy/
         20240525_trend.ipynb
         20240526_seasonal.ipynb
