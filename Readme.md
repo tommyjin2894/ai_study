@@ -1,8 +1,9 @@
-### [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
+### 노션 및 파일 구조
+- [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
 
-### [전체 파일 구조](mds/file_hirachy.md)
+- [전체 파일 구조](mds/file_hirachy.md)
 
-## 기본 시각화 코드
+### 기본 시각화 코드
 ```py
 import numpy as np
 import pandas as pd
