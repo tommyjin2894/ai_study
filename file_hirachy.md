@@ -80,7 +80,7 @@ __KDT__season_1/
         240601.ipynb
         240602.ipynb
     강사님 codes/
-        1. 양승환 강사님/
+        1. 양 강사님/
             00_string.ipynb
             01_number.ipynb
             02_variable.ipynb
@@ -103,7 +103,7 @@ __KDT__season_1/
             16_numpy.ipynb
             17_pandas.ipynb
             18_plus_alpha.ipynb
-        2. 나민원 강사님/
+        2. 나 강사님/
             240527_01_ml-from-scratch-with-iris_ML_.ipynb
             240527_02_knn.ipynb
             240527_03_DT.ipynb
