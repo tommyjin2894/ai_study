@@ -1,6 +1,6 @@
-# [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
+### [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
 
-# [전체 파일 구조](file_hirachy.md)
+### [전체 파일 구조](file_hirachy.md)
 
 ### 참고 링크
 [roboflow](https://roboflow.com/) <br>
@@ -31,368 +31,88 @@ sns.set_context("paper")
 sns.set_palette("Set2") 
 sns.set_style("whitegrid") 
 
+# 시스템 폰트패밀리에 따라 변경
 plt.rc("font", family = "NanumSquareRound")
 plt.rcParams["axes.unicode_minus"] = False
 ```
-<!------------------------------------------------------------------------------------------------------->
+<!--------------------------------------->
+
 ## 파이썬 기본 코드 연습
 
-### codes
+### 데이터 불균형 성능평가
+- 데이터 불균형 판단기준 : 30%
+    - 데이터 불 균형시 다양한 샘플링 및 다양한 metrics 설정
+      - 정확도, 정밀도, 재현율, F1 스코어, AUC-ROC,
 
-<details><summary>numpy</summary>
+### 회귀 성능 평가
+- RMSE, MAE 등 
 
-```py
-import numpy as np
+### 😊결과를 표로 잘 정리하기😊
 
-a = np.array([1,2,3,4,5])
-np.arange(1,2,0.1)
-np.linspace(1,3,4)
-np.zeros((3,4))
-np.ones((3,4))
-np.empty((3,4,3))
-np.random.random((3,2))
-np.random.randint(1,20,(3,4,2))
-
-# 사이즈확인
-a.ndim
-a.size
-a.shape
-
-# 모양 바꾸기
-a.reshape(5,1)
-a.T
-a.transpose()
-a.flatten()
-a.ravel()
-
-a[:,np.newaxis,np.newaxis,np.newaxis,np.newaxis,np.newaxis,np.newaxis]
-np.expand_dims(a, axis=1)
-
-#indexing
-list_a = np.arange(1,11).reshape(2,5) #.tolist() #리스트로 바꾸기
-list_a[0,2]
-list_a[:,2]
-
-list_a[(5 >= list_a) | (list_a % 2 == 0)]
-list_a[(5 >= list_a) & (list_a % 2 == 0)]
-
-list_a = np.arange(1,10).reshape(3,3)
-list_b = np.arange(11,20).reshape(3,3)
-list_a + list_b
-list_a + 10 == list_b
-
-list_a + np.array([[1],[2],[3]])
-list_a + np.array([1,2,3])
-
-np.concatenate((list_a,list_b),axis=0)
-np.concatenate((list_a,list_b),axis=1)
-np.vstack((list_a,list_b))
-np.hstack((list_a,list_b))
-
-np.unique(np.array([2,2,3,4,4,4,3]))
-np.unique(np.array([2,2,3,4,4,4,3]), return_counts=True)
-np.unique(np.array([2,2,3,4,4,4,3]), return_counts=True, return_index=True, return_inverse= True)
-
-np.flip(np.array([1,2,3]))
-np.flip(np.array([[1,2,3],[1,2,3],[1,2,3]]),axis=0)
-
-np.save('file.npy',np.arange(1,10,1)*1000)
-np.load('file.npy')
-```
-</details>
-
-<details><summary>pandas</summary>
-
-```py
-import pandas as pd
-
-dates = pd.date_range("20240510", periods=20)
-df = pd.DataFrame(np.random.randint(1,4,(20,4)),
-                  index=dates,
-                  columns=list('ABCD'))
-
-df.head(2) # df.tail(2)
-df.to_numpy() # df.values
-df.describe()
-df.sort_index(axis=1,ascending=False)
-df.sort_index(axis=0,ascending=False)
-df.sort_values(['A','B'], ascending=[True,False]) # 순위 매기기
-# df.sample(6)
-
-df['A'] # 시리즈
-df[['A','B']] # 데이터 프레임 으로
-
-df["2024-05-10":"2024-05-20"] # index로 슬라이싱
-df.loc["2024-05-10"] # 시리즈
-df.loc[["2024-05-10"]] # 데이터 프레임 으로
-
-df.loc["2024-05-10",['B']] # 시리즈
-df.loc[["2024-05-10"],['B']] # 데이터 프레임 으로
-
-df.loc["2024-05-10":"2024-05-20",'B':'C'] # 데이터 프레임 으로
-df.loc[["2024-05-10","2024-05-20"],'B':'C'] # 데이터 프레임 으로
-
-df.loc["2024-05-10",'A'] # 단일값
-df.at["2024-05-10",'A'] # 단일값
-
-df.iloc[3] # 시리즈
-df.iloc[2:3] # 데이터 프레임 으로
-df.iloc[2,3] # 데이터 프레임 으로
-df.iat[2,3] # 데이터 프레임 으로
-# New std
-dates = pd.date_range("20230515", periods=10)
-s1 = pd.Series(1, index=dates)
-
-df.at['2024-05-15','A'] = 100
-# df['E'] = s1
-df_1 = df.copy()
-df_1.iloc[3:5,2:3] = np.nan
-df_1.iloc[5:12,1:3] = np.nan
-
-df_1.dropna(how='any') # 하나라도 있으면 날리겠다
-df_1.dropna(how='all') # 컬럼전체가 nan이면 날리겠다.
-
-df_1.isna().sum() # 커럼별로
-(~df_1.isna()).sum() # na가 아닌값찾기
-df_1.isna().sum(axis=1) # 로우별로
-
-df_1.fillna(value=999,inplace=True)
-
-# 통계정보
-df_1.mean(axis=1)
-df_1.median(axis=1)
-s_2 = pd.Series(np.random.randint(0,5,10))
-s_2.unique()
-s_2.nunique() # = len(s_2.unique())
-s_2.value_counts().sort_index().sort_values() # 등등등
-
-s_3 = pd.Series(['ASD','asd',np.nan])
-
-# 스트링을 가정하여 한다. https://pandas.pydata.org/pandas-docs/stable/user_guide/text.html
-s_3.str.lower()
-s_3.str.lower()
-
-
-# pandas
-import pandas as pd
-
-dates = pd.date_range("20240510", periods=20)
-df = pd.DataFrame(np.random.randint(1,4,(20,4)),
-                  index=dates,
-                  columns=list('ABCD'))
-
-df.head(2) # df.tail(2)
-df.to_numpy() # df.values
-df.describe()
-df.sort_index(axis=1,ascending=False)
-df.sort_index(axis=0,ascending=False)
-df.sort_values(['A','B'], ascending=[True,False]) # 순위 매기기
-# df.sample(6)
-df = pd.DataFrame(np.random.randn(10,4))
-
-a = df[:3]
-b = df[3:6]
-c = df[6:]
-list_of_abc = [a,b,c]
-pd.concat(list_of_abc)
-left = pd.DataFrame({"key": ["foo", "foo"], "lval": [1, 2]})
-right = pd.DataFrame({"key": ["foo", "foo"], "rval": [4, 5]})
-
-pd.merge(left, right) # 키값이 유니크 하지 않기 때문에 각키별로 각각 붙인다.
-left = pd.DataFrame({"key1": ["foo1", "foo2"], "lval": [1, 2]})
-right = pd.DataFrame({"key2": ["foo1", "foo2"], "rval": [4, 5]})
-
-pd.merge(left, right, left_on='key1', right_on='key2')
-pd.merge(left, right, left_on='key1', right_on='key2', how='outer')
-pd.merge(left, right, left_on='key1', right_on='key2', how='left')
-pd.merge(left, right, left_on='key1', right_on='key2', how='right')
-
-pd.merge(left, right, how='cross', indicator=True)
-# gruoping
-df = pd.DataFrame(
-    {
-        "A": ["foo", "bar", "foo", "bar", "foo", "bar", "foo", "foo"],
-        "B": ["one", "one", "two", "three", "two", "two", "one", "three"],
-        "C": np.random.randint(1,10,8),
-        "D": np.random.randint(1,10,8),
-    }
-)
-df
-df.groupby(by=['A','B'])[['C','D']].sum() # A, B의 컬럼을 그룹화 하고, C끼리 D끼리 더하기
-df.groupby(by=['A','B'])[['C','D']].mean() # A, B의 컬럼을 그룹화 하고, C끼리 D끼리 더하기
-df.groupby(by=['A','B'])[['C','D']].median() # A, B의 컬럼을 그룹화 하고, C끼리 D끼리 더하기
-df2=df.groupby(by=['B','A'])[['C','D']].sum()
-
-print(df2.stack())
-display(df2.stack().unstack(0))
-df = pd.DataFrame({
-    "A": ["one", "one", "two", "three"] * 3,
-    "B": ["A", "B", "C"] * 4,
-    "C": ["foo", "foo", "foo", "bar", "bar", "bar"] * 2,
-    "D": np.random.randn(12),
-    "E": np.random.randn(12),
-})
-
-pd.pivot_table(df, index=['C'], columns=['B'], values=['D'], aggfunc='var')
-
-df.to_excel('test.xlsx', sheet_name='sheet1', index=False)
-df = pd.read_excel('test.xlsx')
-df.to_csv('test.csv', encoding='utf-8')
-df.plot.bar()
-```
-</details>
-
-<details><summary>OpenCV</summary>
-
-```py
-# !pip install opencv-python==4.6.0.66
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-
-print(cv2.__version__)
-
-## 이미지 열기
-img = cv2.imread('images\cat.bmp')
-cv2.imshow('image', img)
-cv2.waitKey(1000) # 안의 값은 시간초
-
-while True:
-    if cv2.waitKey() == ord('x'): # 또는 ascii 코드 를 입력하면 
-        cv2.destroyAllWindows()
-        break
-
-cv2.imwrite('new.jpg', img)
-## matplotlib 을 이용한 이미지 열기
-
-img = cv2.imread('images\waldo.png')
-
-bgr_img = img
-
-# plt.imshow(rgb_img);
-inst_ = bgr_img.copy()
-inst_B = bgr_img[:,:,0].copy()
-bgr_img[:,:,0] = bgr_img[:,:,2]
-bgr_img[:,:,2] = inst_B
-
-plt.imshow(bgr_img);
-gray_img = cv2.imread('images\waldo.png', cv2.IMREAD_GRAYSCALE)
-plt.imshow(gray_img, cmap='gray');
-img = cv2.imread('images\cat.bmp')
-
-img[:,:,0].flatten() # B
-img[:,:,1].flatten() # G
-img[:,:,2].flatten() # R
-img.dtype
-
-black_img = np.zeros((20, 20, 3), dtype=np.uint8)
-white_img = np.ones((20, 20, 3), dtype=np.uint8) * 255
-# rgb_img = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB)
-# # rgb_img[세로 픽셀 범위 , 가로 픽셀 범위, BGR 값]
-# plt.imshow(rgb_img[30:330,250:550]);
-
-#흰도화지 만들기
-# img = np.ones((400,400,3), np.uint8) * 255
-# gray_img = cv2.imread('new.png', cv2.IMREAD_GRAYSCALE)
-# cv2.rectangle(img, (50,200 ,150,100), (100,24,24), 5)
-rgb_img_coppied = gray_img.copy()
-rectpoint = [(250,340), (500,100)]
-color = (100,24,24)
-line_width = 2
-cv2.rectangle(rgb_img_coppied, rectpoint[0], rectpoint[1], color, line_width)
-cv2.putText(rgb_img_coppied, 'Cat',(250, 90), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 2, (0,0,255), 1,cv2.LINE_AA)
-plt.imshow(rgb_img_coppied);
-gray_img = cv2.imread('images\waldo.png', cv2.IMREAD_GRAYSCALE)
-
-#numpy np.clip 이랑 비슷하다 cv2.add(src, 100) 는 255가 넘어가면 다시 0부터 시작한다.
-plt.imshow(cv2.add(gray_img, 200), cmap='gray');
-
-## 사각형 그리기
-import pandas as pd
-df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
-isin_result = df.isin([2, 5])
-print(isin_result)
-
-
-```
-
-</details>
-
-## 모델 설계 시 고려사항
-<details><summary>How To</summary>
-
-- 데이터 불균형 30% 기준
-- 다양한 샘플링 및 다양한 metrics 설정
-  - 정확도, 정밀도, 재현율, F1 스코어, AUC-ROC,
-  - 회귀 : RMSE, MAE 등 
-- 표로 잘 정리하기
-
-</details>
-
-<!------------------------------------------------------------------------------------------------------->
+<!--------------------------------------->
 
 
 ## 마이닝 알고리즘
 
 ### 내용 정리
-- <details><summary>머신러닝 모델(지도 학습)</summary>
+머신러닝 모델(지도 학습)
     
-    |모델|이름|설명|
-    |---|---|---|
-    |분류|Decision Tree|트리구조로 데이터를 분류, 조건 분기|
-    |-|Random Forest|앙상블 기법중 baseline Bagging 중 하나 <br> 여러개의 DT로 구성|
-    |-|KNN|가까운 K 개의 데이터를 기반으로 결정 <br> baseline L1 및 L2 거리|
-    |-|SVM|클래스 간의 경계를 최대화하여 초평면을 찾는다.|
-    |회귀|Linear Regression|선형 관계 모델링|
-    |-|Logistic Regression|이진 분류를 위한 회귀 분석 기법,<br> baseline 확률로     출력값을 변환|
-    |인공 신경망|NN|여러층의 뉴런|
-    |기타|AdaBoost|약한 학습기 x N = 강한 학습기|
-    |-|XGBoost|Gradient Boosting Machines 의 효율적이고 강력하게 개선|
-</details>
+|모델|이름|설명|
+|---|---|---|
+|분류|Decision Tree|트리구조로 데이터를 분류, 조건 분기|
+|-|Random Forest|앙상블 기법중 baseline Bagging 중 하나 <br> 여러개의 DT로 구성|
+|-|KNN|가까운 K 개의 데이터를 기반으로 결정 <br> baseline L1 및 L2 거리|
+|-|SVM|클래스 간의 경계를 최대화하여 초평면을 찾는다.|
+|회귀|Linear Regression|선형 관계 모델링|
+|-|Logistic Regression|이진 분류를 위한 회귀 분석 기법,<br> baseline 확률로     출력값을 변환|
+|인공 신경망|NN|여러층의 뉴런|
+|기타|AdaBoost|약한 학습기 x N = 강한 학습기|
+|-|XGBoost|Gradient Boosting Machines 의 효율적이고 강력하게 개선|
 
-- <details><summary>비지도 학습</summary>
 
-    |종류|이름|설명|
-    |-|-|-|
-    |클러스터링|k-means|비슷한 포인트를 가깝게 위치|
-    |-|계층적 클러스터링|트리 구조로 조직화|
-    |연관 규칙|Apriori 알고리즘|자주 발생 하는 연관 집합|
-    |-|FP-Growth|Apriori 보다 효율적인 |
-    |차원 축소|PCA|데이터를 압축, 저차원으로|
-    |-|t-SNE|2~3 차원으로 시각화, 비슷한 데이터 그룹화|
+비지도 학습
+
+ |종류|이름|설명|
+ |-|-|-|
+ |클러스터링|k-means|비슷한 포인트를 가깝게 위치|
+ |-|계층적 클러스터링|트리 구조로 조직화|
+ |연관 규칙|Apriori 알고리즘|자주 발생 하는 연관 집합|
+ |-|FP-Growth|Apriori 보다 효율적인 |
+ |차원 축소|PCA|데이터를 압축, 저차원으로|
+ |-|t-SNE|2~3 차원으로 시각화, 비슷한 데이터 그룹화|
 
     baseline 클러스터링 : 유사도 기준 L1(manhatten), L2(Euclidean) 으로 군집화
-</details>
 
-- <details><summary>다양한 기법</summary>
 
-    |종류|이름|설명|
-    |---|---|---|
-    |기법|K-fold 교차 검증|점수 평균|
-    |-|Grid search|모든 경우의수를 본다|
-    |-|Randomized search|랜덤한 경우의수를 본다|
-    |앙상블|bagging<br> (bootstrap aggregating)|1. baseline N 개의 샘플을 뽑기<br>->집어넣고 N 개의 샘플을 뽑는다. <br> 2. 중복이 생길 수 있음|
-    |-|Boosting|약한 학습기 X N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat     Boost 등|
-    |-|Stacking|여러 개의 기초모델의 예측<br>종합하여 새로운 메타모델 생성|
+다양한 기법
+
+ |종류|이름|설명|
+ |---|---|---|
+ |기법|K-fold 교차 검증|점수 평균|
+ |-|Grid search|모든 경우의수를 본다|
+ |-|Randomized search|랜덤한 경우의수를 본다|
+ |앙상블|bagging<br> (bootstrap aggregating)|1. baseline N 개의 샘플을 뽑기<br>->집어넣고 N 개의 샘플을 뽑는다. <br> 2. 중복이 생길 수 있음|
+ |-|Boosting|약한 학습기 X N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat     Boost 등|
+ |-|Stacking|여러 개의 기초모델의 예측<br>종합하여 새로운 메타모델 생성|
 
     <details>
-    <summary>K-fold 교차 검증</summary>
+    <summary>K-fold 교차 검증
 
     - 훈련 데이터를 k 개로 분할해 번갈아 가면서 훈련 평가
-        |학습 모델|데이터1|데이터2|데이터3|데이터4|데이터5|
-        | ---   | --- | --- | --- | --- | --- |
-        | 학습 1 | train | train | train | train | test |
-        | 학습 2 | train | train | train | test | train |
-        | 학습 3 | train | train | test | train | train |
-        | 학습 4 | train | test | train | train | train |
-        | 학습 5 | test | train | train | train | train |
+     |학습 모델|데이터1|데이터2|데이터3|데이터4|데이터5|
+     | ---| --- | --- | --- | --- | --- |
+     | 학습 1 | train | train | train | train | test |
+     | 학습 2 | train | train | train | test | train |
+     | 학습 3 | train | train | test | train | train |
+     | 학습 4 | train | test | train | train | train |
+     | 학습 5 | test | train | train | train | train |
 
-    </details>
-</details>
+    
+
 
 ### codes
 
-- <details><summary>전처리</summary>
+전처리
 
     ```py
     from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
@@ -406,9 +126,9 @@ print(isin_result)
     # RobustScaler
     model_robust = RobustScaler()
     ```
-</details>
 
-- <details><summary>트레인 테스트 데이터 분할</summary>
+
+트레인 테스트 데이터 분할
 
     ```py
     from sklearn.model_selection import train_test_split
@@ -421,9 +141,9 @@ print(isin_result)
         # stratify=y_data
         # y라벨의 비율 유지
     ```
-</details>
 
-- <details><summary>마이닝 알고리즘</summary>
+
+마이닝 알고리즘
 
     ```py
     # 머신러닝 라이브러리
@@ -457,9 +177,9 @@ print(isin_result)
 
 
     ```
-</details>
 
-- <details><summary>교차 검증</summary>
+
+교차 검증
 
     ```py
     from sklearn.ensemble import RandomForestRegressor
@@ -484,9 +204,9 @@ print(isin_result)
     print(scores.mean())
 
     ```
-</details>
 
-- <details><summary>PCA</summary>
+
+PCA
 
     ```py
     import pandas as pd
@@ -506,9 +226,9 @@ print(isin_result)
     ax.scatter(pca[:,0], pca[:,1], alpha=0.6, color=c)
     ax.set(xlabel=R"X", ylabel=R"Y", title="PCA");
     ```
-</details>
 
-- <details><summary>그리드 서치, 랜더마이즈드 서치</summary>
+
+그리드 서치, 랜더마이즈드 서치
 
     ```py
     from sklearn.model_selection import GridSearchCV
@@ -535,7 +255,7 @@ print(isin_result)
     params = {} # dict 형식 {"파라미터": list,}
 
     ```
-</details>
+
 <br>
 
 <!------------------------------------------------------------------------------------------------------->
@@ -543,7 +263,7 @@ print(isin_result)
 ## 다양한 샘플링 기법
 
 ### 내용 정리
-- <details><summary>다양한 샘플링 기법 설명</summary>
+다양한 샘플링 기법 설명
   
   ### 샘플링 기법
   - 임의 추출
@@ -555,10 +275,10 @@ print(isin_result)
   
   주의 : 편향적인 데이터가 되지 않게
   
-  </details>
+  
 
 ### codes
-- <details><summary>다양한 샘플링 기법</summary>
+다양한 샘플링 기법
   
   ### 샘플링 기법 코드
   
@@ -578,13 +298,13 @@ print(isin_result)
   # Both
   SMOTEENN
   ```
-  </details>
+  
 
 
 <!------------------------------------------------------------------------------------------------------->
 
 ## 딥러닝
-<details><summary>다양한 딥러닝 모델 구조</summary>
+다양한 딥러닝 모델 구조
 
 |이름|특징|구조|
 |-|-|-|
@@ -601,9 +321,9 @@ print(isin_result)
 |VAE (Variational Autoencoder)|잠재 공간의 확률 분포를 학습하여 새로운 샘플을 생성,<br>데이터의 확률적 특성을 모델링|Encoder, Latent Space (Probability Distribution), Decoder, Variational Objective|
 |GAN (Generative Adversarial Network)|생성자와 판별자 간의 경쟁을 통해 데이터 생성,<br>이미지 생성, 데이터 증강 등에 사용|Generator, Discriminator, Adversarial Training|
 
-</details>
 
-<details><summary>비용 함수</summary>
+
+비용 함수
 
 ### 비용함수 및 손실함수
 - 손실 함수 : 데이터 포인트 하나에 대한 오차 함수
@@ -621,9 +341,9 @@ print(isin_result)
 |-|제곱 힌지 손실|이상치의 민감||
 |-|포칼 손실|오답에 대한 가중치 부여||
 
-</details>
 
-<details><summary>활성화 함수</summary>
+
+활성화 함수
 
 ### 비용함수 및 손실함수
 - 손실 함수 : 데이터 포인트 하나에 대한 오차 함수
@@ -639,9 +359,9 @@ print(isin_result)
     |SoftPlus|$f(z) =  \ln(1 + e^x)$|$0 \leq f(x)$|
     |GeLU|$0.5 \cdot x \cdot \left( 1 + \tanh \left( \sqrt{\frac{2}{\pi}} \cdot \left( x + 0.044715 \cdot x^3 \right) \right) \right)$|Free <br>ReLU 계열 그래프와 비슷|
 
-</details>
 
-<details><summary>옵티마이저</summary>
+
+옵티마이저
 
 ### 옵티 마이저
 - 옵티 마이저 : 수치 최적화 알고리즘
@@ -654,15 +374,15 @@ print(isin_result)
     |RMSProp|단기 파라미터 변화량과 반비례|기울기|학습 률
     |Adam|단기 파라미터 변화량과 반비례|단기 누적 Grad|학습 률
 
-</details>
 
-<details><summary>딥러닝 문제 해결 기법</summary>
+
+딥러닝 문제 해결 기법
 
 ### 문제 및 완화법
 - 경사 소실 문제
     - ReLU 계열의 활성화 함수 사용 <br> (Dead ReLU 문제가 발생할 수 있음)
 - 과적합 문제
-    |이름|내용|
+     |이름|내용|
     |-|-|
     |L1 규제|가중치의 절대값과 비례하는 비용 추가<br>가중치를 0으로 만들어 특성에 대한 영향 제거<br>(모델의 희소성 증가)|
     |L2 규제|가중치의 제곱에 비례하는 비용 추가<br>가중치의 값을 줄여 복잡성을 낮춘다<br>(가중치가 너무 커지는 것을 방지)<br>|
@@ -670,11 +390,11 @@ print(isin_result)
     |Early Stop|더 이상 학습이 진행되지 않을떄 학습 중단|
     |데이터 증강|비슷한 데이터를 복제하여 학습 데이터로 만듬<br>테스트 할떄 증강 금지|
 
-</details>
+
 
 ### codes
                                                                         
-- <details><summary>다양한 layers</summary>
+다양한 layers
 
     - 기본 라이브러리
         ```py
@@ -715,9 +435,9 @@ print(isin_result)
         model1.summary()
         ```
     
-</details>
 
-- <details><summary>Auto Encoder</summary>
+
+Auto Encoder
 
     ```py
     from tensorflow.keras.models import Model
@@ -751,10 +471,10 @@ print(isin_result)
     autoencoder = Model(input_img, output_img)
     ```
     
-</details>
 
 
-- <details><summary>seq2seq</summary>
+
+seq2seq
 
     ```py
     import numpy as np
@@ -807,9 +527,9 @@ print(isin_result)
     └─────────────────────┴───────────────────┴────────────┴───────────────────┘
     ```
     
-</details>
 
-- <details><summary>Transformer</summary>
+
+Transformer
 
     ```py
     from tensorflow.keras import layers
@@ -907,7 +627,7 @@ print(isin_result)
 
 ## 데이터 증강 기법
 
-- <details><summary>keras 변형 증강</summary>
+keras 변형 증강
 
     ```py
     from tensorflow.keras.preprocessing.image import ImageDataGenerator
@@ -948,9 +668,9 @@ print(isin_result)
     x = x.reshape((1,) + x.shape)  # (1, height, width, channels) # 배치 차원 추가
 
     ```
-</details>
 
-- <details><summary>AE 학습 증강</summary>
+
+AE 학습 증강
 
     ```py
     import os
@@ -1001,11 +721,11 @@ print(isin_result)
         augment_images(autoencoder, images, save_folder)
         ```
 
-</details>
-</details>
+
+
 
 ## 다양한 Pretraind 모델
-<details><summary>CNN 기반</summary>
+CNN 기반
 
 |이름|내용|특징|레이어|
 |-|-|-|-|
@@ -1018,10 +738,10 @@ print(isin_result)
 |DenseNet|Dense Block 구조, 모든 레이어의 input을 output에 Concat|ResNet과 비슷한 성능, Feature 재사용 증가|Dense Blocks, Convolutional Layers, Concatenation|
 |EfficientNet|최적의 Depth, Width, Resolution을 찾기 위한 Grid Search, 효율적인 모델 크기 및 성능|구글에 의해 개발, 모델 크기와 계산 효율성 최적화|Compound Scaling, Convolutional Layers, EfficientNet Blocks|
 
-</details>
 
 
-<details><summary>자연어 처리 기반</summary>
+
+자연어 처리 기반
 
 |이름|내용|특징|
 |-|-|-|
@@ -1029,9 +749,9 @@ print(isin_result)
 |BERT (Bidirectional Encoder Representations from Transformers)|양방향 컨텍스트를 사용하여 자연어 이해 성능을 향상시킨 모델. Masked Language Modeling과 Next Sentence Prediction을 통해 사전 학습됨|Bidirectional Context, Pre-training and Fine-tuning, 다양한 NLP 작업에 활용|
 |GPT (Generative Pre-trained Transformer)|대규모 언어 모델로, 언어 생성과 번역을 포함한 다양한 NLP 작업에 강력한 성능을 발휘. Transformer 기반으로 대규모 데이터에서 사전 학습됨|Unidirectional Context, Language Modeling, Transfer Learning|
 
-</details>
 
-<details><summary>객체 탐지 모델</summary>
+
+객체 탐지 모델
 
 |Shots|이름|내용|특징|
 |-|-|-|-|
@@ -1043,11 +763,11 @@ print(isin_result)
 
 > RoI : Region of interest
 
-</details>
+
 
 ### codes
 - 이미지 분류
-    - <details><summary>이미지 기본 전처리</summary>
+    이미지 기본 전처리
 
         ```py
         import tensorflow as tf
@@ -1082,9 +802,9 @@ print(isin_result)
             return train_generator, validation_generator
 
         ```
-    </details>
+    
 
-    - <details><summary>다양한 CNN based models</summary>
+    다양한 CNN based models
 
         ```py
         from tensorflow.keras.applications import (
@@ -1153,10 +873,10 @@ print(isin_result)
         model.summary()
         
         ```
-</details>
+
         
 - LM Models
-    - <details><summary>BERTopic</summary>
+    BERTopic
         : 텍스트의 토픽 추출 및 시각화 - 트랜스 포머 기반, 대량 문서 자동 토픽 추출, 토픽 사이의 관계 파악<br>
         : 주요 기능 - 자동 토픽 수 검출, 유사한 토픽 제거, 시각화, 동적 토픽 모델링(시간에 따라 변하는 트렌드 추척)<br>
 
@@ -1207,9 +927,9 @@ print(isin_result)
         print("첫 번째 문서의 임베딩 벡터:", embeddings[0])
         ```
         
-    </details>
+    
         
-    - <details><summary>GPT</summary>
+    GPT
 
         ```py
         import torch
@@ -1244,152 +964,15 @@ print(isin_result)
         또한 자기계발을 위한 노력도 필요하다.
         자신의 능력을 최대한 발휘할 기회를 만들어주는 것이
         ```
-    </details>
+    
 
-- Object Detection Models
-    - <details><summary>SSD</summary>
-        
-        ```py
-        !pip install torchvisionz
-        ```
-
-        ```py
-        def load_pretrained_ssd_model():
-        # 사전 학습된 SSD300 모델 호출.
-        model = ssd300_vgg16(pretrained=True) # 사전에 학습된 가중치를 사용
-        model.eval()  # 평가 모드로 설정
-        return model
-
-        ```
-
-        ```py
-        img_path = 'test_imgs.png'
-
-        # 이미지 로드, 전처리
-        img = Image.open(img_path).convert("RGB")
-
-        # 이미지 크기 얻기
-        orig_width, orig_height = img.size
-
-        transform = transforms.Compose([
-            transforms.Resize((300, 300)),  # 모델 입력 크기에 맞춰 조정
-            transforms.ToTensor(),  # 텐서로 변환
-            transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])  # 이미지 정규화
-        ])
-
-        img = transform(img).unsqueeze(0)  # 배치 차원 추가
-        ```
-        - 예측 결과 처리
-            
-            ```py
-            import matplotlib.pyplot as plt
-            import matplotlib.patches as patches
-
-            # COCO 2017 클래스 이름 목록
-            COCO_INSTANCE_CATEGORY_NAMES = [
-                'background', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus','train', 'truck', 'boat', 'traffic light',
-                'fire hydrant', '???', 'stop sign','parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep',
-                'cow', 'elephant', 'bear', 'zebra', 'giraffe', '????', 'backpack', 'umbrella', '?_?', '?????',
-                'handbag', 'tie','suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat',
-                'baseball glove', 'skateboard', 'surfboard', 'tennis racket', 'bottle', '?', 'wine glass','cup','fork','knife','spoon',
-                'bowl','banana','apple','sandwich','orange','broccoli','carrot','hot dog','pizza','donut',
-                'cake','chair','couch','potted plant','bed','???','dining table','???','???','toilet',
-                '???', 'tv','laptop','mouse','remote','keyboard','cell phone','microwave','oven','toaster',
-                'sink','refrigerator','book','clock','???','vase','scissors','teddy bear','hair drier','toothbrush']
-            ```
-            ```py
-            # 예측 결과 가져오기
-            pred_scores = predictions[0]['scores'].numpy()
-            pred_boxes = predictions[0]['boxes'].numpy()
-            pred_labels = predictions[0]['labels'].numpy()
-            ```
-            ```py
-            # 신뢰도가 가장 높은 결과 가져오기
-            max_score_idx = pred_scores.argmax()
-            score = pred_scores[max_score_idx]
-            ```
-        - 결과 시각화
-            
-            ```py
-            # 결과 시각화
-            img = Image.open(img_path).convert("RGB")
-            plt.figure(figsize=(12, 12))
-            plt.imshow(img)
-            ax = plt.gca()
-
-            for idxeee in range(1,2):
-                if score > 0.1:
-                    box = pred_boxes[max_score_idx]
-                    # 경계 상자 좌표를 원본 이미지 크기에 맞게 조정
-                    box = [
-                        (box[0] / 300) * orig_width,
-                        (box[1] / 300) * orig_height,
-                        (box[2] / 300) * orig_width,
-                        (box[3] / 300) * orig_height
-                    ]
-
-                    # print(box)
-                    label = pred_labels[max_score_idx]
-                    # print(label) # 88
-                    x_min, y_min, x_max, y_max = box
-                    rect = patches.Rectangle((x_min, y_min), x_max - x_min, y_max - y_min,
-                        linewidth=2, edgecolor='red', facecolor='none')
-                    ax.add_patch(rect)
-                    label_name = COCO_INSTANCE_CATEGORY_NAMES[max_score_idx]
-                    # label_name = COCO_INSTANCE_CATEGORY_NAMES[pred_labels[max_score_idx]]
-                    # print(label_name)
-                    ax.text(x_min, y_min, f'{label_name} {score:.2f}', color='white',
-                            bbox=dict(facecolor='red', alpha=0.5))
-
-
-            plt.axis('off')
-            plt.show()
-
-            ```
-    </details>
-
-    - <details><summary>YOLO</summary>
-        - 로보 플로우 : https://roboflow.com/
-
-        ```py
-        from ultralytics import YOLO
-        
-        from pathlib import Path
-        
-        rel_path = "roboflow_yolo/test__-1/data.yaml"
-        full_path = Path(rel_path).resolve()
-        model = YOLO("roboflow_yolo/yolov8n.pt")
-        ```
-
-        ```py
-        model.train(data=full_path, epochs=100, imgsz=640, plots=True)
-        ```
-        ```py
-        model = YOLO('runs/detect/train/weights/best.pt')  # load a custom model
-        ```
-        ```py
-        results = model.predict("data/_09_OD/images/Abyssinian_24.jpg", conf=0.05)  # predict on an image
-
-        from PIL import Image
-
-        # Show the results
-        for r in results:
-            im_array = r.plot()  # plot a BGR numpy array of predictions
-            im = Image.fromarray(im_array[..., ::-1])  # RGB PIL image
-            im.show()  # show image
-            # im.save('results.jpg')  # save image
-        ```
-        ![yolo_result](github_pics/000001.png)
-    </details>
-
-
-<!-------------------------------------------------------------------------------------------------------> 
+- [Object Detection Models](__KDT__season_3/09_Object_Detection/)
 
 ## 모델 평가 하기
 
 ### 내용 정리
 
-- <details><summary>모델 평가</summary>
+모델 평가
   
   1. 정확도(Accuracy):
       - 일반적 평가 지표
@@ -1430,29 +1013,10 @@ print(isin_result)
   
       - 데이터에 대한 도메인 이해 및 평가
 
-</details>
-
-### codes
-
-- <details><summary>Metrics</summary>
-
-    ```py
-    from sklearn import metrics
-
-    ```
-</details>
-
-- <details><summary>Confusion Matrix</summary>
-
-    ```py
-
-    ```
-</details>
-
 <!-------------------------------------------------------------------------------------------------------> 
 
 ## 분류 및 회귀 문제
-<details><summary>여러 종류의 분류 회귀 문제 유형</summary>
+여러 종류의 분류 회귀 문제 유형
 
 ### 분류 문제
 |이름|내용|
@@ -1469,19 +1033,12 @@ print(isin_result)
 |주식 가격 예측|가격 예측|
 |온도 예측|기상 데이터로 온도 예측|
 
-</details>
+
 
 <!-------------------------------------------------------------------------------------------------------> 
 
 ## 시계열
-<details><summary>시계열 이론</summary>
+시계열 이론
 
-
-</details>
-
-<details><summary>시계열 코드</summary>
-
-
-</details>
 
 <!-------------------------------------------------------------------------------------------------------> 
