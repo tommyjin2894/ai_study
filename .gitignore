@@ -1,7 +1,5 @@
 # to ignores
-__KDT__season_2
 __PDFs
-_Generative Deep Learning 2nd
 
 *.png
 *.pdf
@@ -12,3 +10,5 @@ _Generative Deep Learning 2nd
 *.keras
 *.xlsx
 *.jpg
+*.xml
+*.html
