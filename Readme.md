@@ -1,21 +1,7 @@
 ### [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
 
-### [전체 파일 구조](file_hirachy.md)
+### [전체 파일 구조](mds/file_hirachy.md)
 
-### 참고 링크
-[roboflow](https://roboflow.com/) <br>
-[ultraytics](https://docs.ultralytics.com/integrations/roboflow/) <br>
-learn open cv .com <br>
-supervisely <br>
-superb ai <br>
-labelstudio.com -> 오디오에서 감성 분석 가능 <br>
-
-### segmentation
-[Label Studio](https://labelstud.io/guide/) <br>
-[Label Me](https://github.com/labelmeai/labelme) <br>
-[Anylabeling](https://github.com/vietanhdev/anylabeling) <br>
-[X-Anylabeling](https://github.com/CVHub520/X-AnyLabeling) <br>
- 
 ## 기본 시각화 코드
 ```py
 import numpy as np
@@ -38,7 +24,7 @@ plt.rcParams["axes.unicode_minus"] = False
 ```
 <!--------------------------------------->
 
-## 파이썬 기본 코드 연습
+### [파이썬 기본 코드 연습](mds/1_python_basic_codes.md)
 
 ### 데이터 불균형 성능평가
 - 데이터 불균형 판단기준 : 30%
@@ -228,6 +214,92 @@ PCA
     ax.set(xlabel=R"X", ylabel=R"Y", title="PCA");
     ```
 
+마이닝 알고리즘
+
+    ```py
+    # 머신러닝 라이브러리
+    import sklearn
+    # Main Models
+    from sklearn.neighbors import KNeighborsClassifier # KNN
+    from sklearn.tree import DecisionTreeClassifier # 의사결정나무
+    from sklearn.linear_model import LogisticRegression # 로지스틱 회귀
+    from sklearn.svm import SVC # 서포트 벡터 분류
+    from sklearn.ensemble import RandomForestClassifier # 랜덤 포레스트 분류
+    from sklearn.ensemble import GradientBoostingClassifier # 그래디언트 부스팅 분류
+    from sklearn.naive_bayes import GaussianNB # 가우시안 나이브 베이즈
+    from xgboost import XGBRegressor # XGB 회귀
+
+    # Extras
+    from sklearn.svm import NuSVC # Nu 서포트 벡터 분류
+    from sklearn.svm import LinearSVC # 선형 서포트 벡터 분류
+    from sklearn.ensemble import AdaBoostClassifier # AdaBoost 분류
+    from sklearn.ensemble import ExtraTreesClassifier # Extra Trees 분류
+    from sklearn.ensemble import HistGradientBoostingClassifier # 히스토그램 기반 그래디언트 부스팅 분류
+    from sklearn.ensemble import BaggingClassifier # 배깅 분류
+    from sklearn.discriminant_analysis import LinearDiscriminantAnalysis # 선형 판별 분석
+    from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis # 이차 판별 분석
+    from sklearn.linear_model import RidgeClassifier # 릿지 분류
+    from sklearn.linear_model import Perceptron # 퍼셉트론
+    from sklearn.neural_network import MLPClassifier # 다층 퍼셉트론 분류
+    from sklearn.gaussian_process import GaussianProcessClassifier # 가우시안 프로세스 분류
+    from sklearn.naive_bayes import ComplementNB # 보완 나이브 베이즈
+    from sklearn.naive_bayes import BernoulliNB # 베르누이 나이브 베이즈
+    import xgboost as xgb # xgb (별칭)
+
+
+    ```
+
+
+교차 검증
+
+    ```py
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.pipeline import Pipeline
+    from sklearn.impute import SimpleImputer
+    from sklearn.model_selection import cross_val_score
+
+    # 전처리기 na값 자동채움과
+    # 랜덤 포레스트의 모델을 파이프라인으로 구축,
+    # 동일한 결과를 위한 random_state=0
+    my_pipe = Pipeline(steps=[
+        ('preprocessor', SimpleImputer()) ,
+        ('model', RandomForestRegressor(n_estimators=50, random_state=0))
+    ])
+
+    #neg_mab_error 의 결과는 -으로 나오기 때문에 -1 을 곱해준다.
+    scores = -1 * cross_val_score(
+        my_pipe, X, y,
+        cv=4,
+        scoring='neg_mean_absolute_error')
+
+    print(scores.mean())
+
+    ```
+
+
+PCA
+
+    ```py
+    import pandas as pd
+    from sklearn.decomposition import PCA
+    import matplotlib.pyplot as plt
+
+    train = pd.read_csv("table.csv")
+    feature_df = train[train.columns[1:6]]
+    pca = PCA(n_components = 2).fit_transform(feature_df)
+
+    colors = {0:"blue", 1:"red"}
+    c = train["attrition"].replace(colors)
+    ```
+    그래프 그리기
+    ```py
+    fig, ax = plt.subplots(figsize=(4,4))
+    ax.scatter(pca[:,0], pca[:,1], alpha=0.6, color=c)
+    ax.set(xlabel=R"X", ylabel=R"Y", title="PCA");
+    ```
+
+
+그리드 서치, 랜더마이즈드 서치
 
 그리드 서치, 랜더마이즈드 서치
 
@@ -1043,3 +1115,17 @@ CNN 기반
 
 
 <!-------------------------------------------------------------------------------------------------------> 
+
+### 참고 링크
+[roboflow](https://roboflow.com/) <br>
+[ultraytics](https://docs.ultralytics.com/integrations/roboflow/) <br>
+learn open cv .com <br>
+supervisely <br>
+superb ai <br>
+labelstudio.com -> 오디오에서 감성 분석 가능 <br>
+
+### segmentation
+[Label Studio](https://labelstud.io/guide/) <br>
+[Label Me](https://github.com/labelmeai/labelme) <br>
+[Anylabeling](https://github.com/vietanhdev/anylabeling) <br>
+[X-Anylabeling](https://github.com/CVHub520/X-AnyLabeling) <br>

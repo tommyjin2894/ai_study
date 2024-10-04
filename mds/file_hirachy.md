@@ -5,6 +5,7 @@
     file_hirachey.ipynb
     수료증_박진형.pdf
     우수 수료생_박진형.pdf
+mds/
 _Generative Deep Learning 2nd/
     2.3 다층 퍼셉트론 구현.ipynb
     2.4 합성곱 신경망.ipynb
