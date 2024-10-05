@@ -1,8 +1,7 @@
-### 링크
-- [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
-- [전체 파일 구조](mds/file_hirachy.md)
-
 ### 기본 시각화 코드
+<details>
+<summary>🧑‍💻code🧑‍💻</summary>
+
 ```py
 import numpy as np
 import pandas as pd
@@ -22,25 +21,29 @@ sns.set_style("whitegrid")
 plt.rc("font", family = "NanumSquareRound")
 plt.rcParams["axes.unicode_minus"] = False
 ```
-# 내용정리
+</details>
 
-### [파이썬 기본 코드 연습](mds/1_python_basic_codes.md)
-### [머신러닝](mds/01_ml.md)
-### [샘플링](mds/02_sampling.md)
-### [딥러닝](mds/03_dl.md)
-### [모델 평가](mds/04_metrics.md)
-### [분류 및 회귀 문제](mds/05_diversity.mds)
-### [시계열](mds/06_time_series.md)
+## AI study
+- [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
+- [전체 파일 구조](mds/file_hirachy.md)
 
-# 참고 링크
+### 목차
+- [1. 머신러닝](mds/01_ml.md)
+- [2. 샘플링](mds/02_sampling.md)
+- [3. 딥러닝](mds/03_dl.md)
+- [4. 모델 평가](mds/04_metrics.md)
+- [5. 분류 및 회귀 문제](mds/05_diversity.mds)
+- [6. 시계열](mds/06_time_series.md)
+
+## 참고 링크
 [roboflow](https://roboflow.com/) <br>
 [ultraytics](https://docs.ultralytics.com/integrations/roboflow/) <br>
-learn open cv .com <br>
-supervisely <br>
-superb ai <br>
-labelstudio.com -> 오디오에서 감성 분석 가능 <br>
+[Learn open cv](https://learnopencv.com/)  <br>
+[supervisely](https://supervisely.com/) <br>
+[superb ai](https://superb-ai.com/ko) <br>
+[label studio](https://labelstud.io/) -> 오디오에서 감성 분석 가능 <br>
 
-### segmentation
+### segmentation tool
 [Label Studio](https://labelstud.io/guide/) <br>
 [Label Me](https://github.com/labelmeai/labelme) <br>
 [Anylabeling](https://github.com/vietanhdev/anylabeling) <br>
