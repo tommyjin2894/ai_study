@@ -25,7 +25,7 @@ plt.rcParams["axes.unicode_minus"] = False
 
 ## AI study
 - [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
-- [전체 파일 구조](mds/file_hirachy.md)
+- [전체 파일 구조](mds/00_files.md)
 
 ### 목차
 - [1. 머신러닝](mds/01_ml.md)
