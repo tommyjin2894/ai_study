@@ -1,4 +1,8 @@
 # to ignores
+
+codes_before_recap
+codes_after_recap
+
 __PDFs
 
 *.png
@@ -12,3 +16,5 @@ __PDFs
 *.jpg
 *.xml
 *.html
+*.png
+*.PNG

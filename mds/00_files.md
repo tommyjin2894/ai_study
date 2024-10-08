@@ -1,5 +1,8 @@
 ### 전체 코드 파일 구조
 ```
+0_basics/240603_01_sampling.ipynb
+0_basics/240603_02_hr_sampling_roc.ipynb
+0_basics/240603_03_titanic_new_age.ipynb
 0_basics/00_python_basics/00_string.ipynb
 0_basics/00_python_basics/01_number.ipynb
 0_basics/00_python_basics/02_variable.ipynb
@@ -68,6 +71,7 @@
 1_machinelearing/99_예시/07_hr_data.ipynb
 1_machinelearing/99_예시/08_titanic_data.ipynb
 1_machinelearing/99_예시/09_titanic_data_quiz.ipynb
+1_machinelearing/99_예시/correlation, scaleing.ipynb
 2_DeepLearning/00_기본, 단층, 다층 신경망/00_다층 신경망.ipynb
 2_DeepLearning/00_기본, 단층, 다층 신경망/01_basic_2.ipynb
 2_DeepLearning/00_기본, 단층, 다층 신경망/02_basics.ipynb
@@ -106,6 +110,7 @@
 2_DeepLearning/09_AutoEncoder/00_AE.ipynb
 2_DeepLearning/09_AutoEncoder/01_Mnist.ipynb
 2_DeepLearning/09_AutoEncoder/02_RatingData.ipynb
+3_time_series/time_series_1_lag_feature.ipynb
 3_time_series/00_시계열/00_시계열_1_이론.ipynb
 3_time_series/00_시계열/01_광주데이터.ipynb
 3_time_series/00_시계열/02_ARIMA_분석.ipynb
@@ -120,6 +125,10 @@
 3_time_series/02_시퀀스/04_클러스터링1.ipynb
 3_time_series/02_시퀀스/05_클러스터링2.ipynb
 3_time_series/02_시퀀스/06_클러스터링3_직접.ipynb
+3_time_series/timeSeries/20240525_trend.ipynb
+3_time_series/timeSeries/20240526_seasonal.ipynb
+3_time_series/timeSeries/20240526_seasonal_exp.ipynb
+3_time_series/timeSeries/240602.ipynb
 4_visualization/00_개요.ipynb
 4_visualization/240520_folium.ipynb
 4_visualization/240521_02_crime.ipynb
@@ -216,6 +225,7 @@
 7_pretrained_model/12_Private_chat/_02_llama_3_bllossom.ipynb
 7_pretrained_model/13_NER/8.02.NER.ipynb
 7_pretrained_model/14_VQA/7.02.VQA.ipynb
+8.ETC/7.02.VQA.ipynb
 8.ETC/_간이세미나 1. 딥러닝에서 배치 크기의 역할.ipynb
 8.ETC/_간이세미나 10 인공지능의 윤리적 고려사항.ipynb
 8.ETC/_간이세미나 2. 텐서 자료형.ipynb
@@ -226,48 +236,37 @@
 8.ETC/_간이세미나 7 퍼셉트론.ipynb
 8.ETC/_간이세미나 8 데이터 활용과 개인정보 보호.ipynb
 8.ETC/_간이세미나 9 활성화 함수.ipynb
-8.ETC/kdt1/240603_01_sampling.ipynb
-8.ETC/kdt1/240603_02_hr_sampling_roc.ipynb
-8.ETC/kdt1/240603_03_titanic_new_age.ipynb
-8.ETC/kdt1/240603_04_dropout.ipynb
+8.ETC/101_발표/발표_1_transformer.ipynb
+8.ETC/101_발표/발표_2_alex_net.ipynb
+8.ETC/99_과제 및 퀴즈/0724/0724_weekly_quiz_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/0724 위클리 퀴즈 의료/0724_weekly_quiz_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/0729_CNN_pretrained/0. 계획.ipynb
+8.ETC/99_과제 및 퀴즈/0729_CNN_pretrained/1_1_transfer_with_ML_1_codes.ipynb
+8.ETC/99_과제 및 퀴즈/0729_CNN_pretrained/2_1_transfer_mobilenet.ipynb
+8.ETC/99_과제 및 퀴즈/0729_CNN_pretrained/3_1_finetune_mobilenet.ipynb
+8.ETC/99_과제 및 퀴즈/0729_CNN_pretrained/4_1_from_scratch_NN.ipynb
+8.ETC/99_과제 및 퀴즈/0729_CNN_pretrained/5_1_just_use_mobile.ipynb
+8.ETC/99_과제 및 퀴즈/0729_CNN_pretrained/6_1_모든모델 불러와 비교하기.ipynb
+8.ETC/99_과제 및 퀴즈/072x 과제/0. 계획.ipynb
+8.ETC/99_과제 및 퀴즈/072x 과제/1_1_transfer_with_ML_1_codes.ipynb
+8.ETC/99_과제 및 퀴즈/072x 과제/2_1_transfer_mobilenet.ipynb
+8.ETC/99_과제 및 퀴즈/072x 과제/3_1_finetune_mobilenet.ipynb
+8.ETC/99_과제 및 퀴즈/072x 과제/4_1_from_scratch_NN.ipynb
+8.ETC/99_과제 및 퀴즈/0809 위클리 퀴즈 YOLO/week11_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/99_과제/week10_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/99_과제/week1_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/99_과제/week2_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/99_과제/week3_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/99_과제/week4_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/99_과제/week8_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/99_과제/week9_박진형.ipynb
+8.ETC/99_과제 및 퀴즈/과제_박진형/0. 계획.ipynb
+8.ETC/99_과제 및 퀴즈/과제_박진형/1_1_transfer_with_ML_1_codes.ipynb
+8.ETC/99_과제 및 퀴즈/과제_박진형/2_1_transfer_mobilenet.ipynb
+8.ETC/99_과제 및 퀴즈/과제_박진형/3_1_finetune_mobilenet.ipynb
+8.ETC/99_과제 및 퀴즈/과제_박진형/4_1_from_scratch_NN.ipynb
+8.ETC/99_과제 및 퀴즈/과제_박진형/5_1_just_use_mobile.ipynb
+8.ETC/99_과제 및 퀴즈/과제_박진형/6_1_모든모델 불러와 비교하기.ipynb
 8.ETC/kdt1/240604_00_mnist.ipynb
 8.ETC/kdt1/240604_01_optimizer.ipynb
-8.ETC/kdt1/timeSeries/20240525_trend.ipynb
-8.ETC/kdt1/timeSeries/20240526_seasonal.ipynb
-8.ETC/kdt1/timeSeries/20240526_seasonal_exp.ipynb
-8.ETC/kdt1/timeSeries/240524_hr_prep.ipynb
-8.ETC/kdt1/timeSeries/240601.ipynb
-8.ETC/kdt1/timeSeries/240602.ipynb
-8.ETC/kdt2/7.02.VQA.ipynb
-8.ETC/kdt2/101_발표/발표_1_transformer.ipynb
-8.ETC/kdt2/101_발표/발표_2_alex_net.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0724/0724_weekly_quiz_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0724 위클리 퀴즈 의료/0724_weekly_quiz_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0729_CNN_pretrained/0. 계획.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0729_CNN_pretrained/1_1_transfer_with_ML_1_codes.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0729_CNN_pretrained/2_1_transfer_mobilenet.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0729_CNN_pretrained/3_1_finetune_mobilenet.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0729_CNN_pretrained/4_1_from_scratch_NN.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0729_CNN_pretrained/5_1_just_use_mobile.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0729_CNN_pretrained/6_1_모든모델 불러와 비교하기.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/072x 과제/0. 계획.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/072x 과제/1_1_transfer_with_ML_1_codes.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/072x 과제/2_1_transfer_mobilenet.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/072x 과제/3_1_finetune_mobilenet.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/072x 과제/4_1_from_scratch_NN.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/0809 위클리 퀴즈 YOLO/week11_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/99_과제/week10_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/99_과제/week1_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/99_과제/week2_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/99_과제/week3_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/99_과제/week4_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/99_과제/week8_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/99_과제/week9_박진형.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/과제_박진형/0. 계획.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/과제_박진형/1_1_transfer_with_ML_1_codes.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/과제_박진형/2_1_transfer_mobilenet.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/과제_박진형/3_1_finetune_mobilenet.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/과제_박진형/4_1_from_scratch_NN.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/과제_박진형/5_1_just_use_mobile.ipynb
-8.ETC/kdt2/99_과제 및 퀴즈/과제_박진형/6_1_모든모델 불러와 비교하기.ipynb
 ```
