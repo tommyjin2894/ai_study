@@ -25,15 +25,17 @@ plt.rcParams["axes.unicode_minus"] = False
 
 ## AI study
 - [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
-- [전체 파일 구조](mds/00_files.md)
+- [전체 파일 구조](markdown/00_files.md)
 
 ### 목차
-- [1. 머신러닝](mds/01_ml.md)
-- [2. 샘플링](mds/02_sampling.md)
-- [3. 딥러닝](mds/03_dl.md)
-- [4. 모델 평가](mds/04_metrics.md)
-- [5. 분류 및 회귀 문제](mds/05_diversity.mds)
-- [6. 시계열](mds/06_time_series.md)
+- [0. 파일](markdown/00_files.md)
+- [1. 기초](markdown/01_basics.md)
+- [2. 머신러닝](markdown/02_ml.md)
+- [3. 샘플링](markdown/03_sampling.md)
+- [4. 딥러닝](markdown/04_dl.md)
+- [5. 모델 평가](markdown/05_metrics.md)
+- [6. 분류 및 회귀 문제](markdown/06_diversity.markdown)
+- [7. 시계열](markdown/07_time_series.md)
 
 ## 참고 링크
 [roboflow](https://roboflow.com/) <br>
