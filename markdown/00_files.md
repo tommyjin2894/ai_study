@@ -1,28 +1,6 @@
 ### 전체 코드 파일
 
 - 0_basics
-    - 00_python_basics
-        - [00_string.ipynb](/code/0_basics/00_python_basics/00_string.ipynb)
-        - [01_number.ipynb](/code/0_basics/00_python_basics/01_number.ipynb)
-        - [02_variable.ipynb](/code/0_basics/00_python_basics/02_variable.ipynb)
-        - [03_string_function.ipynb](/code/0_basics/00_python_basics/03_string_function.ipynb)
-        - [04_case.ipynb](/code/0_basics/00_python_basics/04_case.ipynb)
-        - [05_list.ipynb](/code/0_basics/00_python_basics/05_list.ipynb)
-        - [06_dict.ipynb](/code/0_basics/00_python_basics/06_dict.ipynb)
-        - [07_while.ipynb](/code/0_basics/00_python_basics/07_while.ipynb)
-        - [07_while_baseball.ipynb](/code/0_basics/00_python_basics/07_while_baseball.ipynb)
-        - [08_function.ipynb](/code/0_basics/00_python_basics/08_function.ipynb)
-        - [08_function_full.ipynb](/code/0_basics/00_python_basics/08_function_full.ipynb)
-        - [09_tuple_lambda_file.ipynb](/code/0_basics/00_python_basics/09_tuple_lambda_file.ipynb)
-        - [10_exception.ipynb](/code/0_basics/00_python_basics/10_exception.ipynb)
-        - [11_class.ipynb](/code/0_basics/00_python_basics/11_class.ipynb)
-        - [12_conda.ipynb](/code/0_basics/00_python_basics/12_conda.ipynb)
-        - [13_module.ipynb](/code/0_basics/00_python_basics/13_module.ipynb)
-        - [14_API.ipynb](/code/0_basics/00_python_basics/14_API.ipynb)
-        - [15_crawling.ipynb](/code/0_basics/00_python_basics/15_crawling.ipynb)
-        - [16_numpy.ipynb](/code/0_basics/00_python_basics/16_numpy.ipynb)
-        - [17_pandas.ipynb](/code/0_basics/00_python_basics/17_pandas.ipynb)
-        - [18_plus_alpha.ipynb](/code/0_basics/00_python_basics/18_plus_alpha.ipynb)
     - 01_math
         - [00_선형과_비선형.ipynb](/code/0_basics/01_math/00_선형과_비선형.ipynb)
         - [01_도함수_계산.ipynb](/code/0_basics/01_math/01_도함수_계산.ipynb)
@@ -102,11 +80,9 @@
         - [02_비용함수_예제.ipynb](/code/2_DeepLearning/01_딥러닝/02_비용함수_예제.ipynb)
         - [03_역전파.ipynb](/code/2_DeepLearning/01_딥러닝/03_역전파.ipynb)
         - [04_역전파_예제.ipynb](/code/2_DeepLearning/01_딥러닝/04_역전파_예제.ipynb)
-        - [05_경사하강법.ipynb](/code/2_DeepLearning/01_딥러닝/05_경사하강법.ipynb)
-        - [06_경사하강법_예제(Lr영향).ipynb](/code/2_DeepLearning/01_딥러닝/06_경사하강법_예제(Lr영향).ipynb)
-        - [07_옵티마이저.ipynb](/code/2_DeepLearning/01_딥러닝/07_옵티마이저.ipynb)
-        - [08_옵티마이저_예제.ipynb](/code/2_DeepLearning/01_딥러닝/08_옵티마이저_예제.ipynb)
-        - [09_다양한_문제들.ipynb](/code/2_DeepLearning/01_딥러닝/09_다양한_문제들.ipynb)
+        - [05_옵티마이저.ipynb](/code/2_DeepLearning/01_딥러닝/05_옵티마이저.ipynb)
+        - [06_옵티마이저_예제.ipynb](/code/2_DeepLearning/01_딥러닝/06_옵티마이저_예제.ipynb)
+        - [07_다양한_문제들.ipynb](/code/2_DeepLearning/01_딥러닝/07_다양한_문제들.ipynb)
     - 02_CNN
         - [00_CNN.ipynb](/code/2_DeepLearning/02_CNN/00_CNN.ipynb)
         - [01_Cifar10.ipynb](/code/2_DeepLearning/02_CNN/01_Cifar10.ipynb)
