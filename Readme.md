@@ -27,6 +27,9 @@ plt.rcParams["axes.unicode_minus"] = False
 - [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
 - [전체 파일 구조](markdown/00_files.md)
 
+### 예제 데이터 셋
+- [heart](https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset)
+
 ### 목차
 - [0. 파일](markdown/00_files.md)
 - [1. 기초](markdown/01_basics.md)
