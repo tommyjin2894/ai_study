@@ -1,20 +1,12 @@
 ### 전체 코드 파일
 
 - 0_basics
-    - 01_math
-        - [00_선형과_비선형.ipynb](/code/0_basics/01_math/00_선형과_비선형.ipynb)
-        - [01_도함수_계산.ipynb](/code/0_basics/01_math/01_도함수_계산.ipynb)
-        - [02_통계_1.ipynb](/code/0_basics/01_math/02_통계_1.ipynb)
-        - [03_통계_2.ipynb](/code/0_basics/01_math/03_통계_2.ipynb)
-        - [04_벡터화.ipynb](/code/0_basics/01_math/04_벡터화.ipynb)
-        - [05_벡터화_예시.ipynb](/code/0_basics/01_math/05_벡터화_예시.ipynb)
-        - [06_embedding.ipynb](/code/0_basics/01_math/06_embedding.ipynb)
-        - [07_공분산과_상관계수.ipynb](/code/0_basics/01_math/07_공분산과_상관계수.ipynb)
-    - 02_web_crawling
-        - [00_이론.ipynb](/code/0_basics/02_web_crawling/00_이론.ipynb)
-        - [01_Beutifulsoup.ipynb](/code/0_basics/02_web_crawling/01_Beutifulsoup.ipynb)
-        - [02_BS_예제.ipynb](/code/0_basics/02_web_crawling/02_BS_예제.ipynb)
-        - [03_XML_구조_실습.ipynb](/code/0_basics/02_web_crawling/03_XML_구조_실습.ipynb)
+    - [00_선형과_비선형.ipynb](/code/0_basics/00_선형과_비선형.ipynb)
+    - [01_도함수_계산.ipynb](/code/0_basics/01_도함수_계산.ipynb)
+    - [02_통계.ipynb](/code/0_basics/02_통계.ipynb)
+    - [03_벡터화.ipynb](/code/0_basics/03_벡터화.ipynb)
+    - [04_토큰화.ipynb](/code/0_basics/04_토큰화.ipynb)
+    - [05_공분산과_상관계수.ipynb](/code/0_basics/05_공분산과_상관계수.ipynb)
 - 1_machinelearing
     - 00_이론
         - [01_회귀_이론_.ipynb](/code/1_machinelearing/00_이론/01_회귀_이론_.ipynb)
