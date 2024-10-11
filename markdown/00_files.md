@@ -1,19 +1,19 @@
 ### 전체 코드 파일
 
 - 0_basics
-    - [00_선형과_비선형.ipynb](/code/0_basics/00_선형과_비선형.ipynb)
-    - [01_도함수_계산.ipynb](/code/0_basics/01_도함수_계산.ipynb)
-    - [02_통계.ipynb](/code/0_basics/02_통계.ipynb)
-    - [03_벡터화.ipynb](/code/0_basics/03_벡터화.ipynb)
-    - [04_토큰화.ipynb](/code/0_basics/04_토큰화.ipynb)
-    - [05_공분산과_상관계수.ipynb](/code/0_basics/05_공분산과_상관계수.ipynb)
+    - [01_선형과_비선형.ipynb](/code/0_basics/01_선형과_비선형.ipynb)
+    - [02_도함수_계산.ipynb](/code/0_basics/02_도함수_계산.ipynb)
+    - [03_통계.ipynb](/code/0_basics/03_통계.ipynb)
+    - [04_벡터화.ipynb](/code/0_basics/04_벡터화.ipynb)
+    - [05_토큰화.ipynb](/code/0_basics/05_토큰화.ipynb)
+    - [06_공분산과_상관계수.ipynb](/code/0_basics/06_공분산과_상관계수.ipynb)
 - 1_machinelearing
     - 00_이론
-        - [01_회귀_이론_.ipynb](/code/1_machinelearing/00_이론/01_회귀_이론_.ipynb)
-        - [02_회귀_예시_iris_데이터.ipynb](/code/1_machinelearing/00_이론/02_회귀_예시_iris_데이터.ipynb)
-        - [03_GridSearch.ipynb](/code/1_machinelearing/00_이론/03_GridSearch.ipynb)
-        - [04_FeatureImportance.ipynb](/code/1_machinelearing/00_이론/04_FeatureImportance.ipynb)
-        - [05_PCA_주성분분석.ipynb](/code/1_machinelearing/00_이론/05_PCA_주성분분석.ipynb)
+        - [01_상관과_회귀.ipynb](/code/1_machinelearing/00_이론/01_상관과_회귀.ipynb)
+        - [02_교차검증_GridSearch.ipynb](/code/1_machinelearing/00_이론/02_교차검증_GridSearch.ipynb)
+        - [04_Feature_Importance.ipynb](/code/1_machinelearing/00_이론/04_Feature_Importance.ipynb)
+        - [05_PCA_주성분분석_From_This_to_정리.ipynb](/code/1_machinelearing/00_이론/05_PCA_주성분분석_From_This_to_정리.ipynb)
+        - [07_sns_시각화코드.ipynb](/code/1_machinelearing/00_이론/07_sns_시각화코드.ipynb)
     - 01_Decision_Tree
         - [00_dt_이론.ipynb](/code/1_machinelearing/01_Decision_Tree/00_dt_이론.ipynb)
         - [01_dt_분류.ipynb](/code/1_machinelearing/01_Decision_Tree/01_dt_분류.ipynb)
