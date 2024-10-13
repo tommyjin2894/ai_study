@@ -25,7 +25,7 @@ plt.rcParams["axes.unicode_minus"] = False
 ```
 </details>
 
-## AI study
+### AI study
 - [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
 - [전체 파일 구조](markdown/00_files.md)
 
@@ -42,7 +42,14 @@ plt.rcParams["axes.unicode_minus"] = False
 - [6. 분류 및 회귀 문제](markdown/06_diversity.markdown)
 - [7. 시계열](markdown/07_time_series.md)
 
-## 참고 링크
+### 프로젝트
+- [project1](https://github.com/tommyjin2894/KDT_project1)
+- [project2](https://github.com/tommyjin2894/KDT_project2)
+- project3
+    - [서비스](https://github.com/tommyjin2894/project_3_service)
+    - [훈련 및 결과](https://github.com/tommyjin2894/project_3_git)
+
+### 참고 링크
 [roboflow](https://roboflow.com/) <br>
 [ultraytics](https://docs.ultralytics.com/integrations/roboflow/) <br>
 [Learn open cv](https://learnopencv.com/)  <br>
