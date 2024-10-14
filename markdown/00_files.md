@@ -1,6 +1,11 @@
 ### 전체 코드 파일
 
 - 0_basics
+  - [00_파이썬_기초.ipynb](/code/0_basics/00_파이썬_기초.ipynb)
+      -  파이썬으로 할 수 있는 일
+      -  파이썬 에 적합하지 않은 일
+      -  스네이크 케이스와, 캐멀 케이스
+      -  리스트와 배열의 차이
   - [01_선형과_비선형.ipynb](/code/0_basics/01_선형과_비선형.ipynb)
   - [02_도함수_계산.ipynb](/code/0_basics/02_도함수_계산.ipynb)
       -  Gradient
