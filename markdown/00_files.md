@@ -28,23 +28,55 @@
       -  표준 편차 ( std : standard deviation )
       -  Correlation
 - 1_machinelearing
-  - 03_RandomForest
-    - [00_RF_이론.ipynb](/code/1_machinelearing/03_RandomForest/00_RF_이론.ipynb)
-    - [01_RF_iris.ipynb](/code/1_machinelearing/03_RandomForest/01_RF_iris.ipynb)
-    - [02_RF_예시.ipynb](/code/1_machinelearing/03_RandomForest/02_RF_예시.ipynb)
-  - 04_SVM
-    - [_SVM_1_결정경계_그래프_예시.ipynb](/code/1_machinelearing/04_SVM/_SVM_1_결정경계_그래프_예시.ipynb)
-    - [_SVM_2_결정경계_그래프_예시.ipynb](/code/1_machinelearing/04_SVM/_SVM_2_결정경계_그래프_예시.ipynb)
-    - [_SVM_3_결정경계_그래프_예시.ipynb](/code/1_machinelearing/04_SVM/_SVM_3_결정경계_그래프_예시.ipynb)
-  - 05_Ensemble
-    - [00_Ensemble.ipynb](/code/1_machinelearing/05_Ensemble/00_Ensemble.ipynb)
-        -  cancer 데이터 불러오기
-        -  ada boost
-        -  XGboost
-    - [01_Ensemble_예시.ipynb](/code/1_machinelearing/05_Ensemble/01_Ensemble_예시.ipynb)
-  - 06_boosting
-    - [00_boosting.ipynb](/code/1_machinelearing/06_boosting/00_boosting.ipynb)
-    - [01_XGBoost.ipynb](/code/1_machinelearing/06_boosting/01_XGBoost.ipynb)
+  - [01_상관과_회귀.ipynb](/code/1_machinelearing/01_상관과_회귀.ipynb)
+      -  상관계수 (Correlation Coefficient)
+      -  회귀 계수 (Regression Coefficient)
+      -  상관과 회귀의 차이
+      -  결정 계수 $R^2$
+      -  오차의 종류
+      -  예시
+  - [02_교차검증_GridSearch.ipynb](/code/1_machinelearing/02_교차검증_GridSearch.ipynb)
+      -  교차검증(cross validation)
+      -  그리드 서치(Grid Search)
+  - [03_Feature_Importance.ipynb](/code/1_machinelearing/03_Feature_Importance.ipynb)
+      -  feature importance
+      -  2. 랜덤 포레스트 및 디시전 트리를 이용해서 정확도 구해보기
+      -  랜덤 포레스트에서 가장 중요한 피쳐부터 하나씩 추가해서 비교해 보기
+  - [04_PCA_주성분분석.ipynb](/code/1_machinelearing/04_PCA_주성분분석.ipynb)
+      -  주성분 분석(차원 축소)
+  - [05_sns_시각화코드.ipynb](/code/1_machinelearing/05_sns_시각화코드.ipynb)
+      -  여유 있을 때 배우면 좋은 것
+      -  카토 그램
+      -  Matplotlib 시각화 all in one
+      -  라인 그래프
+      -  산점도
+      -  바 그래프
+      -  히스토그램
+      -  육각 히스토그램(hexbin)
+      -  박스, 바이올린 플롯
+      -  색상 선택하기
+      -  파일저장
+  - [06_knn.ipynb](/code/1_machinelearing/06_knn.ipynb)
+      -  [KNN](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) (K-Neighbors-Classifier)
+      -  knn 파라미터 (scikit-learn)
+      -  KNN에서의 최적의 K값 찾기
+      -  적당한 k값 구하기 with 교차 검증
+  - [07_decision_tree.ipynb](/code/1_machinelearing/07_decision_tree.ipynb)
+      -  Decision Tree (DecisionTreeClassifier)
+      -  불순도
+      -  분류 vs 회귀 : DecisionTreeClassifier vs DecisionTreeRegressor
+  - [08_SVM.ipynb](/code/1_machinelearing/08_SVM.ipynb)
+  - [09_ensemble.ipynb](/code/1_machinelearing/09_ensemble.ipynb)
+      -  Ensemble
+      -  Bagging (Bootstrap Aggragating)
+      -  Bagging : Random Forest
+      -  Bagging : Random Forest (Grid Search)
+      -  Boosting
+      -  종류
+      -  Boosting : AdaBoost
+      -  Gradient Boosting
+      -  Gradient Boosting : AdaBoost
+      -  Gradient Boosting : XGBoost
   - 07_CrossValid
     - [00_CrossValid.ipynb](/code/1_machinelearing/07_CrossValid/00_CrossValid.ipynb)
         -  다양한 파라미터로 값 구해보기
@@ -155,44 +187,6 @@
         -  1. Ticket (노미널 데이터)
         -  최종 데이터 및 저장하기
     - [correlation__scaleing.ipynb](/code/1_machinelearing/99_예시/correlation__scaleing.ipynb)
-  - done_study
-    - [01_상관과_회귀.ipynb](/code/1_machinelearing/done_study/01_상관과_회귀.ipynb)
-        -  상관계수 (Correlation Coefficient)
-        -  회귀 계수 (Regression Coefficient)
-        -  상관과 회귀의 차이
-        -  결정 계수 $R^2$
-        -  오차의 종류
-        -  예시
-    - [02_교차검증_GridSearch.ipynb](/code/1_machinelearing/done_study/02_교차검증_GridSearch.ipynb)
-        -  교차검증(cross validation)
-        -  그리드 서치(Grid Search)
-    - [03_Feature_Importance.ipynb](/code/1_machinelearing/done_study/03_Feature_Importance.ipynb)
-        -  feature importance
-        -  2. 랜덤 포레스트 및 디시전 트리를 이용해서 정확도 구해보기
-        -  랜덤 포레스트에서 가장 중요한 피쳐부터 하나씩 추가해서 비교해 보기
-    - [04_PCA_주성분분석.ipynb](/code/1_machinelearing/done_study/04_PCA_주성분분석.ipynb)
-        -  주성분 분석(차원 축소)
-    - [05_sns_시각화코드.ipynb](/code/1_machinelearing/done_study/05_sns_시각화코드.ipynb)
-        -  여유 있을 때 배우면 좋은 것
-        -  카토 그램
-        -  Matplotlib 시각화 all in one
-        -  라인 그래프
-        -  산점도
-        -  바 그래프
-        -  히스토그램
-        -  육각 히스토그램(hexbin)
-        -  박스, 바이올린 플롯
-        -  색상 선택하기
-        -  파일저장
-    - [06_knn.ipynb](/code/1_machinelearing/done_study/06_knn.ipynb)
-        -  [KNN](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) (K-Neighbors-Classifier)
-        -  knn 파라미터 (scikit-learn)
-        -  KNN에서의 최적의 K값 찾기
-        -  적당한 k값 구하기 with 교차 검증
-    - [07_decision_tree.ipynb](/code/1_machinelearing/done_study/07_decision_tree.ipynb)
-        -  Decision Tree (DecisionTreeClassifier)
-        -  불순도
-        -  분류 vs 회귀 : DecisionTreeClassifier vs DecisionTreeRegressor
 - 2_DeepLearning
   - 00_기본_단층_다층_신경망
     - [00_다층_신경망.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/00_다층_신경망.ipynb)
