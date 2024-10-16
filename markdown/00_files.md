@@ -77,9 +77,11 @@
       -  Gradient Boosting
       -  Gradient Boosting : AdaBoost
       -  Gradient Boosting : XGBoost
+  - [10_cross_val.ipynb](/code/1_machinelearing/10_cross_val.ipynb)
+      -  Cross-Validation(교차 검증)
+      -  다양한 파라미터로 값 구해보기
+      -  StratifiedKFold
   - 07_CrossValid
-    - [00_CrossValid.ipynb](/code/1_machinelearing/07_CrossValid/00_CrossValid.ipynb)
-        -  다양한 파라미터로 값 구해보기
     - [01_CrossValid_2.ipynb](/code/1_machinelearing/07_CrossValid/01_CrossValid_2.ipynb)
         -  max는 하이퍼 파라미터 감소, min은 하이퍼 파라미터
         -  피쳐 임포탄스
