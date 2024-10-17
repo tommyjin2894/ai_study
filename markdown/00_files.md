@@ -6,6 +6,7 @@
       -  파이썬 에 적합하지 않은 일
       -  스네이크 케이스와, 캐멀 케이스
       -  리스트와 배열의 차이
+      -  실수와 정수의 난수 생성 with numpy
   - [01_선형과_비선형.ipynb](/code/0_basics/01_선형과_비선형.ipynb)
   - [02_도함수_계산.ipynb](/code/0_basics/02_도함수_계산.ipynb)
       -  Gradient
@@ -35,16 +36,18 @@
       -  결정 계수 $R^2$
       -  오차의 종류
       -  예시
-  - [02_교차검증_GridSearch.ipynb](/code/1_machinelearing/02_교차검증_GridSearch.ipynb)
+  - [02_교차검증.ipynb](/code/1_machinelearing/02_교차검증.ipynb)
       -  교차검증(cross validation)
+  - [03_GridSearch.ipynb](/code/1_machinelearing/03_GridSearch.ipynb)
       -  그리드 서치(Grid Search)
-  - [03_Feature_Importance.ipynb](/code/1_machinelearing/03_Feature_Importance.ipynb)
+      -  RandomizedSearchCV
+  - [04_Feature_Importance.ipynb](/code/1_machinelearing/04_Feature_Importance.ipynb)
       -  feature importance
       -  2. 랜덤 포레스트 및 디시전 트리를 이용해서 정확도 구해보기
       -  랜덤 포레스트에서 가장 중요한 피쳐부터 하나씩 추가해서 비교해 보기
-  - [04_PCA_주성분분석.ipynb](/code/1_machinelearing/04_PCA_주성분분석.ipynb)
+  - [05_PCA_주성분분석.ipynb](/code/1_machinelearing/05_PCA_주성분분석.ipynb)
       -  주성분 분석(차원 축소)
-  - [05_sns_시각화코드.ipynb](/code/1_machinelearing/05_sns_시각화코드.ipynb)
+  - [06_sns_시각화코드.ipynb](/code/1_machinelearing/06_sns_시각화코드.ipynb)
       -  여유 있을 때 배우면 좋은 것
       -  카토 그램
       -  Matplotlib 시각화 all in one
@@ -56,17 +59,17 @@
       -  박스, 바이올린 플롯
       -  색상 선택하기
       -  파일저장
-  - [06_knn.ipynb](/code/1_machinelearing/06_knn.ipynb)
+  - [07_knn.ipynb](/code/1_machinelearing/07_knn.ipynb)
       -  [KNN](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) (K-Neighbors-Classifier)
       -  knn 파라미터 (scikit-learn)
       -  KNN에서의 최적의 K값 찾기
       -  적당한 k값 구하기 with 교차 검증
-  - [07_decision_tree.ipynb](/code/1_machinelearing/07_decision_tree.ipynb)
+  - [08_decision_tree.ipynb](/code/1_machinelearing/08_decision_tree.ipynb)
       -  Decision Tree (DecisionTreeClassifier)
       -  불순도
       -  분류 vs 회귀 : DecisionTreeClassifier vs DecisionTreeRegressor
-  - [08_SVM.ipynb](/code/1_machinelearing/08_SVM.ipynb)
-  - [09_ensemble.ipynb](/code/1_machinelearing/09_ensemble.ipynb)
+  - [09_SVM.ipynb](/code/1_machinelearing/09_SVM.ipynb)
+  - [10_ensemble.ipynb](/code/1_machinelearing/10_ensemble.ipynb)
       -  Ensemble
       -  Bagging (Bootstrap Aggragating)
       -  Bagging : Random Forest
@@ -77,29 +80,45 @@
       -  Gradient Boosting
       -  Gradient Boosting : AdaBoost
       -  Gradient Boosting : XGBoost
-  - [10_cross_val.ipynb](/code/1_machinelearing/10_cross_val.ipynb)
-      -  Cross-Validation(교차 검증)
-      -  다양한 파라미터로 값 구해보기
-      -  StratifiedKFold
-  - 07_CrossValid
-    - [01_CrossValid_2.ipynb](/code/1_machinelearing/07_CrossValid/01_CrossValid_2.ipynb)
-        -  max는 하이퍼 파라미터 감소, min은 하이퍼 파라미터
-        -  피쳐 임포탄스
-        -  이렇게 보다
-        -  이렇게 해야한다. StratifiedKFold 이용
-        -  결과가 가장 좋은 모델 찾기
-        -  편하게 함수로 넣어서 해도 된다.
-        -  3
-        -  ensemble
-        -  실링 의 의미 : 그 수보다 큰 가장 작은 정수
-        -  상상블의 다양한 기법들
-        -  bagging (bootstrap aggregating)
+  - [11_confusion_mat.ipynb](/code/1_machinelearing/11_confusion_mat.ipynb)
+      -  신경망
+      -  Precision
+      -  Recall
+      -  F1-Score
+      -  Precision
+      -  Recall
+      -  F1-Score
+      -  Accuracy
+      -  Macro Average
+      -  Weighted Average
+  - [12_회귀_예시.ipynb](/code/1_machinelearing/12_회귀_예시.ipynb)
+      -  데이터 로드
+      -  결측확인 (missingno as msno)
+      -  데이터 스플릿
+      -  상관 계수
+      -  데이터 스케일링
+      -  Logistic Regression
+      -  SVR
+      -  K-NN Regressor
+      -  Decision Tree Regressor
+      -  Random Forest Regressor
+      -  XGBoost Regressor
+      -  오답 확인
+  - [13_분류_예시.ipynb](/code/1_machinelearing/13_분류_예시.ipynb)
+      -  데이터 로드
+      -  결측확인 (missingno as msno)
+      -  데이터 스플릿
+      -  상관 계수
+      -  데이터 스케일링
+      -  Logistic Regression(분류에 이용)
+      -  SVC
+      -  K-NN Classifier
+      -  Decision Tree Classifier
+      -  Random Forest Classifier
+      -  XGBoost Classifier
+      -  오답 확인
   - 99_예시
-    - [00_cancer_.ipynb](/code/1_machinelearing/99_예시/00_cancer_.ipynb)
     - [01_결측치_이상치.ipynb](/code/1_machinelearing/99_예시/01_결측치_이상치.ipynb)
-    - [02_상관계수.ipynb](/code/1_machinelearing/99_예시/02_상관계수.ipynb)
-        -  시각화
-        -  1 . corr
     - [03_iris_kaggle.ipynb](/code/1_machinelearing/99_예시/03_iris_kaggle.ipynb)
         -  Hello Kagglers!!
         -  Removing the unneeded column
@@ -121,26 +140,7 @@
         -  Decision Tree
         -  K-Nearest Neighbours
         -  Observations:
-    - [04_iris_kaggle_2.ipynb](/code/1_machinelearing/99_예시/04_iris_kaggle_2.ipynb)
-        -  Hello Kagglers!!
-        -  Removing the unneeded column
-        -  Now let us see how are the length and width are distributed
-        -  Now let us see how the length and width vary according to the species
-        -  Now the given problem is a classification problem.. Thus we will be using the classification algorithms to build a model.
-        -  Steps To Be followed When Applying an Algorithm
-        -  Splitting The Data into Training And Testing Dataset
-        -  Support Vector Machine (SVM)
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-        -  Let's check the accuracy for various values of n for K-Nearest nerighbours
-        -  We used all the features of iris in above models. Now we will use Petals and Sepals Seperately
-        -  Creating Petals And Sepals Training Data
-        -  SVM
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-        -  Observations:
+        -  오답 확인
     - [05_iris_예시.ipynb](/code/1_machinelearing/99_예시/05_iris_예시.ipynb)
         -  Removing the unneeded column
         -  Splitting The Data into Training And Testing Dataset
@@ -154,22 +154,6 @@
         -  Logistic Regression
         -  Decision Tree
         -  K-Nearest Neighbours
-    - [06_iris_예시_2.ipynb](/code/1_machinelearing/99_예시/06_iris_예시_2.ipynb)
-        -  K-NN 모델 과 Decision Tree
-        -  Removing the unneeded column
-        -  Splitting The Data into Training And Testing Dataset
-        -  Support Vector Machine (SVM)
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-        -  We used all the features of iris in above models. Now we will use Petals and Sepals Seperately
-        -  Creating Petals And Sepals Training Data
-        -  SVM
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-        -  Knn
-        -  Decision Tree
     - [07_hr_data.ipynb](/code/1_machinelearing/99_예시/07_hr_data.ipynb)
     - [08_titanic_data.ipynb](/code/1_machinelearing/99_예시/08_titanic_data.ipynb)
         -  결측확인
@@ -188,7 +172,6 @@
         -  4. Categorical 데이터
         -  1. Ticket (노미널 데이터)
         -  최종 데이터 및 저장하기
-    - [correlation__scaleing.ipynb](/code/1_machinelearing/99_예시/correlation__scaleing.ipynb)
 - 2_DeepLearning
   - 00_기본_단층_다층_신경망
     - [00_다층_신경망.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/00_다층_신경망.ipynb)
