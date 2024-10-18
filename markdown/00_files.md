@@ -141,8 +141,11 @@
       -  wine 품질(quality) 데이터
       -  다중 분류
   - [03_다양한_기법들.ipynb](/code/2_DeepLearning/03_다양한_기법들.ipynb)
+      -  딥러닝 간단한 층 쌓기
       -  콜백
       -  EarlyStopping
+      -  결과 확인
+      -  과적합 시작점 확인
   - 01_딥러닝
     - [00_활성화_함수.ipynb](/code/2_DeepLearning/01_딥러닝/00_활성화_함수.ipynb)
     - [01_비용함수.ipynb](/code/2_DeepLearning/01_딥러닝/01_비용함수.ipynb)
