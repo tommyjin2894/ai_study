@@ -28,6 +28,18 @@
       -  공분산
       -  표준 편차 ( std : standard deviation )
       -  Correlation
+  - [07_data_유형.ipynb](/code/0_basics/07_data_유형.ipynb)
+      -  정량적 데이터 (Quantitative Data)
+      -  질적 데이터 (Qualitative Data)
+      -  시계열 및 공간 데이터 (Temporal and Spatial Data)
+      -  미디어 및 센서 데이터 (Media and Sensor Data)
+      -  구조 및 관계 데이터 (Structured and Relational Data)
+      -  행동 및 활동 데이터 (Behavioral and Activity Data)
+      -  부가 및 설명 데이터 (Supplementary and Descriptive Data)
+      -  복합 및 실시간 데이터 (Composite and Real-time Data)
+      -  이상 및 특이 데이터 (Anomalous and Atypical Data)
+      -  임베디드 및 트랜잭션 데이터 (Embedded and Transactional Data)
+      -  횡단면 및 종단 데이터 (Cross-sectional and Longitudinal Data)
 - 1_machinelearing
   - [01_상관과_회귀.ipynb](/code/1_machinelearing/01_상관과_회귀.ipynb)
       -  상관계수 (Correlation Coefficient)
@@ -69,6 +81,8 @@
       -  불순도
       -  분류 vs 회귀 : DecisionTreeClassifier vs DecisionTreeRegressor
   - [09_SVM.ipynb](/code/1_machinelearing/09_SVM.ipynb)
+      -  SVM (Support Vector Machine)
+      -  주요 키워드
   - [10_ensemble.ipynb](/code/1_machinelearing/10_ensemble.ipynb)
       -  Ensemble
       -  Bagging (Bootstrap Aggragating)
@@ -80,18 +94,7 @@
       -  Gradient Boosting
       -  Gradient Boosting : AdaBoost
       -  Gradient Boosting : XGBoost
-  - [11_confusion_mat.ipynb](/code/1_machinelearing/11_confusion_mat.ipynb)
-      -  신경망
-      -  Precision
-      -  Recall
-      -  F1-Score
-      -  Precision
-      -  Recall
-      -  F1-Score
-      -  Accuracy
-      -  Macro Average
-      -  Weighted Average
-  - [12_회귀_예시.ipynb](/code/1_machinelearing/12_회귀_예시.ipynb)
+  - [11_회귀_예시.ipynb](/code/1_machinelearing/11_회귀_예시.ipynb)
       -  데이터 로드
       -  결측확인 (missingno as msno)
       -  데이터 스플릿
@@ -104,7 +107,7 @@
       -  Random Forest Regressor
       -  XGBoost Regressor
       -  오답 확인
-  - [13_분류_예시.ipynb](/code/1_machinelearing/13_분류_예시.ipynb)
+  - [12_분류_예시.ipynb](/code/1_machinelearing/12_분류_예시.ipynb)
       -  데이터 로드
       -  결측확인 (missingno as msno)
       -  데이터 스플릿
@@ -117,94 +120,29 @@
       -  Random Forest Classifier
       -  XGBoost Classifier
       -  오답 확인
-  - 99_예시
-    - [01_결측치_이상치.ipynb](/code/1_machinelearing/99_예시/01_결측치_이상치.ipynb)
-    - [03_iris_kaggle.ipynb](/code/1_machinelearing/99_예시/03_iris_kaggle.ipynb)
-        -  Hello Kagglers!!
-        -  Removing the unneeded column
-        -  그림 그리기 방법
-        -  Now let us see how are the length and width are distributed
-        -  Now let us see how the length and width vary according to the species
-        -  Now the given problem is a classification problem.. Thus we will be using the classification algorithms to build a model.
-        -  Steps To Be followed When Applying an Algorithm
-        -  Splitting The Data into Training And Testing Dataset
-        -  Support Vector Machine (SVM)
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-        -  Let's check the accuracy for various values of n for K-Nearest nerighbours
-        -  We used all the features of iris in above models. Now we will use Petals and Sepals Seperately
-        -  Creating Petals And Sepals Training Data
-        -  SVM
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-        -  Observations:
-        -  오답 확인
-    - [05_iris_예시.ipynb](/code/1_machinelearing/99_예시/05_iris_예시.ipynb)
-        -  Removing the unneeded column
-        -  Splitting The Data into Training And Testing Dataset
-        -  Support Vector Machine (SVM)
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-        -  We used all the features of iris in above models. Now we will use Petals and Sepals Seperately
-        -  Creating Petals And Sepals Training Data
-        -  SVM
-        -  Logistic Regression
-        -  Decision Tree
-        -  K-Nearest Neighbours
-    - [07_hr_data.ipynb](/code/1_machinelearing/99_예시/07_hr_data.ipynb)
-    - [08_titanic_data.ipynb](/code/1_machinelearing/99_예시/08_titanic_data.ipynb)
-        -  결측확인
-        -  1. Parch 와 sibling 어쩃거나 가족수 이기 때문에 더한다.
-        -  데이터 타입 바꾸기
-        -  나이 결측을 채우기 위한 작업
-        -  10대 20대 ... 등으로 구분하기
-        -  트레인 테스트 섞어서 다시
-    - [09_titanic_data_quiz.ipynb](/code/1_machinelearing/99_예시/09_titanic_data_quiz.ipynb)
-        -  1. 라이브러리 불러오기
-        -  2. 파일 불러오기 및 info 로 정보 보기 판단하기 및 데이터 확인 하기 전처리
-        -  3. 숫자데이터 확인하기
-        -  3-1. 요금과 나이에 관련한 데이터
-        -  3-2 가족수와 요금과 관련한 데이터의 연관성 보기
-        -  3-3 결측치가 많은 나이 데이터를 보고 결측치 해결하기
-        -  4. Categorical 데이터
-        -  1. Ticket (노미널 데이터)
-        -  최종 데이터 및 저장하기
 - 2_DeepLearning
-  - 00_기본_단층_다층_신경망
-    - [00_다층_신경망.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/00_다층_신경망.ipynb)
-        -  단층 퍼셉트론 및 다층 퍼셉트론
-    - [01_basic_2.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/01_basic_2.ipynb)
-        -  학습과정 시각화
-        -  모델 평가
-    - [02_basics.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/02_basics.ipynb)
-    - [03_단층_신경망.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/03_단층_신경망.ipynb)
-    - [04_house_price.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/04_house_price.ipynb)
-    - [05_IRIS_data.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/05_IRIS_data.ipynb)
-    - [06_wine_data.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/06_wine_data.ipynb)
-        -  인공 신경망<br><br>
-    - [07_cancer_data.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/07_cancer_data.ipynb)
-        -  초창기 신경망 (퍼셉트론)
-        -  다층의 학습과정
-        -  역전파 알고리즘 은닉층에서의 그레디언트 소실때문에 생긴게 ReLU
-        -  은닉층이 쌓이다보면 overfitting 이 생긴다 그과정에서 생긴문제에서 만든것을 해결하는 것이
-        - 
-        -  다층 신경망
-        -  평가
-        -  다중분류
-        -  callback 하기
-        -  체크포인트
-        -  mnist
-        -  전 처리
-    - [08_이진분류.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/08_이진분류.ipynb)
-    - [09_digit.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/09_digit.ipynb)
-        -  다중 분류
-    - [10_단층__다층_과제.ipynb](/code/2_DeepLearning/00_기본_단층_다층_신경망/10_단층__다층_과제.ipynb)
-        -  단층
-        -  다층
-        -  임계값 설정
+  - [01_deep_learning.ipynb](/code/2_DeepLearning/01_deep_learning.ipynb)
+      -  딥러닝
+      -  딥러닝 종류
+      -  딥러닝의 구조
+      -  단층 퍼셉트론 및 다층 퍼셉트론
+      -  인공 신경망의 프로세스
+      -  선형 회귀 모형과 신경망 모델의 차이
+      -  출력 노드의 수
+  - [02_다양한_데이터.ipynb](/code/2_DeepLearning/02_다양한_데이터.ipynb)
+      -  sklearn datasets
+      -  tensorflow datasets
+      -  seaborn datasets
+      -  torchvision datasets
+      -  cancer 데이터
+      -  Digits 데이터
+      -  MNIST 데이터
+      -  Iris dataset
+      -  wine 품질(quality) 데이터
+      -  다중 분류
+  - [03_다양한_기법들.ipynb](/code/2_DeepLearning/03_다양한_기법들.ipynb)
+      -  콜백
+      -  EarlyStopping
   - 01_딥러닝
     - [00_활성화_함수.ipynb](/code/2_DeepLearning/01_딥러닝/00_활성화_함수.ipynb)
     - [01_비용함수.ipynb](/code/2_DeepLearning/01_딥러닝/01_비용함수.ipynb)
@@ -341,6 +279,17 @@
   - [03_ReceptiveField.ipynb](/code/5_layers/03_ReceptiveField.ipynb)
   - [04_dropout.ipynb](/code/5_layers/04_dropout.ipynb)
 - 6_metrics
+  - [11_confusion_mat.ipynb](/code/6_metrics/11_confusion_mat.ipynb)
+      -  신경망
+      -  Precision
+      -  Recall
+      -  F1-Score
+      -  Precision
+      -  Recall
+      -  F1-Score
+      -  Accuracy
+      -  Macro Average
+      -  Weighted Average
   - [240531_01_confusion_matrix.ipynb](/code/6_metrics/240531_01_confusion_matrix.ipynb)
   - [240531_02_confusion_matrix.ipynb](/code/6_metrics/240531_02_confusion_matrix.ipynb)
   - [_Confusion_Matrix.ipynb](/code/6_metrics/_Confusion_Matrix.ipynb)
