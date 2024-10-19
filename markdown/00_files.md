@@ -7,6 +7,7 @@
       -  스네이크 케이스와, 캐멀 케이스
       -  리스트와 배열의 차이
       -  실수와 정수의 난수 생성 with numpy
+      -  `np.where(a, b, c)`
   - [01_선형과_비선형.ipynb](/code/0_basics/01_선형과_비선형.ipynb)
   - [02_도함수_계산.ipynb](/code/0_basics/02_도함수_계산.ipynb)
       -  Gradient
@@ -146,21 +147,36 @@
       -  EarlyStopping
       -  결과 확인
       -  과적합 시작점 확인
-  - 01_딥러닝
-    - [00_활성화_함수.ipynb](/code/2_DeepLearning/01_딥러닝/00_활성화_함수.ipynb)
-    - [01_비용함수.ipynb](/code/2_DeepLearning/01_딥러닝/01_비용함수.ipynb)
-        -  회귀 문제
-        -  분류 문제
-    - [02_비용함수_예제.ipynb](/code/2_DeepLearning/01_딥러닝/02_비용함수_예제.ipynb)
-    - [03_역전파.ipynb](/code/2_DeepLearning/01_딥러닝/03_역전파.ipynb)
-    - [04_역전파_예제.ipynb](/code/2_DeepLearning/01_딥러닝/04_역전파_예제.ipynb)
-    - [05_옵티마이저.ipynb](/code/2_DeepLearning/01_딥러닝/05_옵티마이저.ipynb)
-    - [06_옵티마이저_예제.ipynb](/code/2_DeepLearning/01_딥러닝/06_옵티마이저_예제.ipynb)
-        -  경사 하강법(Gradient Descent)
-        -  다양한 옵티마이저
-    - [07_다양한_문제들.ipynb](/code/2_DeepLearning/01_딥러닝/07_다양한_문제들.ipynb)
-        -  데드 렐루 문제
-        -  과적합
+  - [04_활성화_함수.ipynb](/code/2_DeepLearning/04_활성화_함수.ipynb)
+      -  활성화 함수
+      -  **Sigmoid (시그모이드) 함수**:
+      -  **Tanh (하이퍼볼릭 탄젠트) 함수**:
+      -  **ReLU (Rectified Linear Unit) 함수**:
+      -  **Leaky ReLU 함수**:
+      -  **ELU (Exponential Linear Unit) 함수**:
+      -  **SoftPlus 함수**:
+      -  **GeLU (Gaussian Error Linear Unit) 함수**:
+  - [05_비용함수.ipynb](/code/2_DeepLearning/05_비용함수.ipynb)
+      -  비용함수
+      -  회귀 문제
+      -  분류 문제
+      -  비용함수 예제 : 회귀 문제
+      -  비용함수 예제 : 분류 문제
+  - [06_역전파.ipynb](/code/2_DeepLearning/06_역전파.ipynb)
+      -  역전파 (Back Propagation)
+      -  체인 룰
+  - [07_옵티마이저.ipynb](/code/2_DeepLearning/07_옵티마이저.ipynb)
+      -  Optimizer (수치 최적화 알고리즘)
+      -  기본 이론 : 경사 하강법(Gradient Descent)
+      -  탐색 방향 기반 알고리즘
+      -  학습률 기반 알고리즘
+      -  다양한 옵티마이저 예제(torch)
+  - [08_다양한_문제들.ipynb](/code/2_DeepLearning/08_다양한_문제들.ipynb)
+      -  경사 소실 (gradient vanishing)
+      -  데드 렐루 문제
+      -  과적합 (Overfitting)
+      -  과적합 해결책
+      -  초기 가중치 문제(Weight Initialization Problem)
   - 02_CNN
     - [00_CNN.ipynb](/code/2_DeepLearning/02_CNN/00_CNN.ipynb)
         -  원리
@@ -202,21 +218,21 @@
     - [02_ARIMA_분석.ipynb](/code/3_time_series/00_시계열/02_ARIMA_분석.ipynb)
     - [03_statsmodels_ARIMA.ipynb](/code/3_time_series/00_시계열/03_statsmodels_ARIMA.ipynb)
     - [04_기온_예측_.ipynb](/code/3_time_series/00_시계열/04_기온_예측_.ipynb)
-  - 01_시계열_snp500
-    - [00_snp500_1.ipynb](/code/3_time_series/01_시계열_snp500/00_snp500_1.ipynb)
-    - [01_snp500_2.ipynb](/code/3_time_series/01_시계열_snp500/01_snp500_2.ipynb)
-  - 02_시퀀스
-    - [00_크롤링.ipynb](/code/3_time_series/02_시퀀스/00_크롤링.ipynb)
-    - [01_모델링(yes24).ipynb](/code/3_time_series/02_시퀀스/01_모델링(yes24).ipynb)
-    - [02_EDA.ipynb](/code/3_time_series/02_시퀀스/02_EDA.ipynb)
-    - [03__모델링_예시.ipynb](/code/3_time_series/02_시퀀스/03__모델링_예시.ipynb)
-        -  CNN 층  
-        - 
-        -  합성곱층 
-        - 
-    - [04_클러스터링1.ipynb](/code/3_time_series/02_시퀀스/04_클러스터링1.ipynb)
-    - [05_클러스터링2.ipynb](/code/3_time_series/02_시퀀스/05_클러스터링2.ipynb)
-    - [06_클러스터링3_직접.ipynb](/code/3_time_series/02_시퀀스/06_클러스터링3_직접.ipynb)
+    - 01_시계열_snp500
+      - [00_snp500_1.ipynb](/code/3_time_series/00_시계열/01_시계열_snp500/00_snp500_1.ipynb)
+      - [01_snp500_2.ipynb](/code/3_time_series/00_시계열/01_시계열_snp500/01_snp500_2.ipynb)
+    - 02_시퀀스
+      - [00_크롤링.ipynb](/code/3_time_series/00_시계열/02_시퀀스/00_크롤링.ipynb)
+      - [01_모델링(yes24).ipynb](/code/3_time_series/00_시계열/02_시퀀스/01_모델링(yes24).ipynb)
+      - [02_EDA.ipynb](/code/3_time_series/00_시계열/02_시퀀스/02_EDA.ipynb)
+      - [03__모델링_예시.ipynb](/code/3_time_series/00_시계열/02_시퀀스/03__모델링_예시.ipynb)
+          -  CNN 층  
+          - 
+          -  합성곱층 
+          - 
+      - [04_클러스터링1.ipynb](/code/3_time_series/00_시계열/02_시퀀스/04_클러스터링1.ipynb)
+      - [05_클러스터링2.ipynb](/code/3_time_series/00_시계열/02_시퀀스/05_클러스터링2.ipynb)
+      - [06_클러스터링3_직접.ipynb](/code/3_time_series/00_시계열/02_시퀀스/06_클러스터링3_직접.ipynb)
   - timeSeries
     - [20240525_trend.ipynb](/code/3_time_series/timeSeries/20240525_trend.ipynb)
         -  함수정의
