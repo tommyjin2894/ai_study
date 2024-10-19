@@ -130,7 +130,31 @@
       -  인공 신경망의 프로세스
       -  선형 회귀 모형과 신경망 모델의 차이
       -  출력 노드의 수
-  - [02_다양한_데이터.ipynb](/code/2_DeepLearning/02_다양한_데이터.ipynb)
+  - [02_활성화_함수.ipynb](/code/2_DeepLearning/02_활성화_함수.ipynb)
+      -  활성화 함수
+      -  **Sigmoid (시그모이드) 함수**:
+      -  **Tanh (하이퍼볼릭 탄젠트) 함수**:
+      -  **ReLU (Rectified Linear Unit) 함수**:
+      -  **Leaky ReLU 함수**:
+      -  **ELU (Exponential Linear Unit) 함수**:
+      -  **SoftPlus 함수**:
+      -  **GeLU (Gaussian Error Linear Unit) 함수**:
+  - [03_비용함수.ipynb](/code/2_DeepLearning/03_비용함수.ipynb)
+      -  비용함수
+      -  회귀 문제
+      -  분류 문제
+      -  비용함수 예제 : 회귀 문제
+      -  비용함수 예제 : 분류 문제
+  - [04_역전파.ipynb](/code/2_DeepLearning/04_역전파.ipynb)
+      -  역전파 (Back Propagation)
+      -  체인 룰
+  - [05_옵티마이저.ipynb](/code/2_DeepLearning/05_옵티마이저.ipynb)
+      -  Optimizer (수치 최적화 알고리즘)
+      -  기본 이론 : 경사 하강법(Gradient Descent)
+      -  탐색 방향 기반 알고리즘
+      -  학습률 기반 알고리즘
+      -  다양한 옵티마이저 예제(torch)
+  - [06_다양한_데이터.ipynb](/code/2_DeepLearning/06_다양한_데이터.ipynb)
       -  sklearn datasets
       -  tensorflow datasets
       -  seaborn datasets
@@ -141,36 +165,12 @@
       -  Iris dataset
       -  wine 품질(quality) 데이터
       -  다중 분류
-  - [03_다양한_기법들.ipynb](/code/2_DeepLearning/03_다양한_기법들.ipynb)
+  - [07_다양한_기법들.ipynb](/code/2_DeepLearning/07_다양한_기법들.ipynb)
       -  딥러닝 간단한 층 쌓기
       -  콜백
       -  EarlyStopping
       -  결과 확인
       -  과적합 시작점 확인
-  - [04_활성화_함수.ipynb](/code/2_DeepLearning/04_활성화_함수.ipynb)
-      -  활성화 함수
-      -  **Sigmoid (시그모이드) 함수**:
-      -  **Tanh (하이퍼볼릭 탄젠트) 함수**:
-      -  **ReLU (Rectified Linear Unit) 함수**:
-      -  **Leaky ReLU 함수**:
-      -  **ELU (Exponential Linear Unit) 함수**:
-      -  **SoftPlus 함수**:
-      -  **GeLU (Gaussian Error Linear Unit) 함수**:
-  - [05_비용함수.ipynb](/code/2_DeepLearning/05_비용함수.ipynb)
-      -  비용함수
-      -  회귀 문제
-      -  분류 문제
-      -  비용함수 예제 : 회귀 문제
-      -  비용함수 예제 : 분류 문제
-  - [06_역전파.ipynb](/code/2_DeepLearning/06_역전파.ipynb)
-      -  역전파 (Back Propagation)
-      -  체인 룰
-  - [07_옵티마이저.ipynb](/code/2_DeepLearning/07_옵티마이저.ipynb)
-      -  Optimizer (수치 최적화 알고리즘)
-      -  기본 이론 : 경사 하강법(Gradient Descent)
-      -  탐색 방향 기반 알고리즘
-      -  학습률 기반 알고리즘
-      -  다양한 옵티마이저 예제(torch)
   - [08_다양한_문제들.ipynb](/code/2_DeepLearning/08_다양한_문제들.ipynb)
       -  경사 소실 (gradient vanishing)
       -  데드 렐루 문제
