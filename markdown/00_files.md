@@ -196,21 +196,26 @@
       -  Return Sequence True 파라미터
       -  imdb data 실습(return_seq_true with concat)
       -  imdb data 실습(return_seq_true with mean)
-# 정리해야할 부분
+  - [11_LSTM.ipynb](/code/2_DeepLearning/11_LSTM.ipynb)
+      -  LSTM
+      -  기억 셀 ($C_t$)
+      -  기억 셀의 업데이트
+      -  기억 셀(Memory Cell)
+      -  Gate
+      -  GRU(Gated Recurrent Unit)
+      -  imdb 실습
+      -  bidirectional 및 stacked bidirectional
+  - [12_AutoEncoder.ipynb](/code/2_DeepLearning/12_AutoEncoder.ipynb)
+      -  AutoEncoder
+      -  Encoder
+      -  Latent Space(Code or z)
+      -  Decoder
+      -  Loss
+      -  AE 응용
+      -  Mnist data를 이용한 AE
+
+### 수정할 내용
 ---
-  - 04_LSTM
-    - [00_LSTM.ipynb](/code/2_DeepLearning/04_LSTM/00_LSTM.ipynb)
-    - [01_LSTM2.ipynb](/code/2_DeepLearning/04_LSTM/01_LSTM2.ipynb)
-        -  **Forget Gate**
-        -  **Input Gate**
-        -  **Cell State(Memory cell : 기억 셀) Update**
-        -  **Output Gate**
-    - [02_LSTM_실습.ipynb](/code/2_DeepLearning/04_LSTM/02_LSTM_실습.ipynb)
-    - [03_LSTM_실습2.ipynb](/code/2_DeepLearning/04_LSTM/03_LSTM_실습2.ipynb)
-  - 09_AutoEncoder
-    - [00_AE.ipynb](/code/2_DeepLearning/09_AutoEncoder/00_AE.ipynb)
-    - [01_Mnist.ipynb](/code/2_DeepLearning/09_AutoEncoder/01_Mnist.ipynb)
-    - [02_RatingData.ipynb](/code/2_DeepLearning/09_AutoEncoder/02_RatingData.ipynb)
 - 3_time_series
   - [time_series_1_lag_feature.ipynb](/code/3_time_series/time_series_1_lag_feature.ipynb)
       -  이동평균선
