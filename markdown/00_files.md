@@ -177,20 +177,27 @@
       -  과적합 (Overfitting)
       -  과적합 해결책
       -  초기 가중치 문제(Weight Initialization Problem)
-  - 02_CNN
-    - [00_CNN.ipynb](/code/2_DeepLearning/02_CNN/00_CNN.ipynb)
-        -  원리
-        -  예시
-    - [01_Cifar10.ipynb](/code/2_DeepLearning/02_CNN/01_Cifar10.ipynb)
-    - [02_Mnist.ipynb](/code/2_DeepLearning/02_CNN/02_Mnist.ipynb)
-    - [04_Mnist_2.ipynb](/code/2_DeepLearning/02_CNN/04_Mnist_2.ipynb)
-    - [05_Cycle_Bicycle.ipynb](/code/2_DeepLearning/02_CNN/05_Cycle_Bicycle.ipynb)
-  - 03_RNN
-    - [00_순환신경망.ipynb](/code/2_DeepLearning/03_RNN/00_순환신경망.ipynb)
-    - [01_.ipynb](/code/2_DeepLearning/03_RNN/01_.ipynb)
-    - [02_imdb_1.ipynb](/code/2_DeepLearning/03_RNN/02_imdb_1.ipynb)
-    - [03_imdb_실습_return_seq_true_concat.ipynb](/code/2_DeepLearning/03_RNN/03_imdb_실습_return_seq_true_concat.ipynb)
-    - [04_imdb_실습_return_seq_true_mean.ipynb](/code/2_DeepLearning/03_RNN/04_imdb_실습_return_seq_true_mean.ipynb)
+  - [09_CNN.ipynb](/code/2_DeepLearning/09_CNN.ipynb)
+      -  CNN (Convolutional Neural Networks)
+      -  공간 정보 추출(Spatial)
+      -  패딩
+      -  풀링
+      -  CNN의 학습 과정
+      -  CNN의 키워드
+      -  Cifar10 데이터
+      -  mnist 데이터
+  - [10_RNN.ipynb](/code/2_DeepLearning/10_RNN.ipynb)
+      -  RNN(Reccurent Neural Networks)
+      -  시퀀스 데이터
+      -  RNN과 FNN 모델의 차이점
+      -  RNN을 사용한 텍스트 분석
+      -  시작 토큰 및 종료 토큰
+      -  RNN 순서
+      -  Return Sequence True 파라미터
+      -  imdb data 실습(return_seq_true with concat)
+      -  imdb data 실습(return_seq_true with mean)
+# 정리해야할 부분
+---
   - 04_LSTM
     - [00_LSTM.ipynb](/code/2_DeepLearning/04_LSTM/00_LSTM.ipynb)
     - [01_LSTM2.ipynb](/code/2_DeepLearning/04_LSTM/01_LSTM2.ipynb)
