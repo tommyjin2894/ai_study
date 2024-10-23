@@ -1,35 +1,35 @@
 ### 전체 코드 파일
 
-- 0_basics
-  - [00_파이썬_기초.ipynb](/code/0_basics/00_파이썬_기초.ipynb)
+- 00_basics
+  - [00_파이썬_기초.ipynb](/code/00_basics/00_파이썬_기초.ipynb)
       -  파이썬으로 할 수 있는 일
       -  파이썬 에 적합하지 않은 일
       -  스네이크 케이스와, 캐멀 케이스
       -  리스트와 배열의 차이
       -  실수와 정수의 난수 생성 with numpy
       -  `np.where(a, b, c)`
-  - [01_선형과_비선형.ipynb](/code/0_basics/01_선형과_비선형.ipynb)
-  - [02_도함수_계산.ipynb](/code/0_basics/02_도함수_계산.ipynb)
+  - [01_선형과_비선형.ipynb](/code/00_basics/01_선형과_비선형.ipynb)
+  - [02_도함수_계산.ipynb](/code/00_basics/02_도함수_계산.ipynb)
       -  Gradient
-  - [03_통계.ipynb](/code/0_basics/03_통계.ipynb)
+  - [03_통계.ipynb](/code/00_basics/03_통계.ipynb)
       -  통계와 데이터 분석의 기초 개념
       -  정규 분포 (Normal Distribution)
       -  표준화 (Standardization)
       -  가설(Hypothesis) 검정
       -  만약 정규분포를 따르지 않을 때
       -  파이썬 코드
-  - [04_벡터화.ipynb](/code/0_basics/04_벡터화.ipynb)
+  - [04_벡터화.ipynb](/code/00_basics/04_벡터화.ipynb)
       -  벡터라이제이션
       -  코사인 거리
       -  CountVectorizer, TfidfVectorizer
-  - [05_토큰화.ipynb](/code/0_basics/05_토큰화.ipynb)
+  - [05_토큰화.ipynb](/code/00_basics/05_토큰화.ipynb)
       -  토크나이제이션 (토큰화 : Tokenizaiton)
       -  IMDB를 이용한 영화평
-  - [06_공분산과_상관계수.ipynb](/code/0_basics/06_공분산과_상관계수.ipynb)
+  - [06_공분산과_상관계수.ipynb](/code/00_basics/06_공분산과_상관계수.ipynb)
       -  공분산
       -  표준 편차 ( std : standard deviation )
       -  Correlation
-  - [07_data_유형.ipynb](/code/0_basics/07_data_유형.ipynb)
+  - [07_data_유형.ipynb](/code/00_basics/07_data_유형.ipynb)
       -  정량적 데이터 (Quantitative Data)
       -  질적 데이터 (Qualitative Data)
       -  시계열 및 공간 데이터 (Temporal and Spatial Data)
@@ -41,26 +41,26 @@
       -  이상 및 특이 데이터 (Anomalous and Atypical Data)
       -  임베디드 및 트랜잭션 데이터 (Embedded and Transactional Data)
       -  횡단면 및 종단 데이터 (Cross-sectional and Longitudinal Data)
-- 1_machinelearing
-  - [01_상관과_회귀.ipynb](/code/1_machinelearing/01_상관과_회귀.ipynb)
+- 01_machinelearing
+  - [01_상관과_회귀.ipynb](/code/01_machinelearing/01_상관과_회귀.ipynb)
       -  상관계수 (Correlation Coefficient)
       -  회귀 계수 (Regression Coefficient)
       -  상관과 회귀의 차이
       -  결정 계수 $R^2$
       -  오차의 종류
       -  예시
-  - [02_교차검증.ipynb](/code/1_machinelearing/02_교차검증.ipynb)
+  - [02_교차검증.ipynb](/code/01_machinelearing/02_교차검증.ipynb)
       -  교차검증(cross validation)
-  - [03_GridSearch.ipynb](/code/1_machinelearing/03_GridSearch.ipynb)
+  - [03_GridSearch.ipynb](/code/01_machinelearing/03_GridSearch.ipynb)
       -  그리드 서치(Grid Search)
       -  RandomizedSearchCV
-  - [04_Feature_Importance.ipynb](/code/1_machinelearing/04_Feature_Importance.ipynb)
+  - [04_Feature_Importance.ipynb](/code/01_machinelearing/04_Feature_Importance.ipynb)
       -  feature importance
       -  2. 랜덤 포레스트 및 디시전 트리를 이용해서 정확도 구해보기
       -  랜덤 포레스트에서 가장 중요한 피쳐부터 하나씩 추가해서 비교해 보기
-  - [05_PCA_주성분분석.ipynb](/code/1_machinelearing/05_PCA_주성분분석.ipynb)
+  - [05_PCA_주성분분석.ipynb](/code/01_machinelearing/05_PCA_주성분분석.ipynb)
       -  주성분 분석(차원 축소)
-  - [06_sns_시각화코드.ipynb](/code/1_machinelearing/06_sns_시각화코드.ipynb)
+  - [06_sns_시각화코드.ipynb](/code/01_machinelearing/06_sns_시각화코드.ipynb)
       -  여유 있을 때 배우면 좋은 것
       -  카토 그램
       -  Matplotlib 시각화 all in one
@@ -72,19 +72,19 @@
       -  박스, 바이올린 플롯
       -  색상 선택하기
       -  파일저장
-  - [07_knn.ipynb](/code/1_machinelearing/07_knn.ipynb)
+  - [07_knn.ipynb](/code/01_machinelearing/07_knn.ipynb)
       -  [KNN](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) (K-Neighbors-Classifier)
       -  knn 파라미터 (scikit-learn)
       -  KNN에서의 최적의 K값 찾기
       -  적당한 k값 구하기 with 교차 검증
-  - [08_decision_tree.ipynb](/code/1_machinelearing/08_decision_tree.ipynb)
+  - [08_decision_tree.ipynb](/code/01_machinelearing/08_decision_tree.ipynb)
       -  Decision Tree (DecisionTreeClassifier)
       -  불순도
       -  분류 vs 회귀 : DecisionTreeClassifier vs DecisionTreeRegressor
-  - [09_SVM.ipynb](/code/1_machinelearing/09_SVM.ipynb)
+  - [09_SVM.ipynb](/code/01_machinelearing/09_SVM.ipynb)
       -  SVM (Support Vector Machine)
       -  주요 키워드
-  - [10_ensemble.ipynb](/code/1_machinelearing/10_ensemble.ipynb)
+  - [10_ensemble.ipynb](/code/01_machinelearing/10_ensemble.ipynb)
       -  Ensemble
       -  Bagging (Bootstrap Aggragating)
       -  Bagging : Random Forest
@@ -95,7 +95,7 @@
       -  Gradient Boosting
       -  Gradient Boosting : AdaBoost
       -  Gradient Boosting : XGBoost
-  - [11_회귀_예시.ipynb](/code/1_machinelearing/11_회귀_예시.ipynb)
+  - [11_회귀_예시.ipynb](/code/01_machinelearing/11_회귀_예시.ipynb)
       -  데이터 로드
       -  결측확인 (missingno as msno)
       -  데이터 스플릿
@@ -108,7 +108,7 @@
       -  Random Forest Regressor
       -  XGBoost Regressor
       -  오답 확인
-  - [12_분류_예시.ipynb](/code/1_machinelearing/12_분류_예시.ipynb)
+  - [12_분류_예시.ipynb](/code/01_machinelearing/12_분류_예시.ipynb)
       -  데이터 로드
       -  결측확인 (missingno as msno)
       -  데이터 스플릿
@@ -121,8 +121,8 @@
       -  Random Forest Classifier
       -  XGBoost Classifier
       -  오답 확인
-- 2_DeepLearning
-  - [01_deep_learning.ipynb](/code/2_DeepLearning/01_deep_learning.ipynb)
+- 02_DeepLearning
+  - [01_deep_learning.ipynb](/code/02_DeepLearning/01_deep_learning.ipynb)
       -  딥러닝
       -  딥러닝 종류
       -  딥러닝의 구조
@@ -130,7 +130,7 @@
       -  인공 신경망의 프로세스
       -  선형 회귀 모형과 신경망 모델의 차이
       -  출력 노드의 수
-  - [02_활성화_함수.ipynb](/code/2_DeepLearning/02_활성화_함수.ipynb)
+  - [02_활성화_함수.ipynb](/code/02_DeepLearning/02_활성화_함수.ipynb)
       -  활성화 함수
       -  **Sigmoid (시그모이드) 함수**:
       -  **Tanh (하이퍼볼릭 탄젠트) 함수**:
@@ -139,22 +139,22 @@
       -  **ELU (Exponential Linear Unit) 함수**:
       -  **SoftPlus 함수**:
       -  **GeLU (Gaussian Error Linear Unit) 함수**:
-  - [03_비용함수.ipynb](/code/2_DeepLearning/03_비용함수.ipynb)
+  - [03_비용함수.ipynb](/code/02_DeepLearning/03_비용함수.ipynb)
       -  비용함수
       -  회귀 문제
       -  분류 문제
       -  비용함수 예제 : 회귀 문제
       -  비용함수 예제 : 분류 문제
-  - [04_역전파.ipynb](/code/2_DeepLearning/04_역전파.ipynb)
+  - [04_역전파.ipynb](/code/02_DeepLearning/04_역전파.ipynb)
       -  역전파 (Back Propagation)
       -  체인 룰
-  - [05_옵티마이저.ipynb](/code/2_DeepLearning/05_옵티마이저.ipynb)
+  - [05_옵티마이저.ipynb](/code/02_DeepLearning/05_옵티마이저.ipynb)
       -  Optimizer (수치 최적화 알고리즘)
       -  기본 이론 : 경사 하강법(Gradient Descent)
       -  탐색 방향 기반 알고리즘
       -  학습률 기반 알고리즘
       -  다양한 옵티마이저 예제(torch)
-  - [06_다양한_데이터.ipynb](/code/2_DeepLearning/06_다양한_데이터.ipynb)
+  - [06_다양한_데이터.ipynb](/code/02_DeepLearning/06_다양한_데이터.ipynb)
       -  sklearn datasets
       -  tensorflow datasets
       -  seaborn datasets
@@ -165,19 +165,19 @@
       -  Iris dataset
       -  wine 품질(quality) 데이터
       -  다중 분류
-  - [07_다양한_기법들.ipynb](/code/2_DeepLearning/07_다양한_기법들.ipynb)
+  - [07_다양한_기법들.ipynb](/code/02_DeepLearning/07_다양한_기법들.ipynb)
       -  딥러닝 간단한 층 쌓기
       -  콜백
       -  EarlyStopping
       -  결과 확인
       -  과적합 시작점 확인
-  - [08_다양한_문제들.ipynb](/code/2_DeepLearning/08_다양한_문제들.ipynb)
+  - [08_다양한_문제들.ipynb](/code/02_DeepLearning/08_다양한_문제들.ipynb)
       -  경사 소실 (gradient vanishing)
       -  데드 렐루 문제
       -  과적합 (Overfitting)
       -  과적합 해결책
       -  초기 가중치 문제(Weight Initialization Problem)
-  - [09_CNN.ipynb](/code/2_DeepLearning/09_CNN.ipynb)
+  - [09_CNN.ipynb](/code/02_DeepLearning/09_CNN.ipynb)
       -  CNN (Convolutional Neural Networks)
       -  공간 정보 추출(Spatial)
       -  패딩
@@ -186,7 +186,7 @@
       -  CNN의 키워드
       -  Cifar10 데이터
       -  mnist 데이터
-  - [10_RNN.ipynb](/code/2_DeepLearning/10_RNN.ipynb)
+  - [10_RNN.ipynb](/code/02_DeepLearning/10_RNN.ipynb)
       -  RNN(Reccurent Neural Networks)
       -  시퀀스 데이터
       -  RNN과 FNN 모델의 차이점
@@ -196,7 +196,7 @@
       -  Return Sequence True 파라미터
       -  imdb data 실습(return_seq_true with concat)
       -  imdb data 실습(return_seq_true with mean)
-  - [11_LSTM.ipynb](/code/2_DeepLearning/11_LSTM.ipynb)
+  - [11_LSTM.ipynb](/code/02_DeepLearning/11_LSTM.ipynb)
       -  LSTM
       -  기억 셀 ($C_t$)
       -  기억 셀의 업데이트
@@ -205,7 +205,7 @@
       -  GRU(Gated Recurrent Unit)
       -  imdb 실습
       -  bidirectional 및 stacked bidirectional
-  - [12_AutoEncoder.ipynb](/code/2_DeepLearning/12_AutoEncoder.ipynb)
+  - [12_AutoEncoder.ipynb](/code/02_DeepLearning/12_AutoEncoder.ipynb)
       -  AutoEncoder
       -  Encoder
       -  Latent Space(Code or z)
@@ -213,67 +213,62 @@
       -  Loss
       -  AE 응용
       -  Mnist data를 이용한 AE
-
-### 수정할 내용
----
-- 3_time_series
-  - [time_series_1_lag_feature.ipynb](/code/3_time_series/time_series_1_lag_feature.ipynb)
+- 03_time_series
+  - [01_time_series.ipynb](/code/03_time_series/01_time_series.ipynb)
+      -  시계열 데이터
+      -  다변량과 단변량
+      -  시간 종속성 Time Dependence
+      -  시계열 특성
+      -  **정상성**
+  - [02_ARIMA_분석.ipynb](/code/03_time_series/02_ARIMA_분석.ipynb)
+      -  Arima 분석
+  - [rag_feature.ipynb](/code/03_time_series/rag_feature.ipynb)
       -  이동평균선
-  - 00_시계열
-    - [00_시계열_1_이론.ipynb](/code/3_time_series/00_시계열/00_시계열_1_이론.ipynb)
-        -  다변량과 단변량?
-        -  시간 종속성 Time Dependence
-        -  시계열 특성
-        -  정상성!
-    - [01_광주데이터.ipynb](/code/3_time_series/00_시계열/01_광주데이터.ipynb)
-        -  기온 예측 <br>
-    - [02_ARIMA_분석.ipynb](/code/3_time_series/00_시계열/02_ARIMA_분석.ipynb)
-    - [03_statsmodels_ARIMA.ipynb](/code/3_time_series/00_시계열/03_statsmodels_ARIMA.ipynb)
-    - [04_기온_예측_.ipynb](/code/3_time_series/00_시계열/04_기온_예측_.ipynb)
-    - 01_시계열_snp500
-      - [00_snp500_1.ipynb](/code/3_time_series/00_시계열/01_시계열_snp500/00_snp500_1.ipynb)
-      - [01_snp500_2.ipynb](/code/3_time_series/00_시계열/01_시계열_snp500/01_snp500_2.ipynb)
-    - 02_시퀀스
-      - [00_크롤링.ipynb](/code/3_time_series/00_시계열/02_시퀀스/00_크롤링.ipynb)
-      - [01_모델링(yes24).ipynb](/code/3_time_series/00_시계열/02_시퀀스/01_모델링(yes24).ipynb)
-      - [02_EDA.ipynb](/code/3_time_series/00_시계열/02_시퀀스/02_EDA.ipynb)
-      - [03__모델링_예시.ipynb](/code/3_time_series/00_시계열/02_시퀀스/03__모델링_예시.ipynb)
-          -  CNN 층  
-          - 
-          -  합성곱층 
-          - 
-      - [04_클러스터링1.ipynb](/code/3_time_series/00_시계열/02_시퀀스/04_클러스터링1.ipynb)
-      - [05_클러스터링2.ipynb](/code/3_time_series/00_시계열/02_시퀀스/05_클러스터링2.ipynb)
-      - [06_클러스터링3_직접.ipynb](/code/3_time_series/00_시계열/02_시퀀스/06_클러스터링3_직접.ipynb)
-  - timeSeries
-    - [20240525_trend.ipynb](/code/3_time_series/timeSeries/20240525_trend.ipynb)
-        -  함수정의
-        -  전처리
-    - [20240526_seasonal.ipynb](/code/3_time_series/timeSeries/20240526_seasonal.ipynb)
-        -  그래프 확인을 위한 전처리
-    - [20240526_seasonal_exp.ipynb](/code/3_time_series/timeSeries/20240526_seasonal_exp.ipynb)
-    - [240602.ipynb](/code/3_time_series/timeSeries/240602.ipynb)
-- 4_visualization
-  - [00_개요.ipynb](/code/4_visualization/00_개요.ipynb)
-  - [240520_folium.ipynb](/code/4_visualization/240520_folium.ipynb)
-  - [240521_02_crime.ipynb](/code/4_visualization/240521_02_crime.ipynb)
-  - [240522_01_hr.ipynb](/code/4_visualization/240522_01_hr.ipynb)
-  - [240522_02_quatile.ipynb](/code/4_visualization/240522_02_quatile.ipynb)
-  - [240523_02__Matplotlib_.ipynb](/code/4_visualization/240523_02__Matplotlib_.ipynb)
-  - [240523_03_titanic.ipynb](/code/4_visualization/240523_03_titanic.ipynb)
-  - [240524_00_boxplot.ipynb](/code/4_visualization/240524_00_boxplot.ipynb)
-  - [240524_01_correlation.ipynb](/code/4_visualization/240524_01_correlation.ipynb)
-  - [240524_02_scaling.ipynb](/code/4_visualization/240524_02_scaling.ipynb)
-  - [240524_03_PCA.ipynb](/code/4_visualization/240524_03_PCA.ipynb)
-  - [240524_04_hr.ipynb](/code/4_visualization/240524_04_hr.ipynb)
-  - [240524_05_hr.ipynb](/code/4_visualization/240524_05_hr.ipynb)
-  - [240527_00_hr.ipynb](/code/4_visualization/240527_00_hr.ipynb)
-  - [_PCA_아이리스_데이터.ipynb](/code/4_visualization/_PCA_아이리스_데이터.ipynb)
-  - [시각화_10_folium_개인_연습_1.ipynb](/code/4_visualization/시각화_10_folium_개인_연습_1.ipynb)
-  - [시각화_10_folium_개인_연습_2.ipynb](/code/4_visualization/시각화_10_folium_개인_연습_2.ipynb)
-  - [시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb](/code/4_visualization/시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb)
+  - [seasonal.ipynb](/code/03_time_series/seasonal.ipynb)
+      -  그래프 확인을 위한 전처리
+      -  example
+  - [trend.ipynb](/code/03_time_series/trend.ipynb)
+      -  트렌드 예측
+      -  잔차 모델링
+      -  성능 평가
+      -  지연 피쳐 및 이동 평균 생성
+      -  모델 시각화
+      -  example
+      -  함수정의
+      -  전처리
+- 04_sequence
+  - [00_크롤링.ipynb](/code/04_sequence/00_크롤링.ipynb)
+  - [01_모델링(yes24).ipynb](/code/04_sequence/01_모델링(yes24).ipynb)
+  - [02_EDA.ipynb](/code/04_sequence/02_EDA.ipynb)
+  - [03__모델링_예시.ipynb](/code/04_sequence/03__모델링_예시.ipynb)
+      -  CNN 층  
+      - 
+      -  합성곱층 
+      - 
+  - [04_클러스터링1.ipynb](/code/04_sequence/04_클러스터링1.ipynb)
+  - [05_클러스터링2.ipynb](/code/04_sequence/05_클러스터링2.ipynb)
+  - [06_클러스터링3_직접.ipynb](/code/04_sequence/06_클러스터링3_직접.ipynb)
+- 05_visualization
+  - [00_개요.ipynb](/code/05_visualization/00_개요.ipynb)
+  - [240520_folium.ipynb](/code/05_visualization/240520_folium.ipynb)
+  - [240521_02_crime.ipynb](/code/05_visualization/240521_02_crime.ipynb)
+  - [240522_01_hr.ipynb](/code/05_visualization/240522_01_hr.ipynb)
+  - [240522_02_quatile.ipynb](/code/05_visualization/240522_02_quatile.ipynb)
+  - [240523_02__Matplotlib_.ipynb](/code/05_visualization/240523_02__Matplotlib_.ipynb)
+  - [240523_03_titanic.ipynb](/code/05_visualization/240523_03_titanic.ipynb)
+  - [240524_00_boxplot.ipynb](/code/05_visualization/240524_00_boxplot.ipynb)
+  - [240524_01_correlation.ipynb](/code/05_visualization/240524_01_correlation.ipynb)
+  - [240524_02_scaling.ipynb](/code/05_visualization/240524_02_scaling.ipynb)
+  - [240524_03_PCA.ipynb](/code/05_visualization/240524_03_PCA.ipynb)
+  - [240524_04_hr.ipynb](/code/05_visualization/240524_04_hr.ipynb)
+  - [240524_05_hr.ipynb](/code/05_visualization/240524_05_hr.ipynb)
+  - [240527_00_hr.ipynb](/code/05_visualization/240527_00_hr.ipynb)
+  - [_PCA_아이리스_데이터.ipynb](/code/05_visualization/_PCA_아이리스_데이터.ipynb)
+  - [시각화_10_folium_개인_연습_1.ipynb](/code/05_visualization/시각화_10_folium_개인_연습_1.ipynb)
+  - [시각화_10_folium_개인_연습_2.ipynb](/code/05_visualization/시각화_10_folium_개인_연습_2.ipynb)
+  - [시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb](/code/05_visualization/시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb)
       -  특정 그래프만 강조
-  - [시각화_3_시각화_해보기.ipynb](/code/4_visualization/시각화_3_시각화_해보기.ipynb)
+  - [시각화_3_시각화_해보기.ipynb](/code/05_visualization/시각화_3_시각화_해보기.ipynb)
       -  1. 라이브러리 불러오기
       -  2. 파일 불러오기 및 info 로 정보 보기 판단하기 및 데이터 확인 하기 전처리
       -  3. 숫자데이터 확인하기
@@ -285,12 +280,12 @@
       -  4. Categorical 데이터
       -  1. Ticket (노미널 데이터)
       -  최종 데이터 및 저장하기
-  - [시각화_4__그래프만_모아서.ipynb](/code/4_visualization/시각화_4__그래프만_모아서.ipynb)
-  - [시각화_5_times_series.ipynb](/code/4_visualization/시각화_5_times_series.ipynb)
-  - [시각화_6_box_plot_IQR.ipynb](/code/4_visualization/시각화_6_box_plot_IQR.ipynb)
-  - [시각화_7_cv2_그림.ipynb](/code/4_visualization/시각화_7_cv2_그림.ipynb)
-  - [시각화_8_folium_1.ipynb](/code/4_visualization/시각화_8_folium_1.ipynb)
-  - [시각화_9_folium_2_과제.ipynb](/code/4_visualization/시각화_9_folium_2_과제.ipynb)
+  - [시각화_4__그래프만_모아서.ipynb](/code/05_visualization/시각화_4__그래프만_모아서.ipynb)
+  - [시각화_5_times_series.ipynb](/code/05_visualization/시각화_5_times_series.ipynb)
+  - [시각화_6_box_plot_IQR.ipynb](/code/05_visualization/시각화_6_box_plot_IQR.ipynb)
+  - [시각화_7_cv2_그림.ipynb](/code/05_visualization/시각화_7_cv2_그림.ipynb)
+  - [시각화_8_folium_1.ipynb](/code/05_visualization/시각화_8_folium_1.ipynb)
+  - [시각화_9_folium_2_과제.ipynb](/code/05_visualization/시각화_9_folium_2_과제.ipynb)
       -  1. 강력범죄 검거 건수와 발생 건수의 비율을 계산하여 "arrest_occurs_ratio" 열을 추가하시오. 만약 `NaN`이 있다면 0으로 채우시오.
       -  해답
       -   2. "arrest_occurs_ratio"가 가장 큰 경찰서를 찾으시오.
@@ -303,14 +298,14 @@
       -  해답 (다시 살펴보기)
       -   6. "금천구"의 "occurs_total"과 "arrest_total"를 평균으로 채우시오.
       -  7. "seoul_geo.json"을 이용하여 구별로 "arrest_total"을 반영한 Choropleth을 그리시오.
-- 5_layers
-  - [00_SoftMax.ipynb](/code/5_layers/00_SoftMax.ipynb)
-  - [01_batch_norm.ipynb](/code/5_layers/01_batch_norm.ipynb)
-  - [02_early_stop.ipynb](/code/5_layers/02_early_stop.ipynb)
-  - [03_ReceptiveField.ipynb](/code/5_layers/03_ReceptiveField.ipynb)
-  - [04_dropout.ipynb](/code/5_layers/04_dropout.ipynb)
-- 6_metrics
-  - [11_confusion_mat.ipynb](/code/6_metrics/11_confusion_mat.ipynb)
+- 06_layers
+  - [00_SoftMax.ipynb](/code/06_layers/00_SoftMax.ipynb)
+  - [01_batch_norm.ipynb](/code/06_layers/01_batch_norm.ipynb)
+  - [02_early_stop.ipynb](/code/06_layers/02_early_stop.ipynb)
+  - [03_ReceptiveField.ipynb](/code/06_layers/03_ReceptiveField.ipynb)
+  - [04_dropout.ipynb](/code/06_layers/04_dropout.ipynb)
+- 07_metrics
+  - [11_confusion_mat.ipynb](/code/07_metrics/11_confusion_mat.ipynb)
       -  신경망
       -  Precision
       -  Recall
@@ -321,129 +316,129 @@
       -  Accuracy
       -  Macro Average
       -  Weighted Average
-  - [240531_01_confusion_matrix.ipynb](/code/6_metrics/240531_01_confusion_matrix.ipynb)
-  - [240531_02_confusion_matrix.ipynb](/code/6_metrics/240531_02_confusion_matrix.ipynb)
-  - [_Confusion_Matrix.ipynb](/code/6_metrics/_Confusion_Matrix.ipynb)
-  - [머신러닝_12_Confusion_mat.ipynb](/code/6_metrics/머신러닝_12_Confusion_mat.ipynb)
+  - [240531_01_confusion_matrix.ipynb](/code/07_metrics/240531_01_confusion_matrix.ipynb)
+  - [240531_02_confusion_matrix.ipynb](/code/07_metrics/240531_02_confusion_matrix.ipynb)
+  - [_Confusion_Matrix.ipynb](/code/07_metrics/_Confusion_Matrix.ipynb)
+  - [머신러닝_12_Confusion_mat.ipynb](/code/07_metrics/머신러닝_12_Confusion_mat.ipynb)
       -  Precision 과 recall 을 봐야한다.
-- 7_pretrained_model
+- 08_pretrained_model
   - 01_크롤링_후_CNN_분류
-    - [_00_네이버_크롤링.ipynb](/code/7_pretrained_model/01_크롤링_후_CNN_분류/_00_네이버_크롤링.ipynb)
-    - [_01_산_바다_분류.ipynb](/code/7_pretrained_model/01_크롤링_후_CNN_분류/_01_산_바다_분류.ipynb)
-    - [_02_cifar10_분류.ipynb](/code/7_pretrained_model/01_크롤링_후_CNN_분류/_02_cifar10_분류.ipynb)
-    - [_03_FNN.MNIST_분류.ipynb](/code/7_pretrained_model/01_크롤링_후_CNN_분류/_03_FNN.MNIST_분류.ipynb)
-    - [_04_image_crawling.ipynb](/code/7_pretrained_model/01_크롤링_후_CNN_분류/_04_image_crawling.ipynb)
-    - [_05_크롤링_후_다중분류.ipynb](/code/7_pretrained_model/01_크롤링_후_CNN_분류/_05_크롤링_후_다중분류.ipynb)
+    - [_00_네이버_크롤링.ipynb](/code/08_pretrained_model/01_크롤링_후_CNN_분류/_00_네이버_크롤링.ipynb)
+    - [_01_산_바다_분류.ipynb](/code/08_pretrained_model/01_크롤링_후_CNN_분류/_01_산_바다_분류.ipynb)
+    - [_02_cifar10_분류.ipynb](/code/08_pretrained_model/01_크롤링_후_CNN_분류/_02_cifar10_분류.ipynb)
+    - [_03_FNN.MNIST_분류.ipynb](/code/08_pretrained_model/01_크롤링_후_CNN_분류/_03_FNN.MNIST_분류.ipynb)
+    - [_04_image_crawling.ipynb](/code/08_pretrained_model/01_크롤링_후_CNN_분류/_04_image_crawling.ipynb)
+    - [_05_크롤링_후_다중분류.ipynb](/code/08_pretrained_model/01_크롤링_후_CNN_분류/_05_크롤링_후_다중분류.ipynb)
         -  폴더안의 폴더들(라벨) 을 리스트로
   - 02_데이터_증강_및_모델_저장
-    - [_01_AE_데이터_증강.ipynb](/code/7_pretrained_model/02_데이터_증강_및_모델_저장/_01_AE_데이터_증강.ipynb)
-    - [_02_AE_데이터_증강_폴더_단위.ipynb](/code/7_pretrained_model/02_데이터_증강_및_모델_저장/_02_AE_데이터_증강_폴더_단위.ipynb)
+    - [_01_AE_데이터_증강.ipynb](/code/08_pretrained_model/02_데이터_증강_및_모델_저장/_01_AE_데이터_증강.ipynb)
+    - [_02_AE_데이터_증강_폴더_단위.ipynb](/code/08_pretrained_model/02_데이터_증강_및_모델_저장/_02_AE_데이터_증강_폴더_단위.ipynb)
         -  data augementation(데이터 증강)
-    - [_03_AE_데이터_증강_재훈련.ipynb](/code/7_pretrained_model/02_데이터_증강_및_모델_저장/_03_AE_데이터_증강_재훈련.ipynb)
+    - [_03_AE_데이터_증강_재훈련.ipynb](/code/08_pretrained_model/02_데이터_증강_및_모델_저장/_03_AE_데이터_증강_재훈련.ipynb)
         -  재훈련 전
-    - [_04_keras_이미지_변형_생성.ipynb](/code/7_pretrained_model/02_데이터_증강_및_모델_저장/_04_keras_이미지_변형_생성.ipynb)
+    - [_04_keras_이미지_변형_생성.ipynb](/code/08_pretrained_model/02_데이터_증강_및_모델_저장/_04_keras_이미지_변형_생성.ipynb)
         -  이미지 데이터 generator
-    - [_05_keras_이미지_변형_생성_폴더_단위.ipynb](/code/7_pretrained_model/02_데이터_증강_및_모델_저장/_05_keras_이미지_변형_생성_폴더_단위.ipynb)
-    - [_06_AE증강_vs_keras증강_훈련_결과.ipynb](/code/7_pretrained_model/02_데이터_증강_및_모델_저장/_06_AE증강_vs_keras증강_훈련_결과.ipynb)
+    - [_05_keras_이미지_변형_생성_폴더_단위.ipynb](/code/08_pretrained_model/02_데이터_증강_및_모델_저장/_05_keras_이미지_변형_생성_폴더_단위.ipynb)
+    - [_06_AE증강_vs_keras증강_훈련_결과.ipynb](/code/08_pretrained_model/02_데이터_증강_및_모델_저장/_06_AE증강_vs_keras증강_훈련_결과.ipynb)
         -  같은 조건으로 생성한 데이터로 추가 훈련 시에는 AE 성능이 더 좋다
   - 03_CNN_base_pretrained_model
     - 1_abstract
-      - [_01_LeNet_MNIST_Call.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/1_abstract/_01_LeNet_MNIST_Call.ipynb)
-      - [_02_LeNet_MNIST_변형.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/1_abstract/_02_LeNet_MNIST_변형.ipynb)
-      - [_03_ResNet_로드_예측.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/1_abstract/_03_ResNet_로드_예측.ipynb)
+      - [_01_LeNet_MNIST_Call.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/1_abstract/_01_LeNet_MNIST_Call.ipynb)
+      - [_02_LeNet_MNIST_변형.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/1_abstract/_02_LeNet_MNIST_변형.ipynb)
+      - [_03_ResNet_로드_예측.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/1_abstract/_03_ResNet_로드_예측.ipynb)
     - 2_AlexNet
-      - [_01_AlexNet_구현하기.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/2_AlexNet/_01_AlexNet_구현하기.ipynb)
-      - [_02_AlexNet_정답코드.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/2_AlexNet/_02_AlexNet_정답코드.ipynb)
+      - [_01_AlexNet_구현하기.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/2_AlexNet/_01_AlexNet_구현하기.ipynb)
+      - [_02_AlexNet_정답코드.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/2_AlexNet/_02_AlexNet_정답코드.ipynb)
     - 3_VGG_inception
-      - [_01_VGG16_FeatureMap.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/3_VGG_inception/_01_VGG16_FeatureMap.ipynb)
-      - [_02_VGG16.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/3_VGG_inception/_02_VGG16.ipynb)
-      - [_04_VGG16_로드_예측.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/3_VGG_inception/_04_VGG16_로드_예측.ipynb)
+      - [_01_VGG16_FeatureMap.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/3_VGG_inception/_01_VGG16_FeatureMap.ipynb)
+      - [_02_VGG16.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/3_VGG_inception/_02_VGG16.ipynb)
+      - [_04_VGG16_로드_예측.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/3_VGG_inception/_04_VGG16_로드_예측.ipynb)
           -  사전 학습 모형을 통한 이미지 분류 - VGG16
     - 4_inception(ggl)Net
-      - [_01_InceptionNet_Architecture.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/4_inception(ggl)Net/_01_InceptionNet_Architecture.ipynb)
-      - [_02_PreTrained_InceptionNet.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/4_inception(ggl)Net/_02_PreTrained_InceptionNet.ipynb)
+      - [_01_InceptionNet_Architecture.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/4_inception(ggl)Net/_01_InceptionNet_Architecture.ipynb)
+      - [_02_PreTrained_InceptionNet.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/4_inception(ggl)Net/_02_PreTrained_InceptionNet.ipynb)
     - 5_ResNet
-      - [_01_PreTrained_ResNet_Design.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/5_ResNet/_01_PreTrained_ResNet_Design.ipynb)
-      - [_02_Pre_trained_ResNet50.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/5_ResNet/_02_Pre_trained_ResNet50.ipynb)
+      - [_01_PreTrained_ResNet_Design.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/5_ResNet/_01_PreTrained_ResNet_Design.ipynb)
+      - [_02_Pre_trained_ResNet50.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/5_ResNet/_02_Pre_trained_ResNet50.ipynb)
     - 6_MobileNet
-      - [_02_MobileNet_depth_wise.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/6_MobileNet/_02_MobileNet_depth_wise.ipynb)
-      - [_03_MobileNet.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/6_MobileNet/_03_MobileNet.ipynb)
+      - [_02_MobileNet_depth_wise.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/6_MobileNet/_02_MobileNet_depth_wise.ipynb)
+      - [_03_MobileNet.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/6_MobileNet/_03_MobileNet.ipynb)
     - 7_DenseNet
-      - [7.03.PreTrained_DenseNet.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/7_DenseNet/7.03.PreTrained_DenseNet.ipynb)
+      - [7.03.PreTrained_DenseNet.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/7_DenseNet/7.03.PreTrained_DenseNet.ipynb)
     - 8_EfficientNet
-      - [7.03.PreTrained_EfficientNet.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/8_EfficientNet/7.03.PreTrained_EfficientNet.ipynb)
+      - [7.03.PreTrained_EfficientNet.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/8_EfficientNet/7.03.PreTrained_EfficientNet.ipynb)
     - 9_img_prep
-      - [7.04.Pretrained_Test_Image_preprocessing_p.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/9_img_prep/7.04.Pretrained_Test_Image_preprocessing_p.ipynb)
-      - [7.04.Pre_trained_Image_preprocessing.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/9_img_prep/7.04.Pre_trained_Image_preprocessing.ipynb)
-      - [7.05.Pretrained_Test_Image_preprocessing.ipynb](/code/7_pretrained_model/03_CNN_base_pretrained_model/9_img_prep/7.05.Pretrained_Test_Image_preprocessing.ipynb)
+      - [7.04.Pretrained_Test_Image_preprocessing_p.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/9_img_prep/7.04.Pretrained_Test_Image_preprocessing_p.ipynb)
+      - [7.04.Pre_trained_Image_preprocessing.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/9_img_prep/7.04.Pre_trained_Image_preprocessing.ipynb)
+      - [7.05.Pretrained_Test_Image_preprocessing.ipynb](/code/08_pretrained_model/03_CNN_base_pretrained_model/9_img_prep/7.05.Pretrained_Test_Image_preprocessing.ipynb)
           -  이미지 패딩
   - 04_CNN_피쳐맵_및_전이학습
-    - [01_Inception_to_ML.ipynb](/code/7_pretrained_model/04_CNN_피쳐맵_및_전이학습/01_Inception_to_ML.ipynb)
-    - [02_FetureMap.ipynb](/code/7_pretrained_model/04_CNN_피쳐맵_및_전이학습/02_FetureMap.ipynb)
-    - [03_MobileNet_전이_학습.ipynb](/code/7_pretrained_model/04_CNN_피쳐맵_및_전이학습/03_MobileNet_전이_학습.ipynb)
-    - [04_MobileNet_일부_파인튠.ipynb](/code/7_pretrained_model/04_CNN_피쳐맵_및_전이학습/04_MobileNet_일부_파인튠.ipynb)
+    - [01_Inception_to_ML.ipynb](/code/08_pretrained_model/04_CNN_피쳐맵_및_전이학습/01_Inception_to_ML.ipynb)
+    - [02_FetureMap.ipynb](/code/08_pretrained_model/04_CNN_피쳐맵_및_전이학습/02_FetureMap.ipynb)
+    - [03_MobileNet_전이_학습.ipynb](/code/08_pretrained_model/04_CNN_피쳐맵_및_전이학습/03_MobileNet_전이_학습.ipynb)
+    - [04_MobileNet_일부_파인튠.ipynb](/code/08_pretrained_model/04_CNN_피쳐맵_및_전이학습/04_MobileNet_일부_파인튠.ipynb)
   - 05_RNN
-    - [5.0.SeqData_Anal.ipynb](/code/7_pretrained_model/05_RNN/5.0.SeqData_Anal.ipynb)
-    - [5.0.SeqData_Anal_AutoArima.ipynb](/code/7_pretrained_model/05_RNN/5.0.SeqData_Anal_AutoArima.ipynb)
+    - [5.0.SeqData_Anal.ipynb](/code/08_pretrained_model/05_RNN/5.0.SeqData_Anal.ipynb)
+    - [5.0.SeqData_Anal_AutoArima.ipynb](/code/08_pretrained_model/05_RNN/5.0.SeqData_Anal_AutoArima.ipynb)
   - 06_Seq2Seq
-    - [_02_LM_seq2seq.ipynb](/code/7_pretrained_model/06_Seq2Seq/_02_LM_seq2seq.ipynb)
+    - [_02_LM_seq2seq.ipynb](/code/08_pretrained_model/06_Seq2Seq/_02_LM_seq2seq.ipynb)
   - 07_Transformer
-    - [_00_positioning_embedding.ipynb](/code/7_pretrained_model/07_Transformer/_00_positioning_embedding.ipynb)
-    - [_01_self_Attention.ipynb](/code/7_pretrained_model/07_Transformer/_01_self_Attention.ipynb)
-    - [_02_Transformer_imdb.ipynb](/code/7_pretrained_model/07_Transformer/_02_Transformer_imdb.ipynb)
+    - [_00_positioning_embedding.ipynb](/code/08_pretrained_model/07_Transformer/_00_positioning_embedding.ipynb)
+    - [_01_self_Attention.ipynb](/code/08_pretrained_model/07_Transformer/_01_self_Attention.ipynb)
+    - [_02_Transformer_imdb.ipynb](/code/08_pretrained_model/07_Transformer/_02_Transformer_imdb.ipynb)
   - 08_Bert
-    - [7.06.LM_BERTopic_En.ipynb](/code/7_pretrained_model/08_Bert/7.06.LM_BERTopic_En.ipynb)
+    - [7.06.LM_BERTopic_En.ipynb](/code/08_pretrained_model/08_Bert/7.06.LM_BERTopic_En.ipynb)
   - 09_Object_Detection
-    - [_01_OD_NMS.ipynb](/code/7_pretrained_model/09_Object_Detection/_01_OD_NMS.ipynb)
-    - [_02_OD_SSD_mAP.ipynb](/code/7_pretrained_model/09_Object_Detection/_02_OD_SSD_mAP.ipynb)
-    - [_03_OD_SSD_example.ipynb](/code/7_pretrained_model/09_Object_Detection/_03_OD_SSD_example.ipynb)
-    - [_04_ReceptiveField.ipynb](/code/7_pretrained_model/09_Object_Detection/_04_ReceptiveField.ipynb)
-    - [_05_Semantic_Upsampling_Transposed.ipynb](/code/7_pretrained_model/09_Object_Detection/_05_Semantic_Upsampling_Transposed.ipynb)
-    - [_06_Semantic_Segmentation.ipynb](/code/7_pretrained_model/09_Object_Detection/_06_Semantic_Segmentation.ipynb)
-    - [_07_Semantic_Performance.ipynb](/code/7_pretrained_model/09_Object_Detection/_07_Semantic_Performance.ipynb)
-    - [_08_OD_RCNN_Offset.ipynb](/code/7_pretrained_model/09_Object_Detection/_08_OD_RCNN_Offset.ipynb)
+    - [_01_OD_NMS.ipynb](/code/08_pretrained_model/09_Object_Detection/_01_OD_NMS.ipynb)
+    - [_02_OD_SSD_mAP.ipynb](/code/08_pretrained_model/09_Object_Detection/_02_OD_SSD_mAP.ipynb)
+    - [_03_OD_SSD_example.ipynb](/code/08_pretrained_model/09_Object_Detection/_03_OD_SSD_example.ipynb)
+    - [_04_ReceptiveField.ipynb](/code/08_pretrained_model/09_Object_Detection/_04_ReceptiveField.ipynb)
+    - [_05_Semantic_Upsampling_Transposed.ipynb](/code/08_pretrained_model/09_Object_Detection/_05_Semantic_Upsampling_Transposed.ipynb)
+    - [_06_Semantic_Segmentation.ipynb](/code/08_pretrained_model/09_Object_Detection/_06_Semantic_Segmentation.ipynb)
+    - [_07_Semantic_Performance.ipynb](/code/08_pretrained_model/09_Object_Detection/_07_Semantic_Performance.ipynb)
+    - [_08_OD_RCNN_Offset.ipynb](/code/08_pretrained_model/09_Object_Detection/_08_OD_RCNN_Offset.ipynb)
   - 10_YOLO
-    - [7.04.self.ipynb](/code/7_pretrained_model/10_YOLO/7.04.self.ipynb)
-    - [7.05.OD_yolo_for_class.ipynb](/code/7_pretrained_model/10_YOLO/7.05.OD_yolo_for_class.ipynb)
-    - [7.05.z_주석.ipynb](/code/7_pretrained_model/10_YOLO/7.05.z_주석.ipynb)
+    - [7.04.self.ipynb](/code/08_pretrained_model/10_YOLO/7.04.self.ipynb)
+    - [7.05.OD_yolo_for_class.ipynb](/code/08_pretrained_model/10_YOLO/7.05.OD_yolo_for_class.ipynb)
+    - [7.05.z_주석.ipynb](/code/08_pretrained_model/10_YOLO/7.05.z_주석.ipynb)
   - 11_ChatGPT_API
-    - [8.01.LLM_ChatGPT_API.ipynb](/code/7_pretrained_model/11_ChatGPT_API/8.01.LLM_ChatGPT_API.ipynb)
-    - [8.01.LLM_ChatGPT_API_Chatbot.ipynb](/code/7_pretrained_model/11_ChatGPT_API/8.01.LLM_ChatGPT_API_Chatbot.ipynb)
+    - [8.01.LLM_ChatGPT_API.ipynb](/code/08_pretrained_model/11_ChatGPT_API/8.01.LLM_ChatGPT_API.ipynb)
+    - [8.01.LLM_ChatGPT_API_Chatbot.ipynb](/code/08_pretrained_model/11_ChatGPT_API/8.01.LLM_ChatGPT_API_Chatbot.ipynb)
   - 11_모델_응용
-    - [8.01.Model_Util_CNN_TextAna.ipynb](/code/7_pretrained_model/11_모델_응용/8.01.Model_Util_CNN_TextAna.ipynb)
+    - [8.01.Model_Util_CNN_TextAna.ipynb](/code/08_pretrained_model/11_모델_응용/8.01.Model_Util_CNN_TextAna.ipynb)
   - 12_Private_chat
-    - [8.02.Llmal.ipynb](/code/7_pretrained_model/12_Private_chat/8.02.Llmal.ipynb)
-    - [8.02.LnagChain_Text_Summarize.ipynb](/code/7_pretrained_model/12_Private_chat/8.02.LnagChain_Text_Summarize.ipynb)
-    - [_01_GPT_2.ipynb](/code/7_pretrained_model/12_Private_chat/_01_GPT_2.ipynb)
-    - [_02_llama_3_bllossom.ipynb](/code/7_pretrained_model/12_Private_chat/_02_llama_3_bllossom.ipynb)
+    - [8.02.Llmal.ipynb](/code/08_pretrained_model/12_Private_chat/8.02.Llmal.ipynb)
+    - [8.02.LnagChain_Text_Summarize.ipynb](/code/08_pretrained_model/12_Private_chat/8.02.LnagChain_Text_Summarize.ipynb)
+    - [_01_GPT_2.ipynb](/code/08_pretrained_model/12_Private_chat/_01_GPT_2.ipynb)
+    - [_02_llama_3_bllossom.ipynb](/code/08_pretrained_model/12_Private_chat/_02_llama_3_bllossom.ipynb)
   - 13_NER
-    - [8.02.NER.ipynb](/code/7_pretrained_model/13_NER/8.02.NER.ipynb)
+    - [8.02.NER.ipynb](/code/08_pretrained_model/13_NER/8.02.NER.ipynb)
   - 14_VQA
-    - [7.02.VQA.ipynb](/code/7_pretrained_model/14_VQA/7.02.VQA.ipynb)
-- 8.ETC
-  - [7.02.VQA.ipynb](/code/8.ETC/7.02.VQA.ipynb)
-  - [_간이세미나_1._딥러닝에서_배치_크기의_역할.ipynb](/code/8.ETC/_간이세미나_1._딥러닝에서_배치_크기의_역할.ipynb)
-  - [_간이세미나_10_인공지능의_윤리적_고려사항.ipynb](/code/8.ETC/_간이세미나_10_인공지능의_윤리적_고려사항.ipynb)
-  - [_간이세미나_2._텐서_자료형.ipynb](/code/8.ETC/_간이세미나_2._텐서_자료형.ipynb)
-  - [_간이세미나_3._옵티마이저_비교.ipynb](/code/8.ETC/_간이세미나_3._옵티마이저_비교.ipynb)
-  - [_간이세미나_4_인공지능의_편향성과_차별.ipynb](/code/8.ETC/_간이세미나_4_인공지능의_편향성과_차별.ipynb)
-  - [_간이세미나_5._인공지능의_창의성과_저작권.ipynb](/code/8.ETC/_간이세미나_5._인공지능의_창의성과_저작권.ipynb)
+    - [7.02.VQA.ipynb](/code/08_pretrained_model/14_VQA/7.02.VQA.ipynb)
+- 09.ETC
+  - [7.02.VQA.ipynb](/code/09.ETC/7.02.VQA.ipynb)
+  - [_간이세미나_1._딥러닝에서_배치_크기의_역할.ipynb](/code/09.ETC/_간이세미나_1._딥러닝에서_배치_크기의_역할.ipynb)
+  - [_간이세미나_10_인공지능의_윤리적_고려사항.ipynb](/code/09.ETC/_간이세미나_10_인공지능의_윤리적_고려사항.ipynb)
+  - [_간이세미나_2._텐서_자료형.ipynb](/code/09.ETC/_간이세미나_2._텐서_자료형.ipynb)
+  - [_간이세미나_3._옵티마이저_비교.ipynb](/code/09.ETC/_간이세미나_3._옵티마이저_비교.ipynb)
+  - [_간이세미나_4_인공지능의_편향성과_차별.ipynb](/code/09.ETC/_간이세미나_4_인공지능의_편향성과_차별.ipynb)
+  - [_간이세미나_5._인공지능의_창의성과_저작권.ipynb](/code/09.ETC/_간이세미나_5._인공지능의_창의성과_저작권.ipynb)
       -  논점
       -  창의성 시험
       -  AI 드론
       -  Nara AI Film
-  - [_간이세미나_6_딥러닝_모델의_해석가능성.ipynb](/code/8.ETC/_간이세미나_6_딥러닝_모델의_해석가능성.ipynb)
-  - [_간이세미나_7_퍼셉트론.ipynb](/code/8.ETC/_간이세미나_7_퍼셉트론.ipynb)
-  - [_간이세미나_8_데이터_활용과_개인정보_보호.ipynb](/code/8.ETC/_간이세미나_8_데이터_활용과_개인정보_보호.ipynb)
-  - [_간이세미나_9_활성화_함수.ipynb](/code/8.ETC/_간이세미나_9_활성화_함수.ipynb)
-  - [발표_1_transformer.ipynb](/code/8.ETC/발표_1_transformer.ipynb)
+  - [_간이세미나_6_딥러닝_모델의_해석가능성.ipynb](/code/09.ETC/_간이세미나_6_딥러닝_모델의_해석가능성.ipynb)
+  - [_간이세미나_7_퍼셉트론.ipynb](/code/09.ETC/_간이세미나_7_퍼셉트론.ipynb)
+  - [_간이세미나_8_데이터_활용과_개인정보_보호.ipynb](/code/09.ETC/_간이세미나_8_데이터_활용과_개인정보_보호.ipynb)
+  - [_간이세미나_9_활성화_함수.ipynb](/code/09.ETC/_간이세미나_9_활성화_함수.ipynb)
+  - [발표_1_transformer.ipynb](/code/09.ETC/발표_1_transformer.ipynb)
       -  어텐션 시각화
-  - [발표_2_alex_net.ipynb](/code/8.ETC/발표_2_alex_net.ipynb)
+  - [발표_2_alex_net.ipynb](/code/09.ETC/발표_2_alex_net.ipynb)
       -  Alex Net
       -  구조
   - 99_과제_및_퀴즈
     - 0724
-      - [0724_weekly_quiz_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/0724/0724_weekly_quiz_박진형.ipynb)
+      - [0724_weekly_quiz_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/0724/0724_weekly_quiz_박진형.ipynb)
           -  체크리스트
           -  기본적으로 젠더, 경고 여부 원핫 인코딩
           -  히트맵을 확인하여 상관관계 파악
@@ -453,7 +448,7 @@
           -  딥러닝
           -  AUC socores
     - 0724_위클리_퀴즈_의료
-      - [0724_weekly_quiz_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/0724_위클리_퀴즈_의료/0724_weekly_quiz_박진형.ipynb)
+      - [0724_weekly_quiz_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/0724_위클리_퀴즈_의료/0724_weekly_quiz_박진형.ipynb)
           -  체크리스트
           -  기본적으로 젠더, 경고 여부 원핫 인코딩
           -  히트맵을 확인하여 상관관계 파악
@@ -463,7 +458,7 @@
           -  딥러닝
           -  AUC socores
     - 0729_CNN_pretrained
-      - [0._계획.ipynb](/code/8.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/0._계획.ipynb)
+      - [0._계획.ipynb](/code/09.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/0._계획.ipynb)
           -  계획
           -  1. ML 전이 학습 결과
           -  2. NN 전이 학습 결과 (다양하게 많이 돌려 보진 못함)
@@ -471,35 +466,35 @@
           -  4. 직접 설계
           -  5. pre trained model
           -  5. 고찰
-      - [1_1_transfer_with_ML_1_codes.ipynb](/code/8.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/1_1_transfer_with_ML_1_codes.ipynb)
+      - [1_1_transfer_with_ML_1_codes.ipynb](/code/09.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/1_1_transfer_with_ML_1_codes.ipynb)
           -  각 모델 불러오기
           -  데이터 준비
           -  머신러닝을 위한 각 모델별 예측
           -  각 머신러닝 모델 돌려보고 결과 확인
           -  전이 학습 with 머신러닝
-      - [2_1_transfer_mobilenet.ipynb](/code/8.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/2_1_transfer_mobilenet.ipynb)
+      - [2_1_transfer_mobilenet.ipynb](/code/09.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/2_1_transfer_mobilenet.ipynb)
           -  모바일 넷 전이 학습 with NN
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [3_1_finetune_mobilenet.ipynb](/code/8.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/3_1_finetune_mobilenet.ipynb)
+      - [3_1_finetune_mobilenet.ipynb](/code/09.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/3_1_finetune_mobilenet.ipynb)
           -  모바일 넷 파인 튜닝
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [4_1_from_scratch_NN.ipynb](/code/8.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/4_1_from_scratch_NN.ipynb)
+      - [4_1_from_scratch_NN.ipynb](/code/09.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/4_1_from_scratch_NN.ipynb)
           -  직접 구축하기
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [5_1_just_use_mobile.ipynb](/code/8.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/5_1_just_use_mobile.ipynb)
+      - [5_1_just_use_mobile.ipynb](/code/09.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/5_1_just_use_mobile.ipynb)
           -  경로 불러오기
-      - [6_1_모든모델_불러와_비교하기.ipynb](/code/8.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/6_1_모든모델_불러와_비교하기.ipynb)
+      - [6_1_모든모델_불러와_비교하기.ipynb](/code/09.ETC/99_과제_및_퀴즈/0729_CNN_pretrained/6_1_모든모델_불러와_비교하기.ipynb)
           -  TEST 데이터로 확인하기
           -  모바일 넷 정답라벨
           -  모델 결과 비교
     - 072x_과제
-      - [0._계획.ipynb](/code/8.ETC/99_과제_및_퀴즈/072x_과제/0._계획.ipynb)
+      - [0._계획.ipynb](/code/09.ETC/99_과제_및_퀴즈/072x_과제/0._계획.ipynb)
           -  계획
           -  1. ML 전이 학습 결과
           -  2. NN 전이 학습 결과 (다양하게 많이 돌려 보진 못함)
@@ -507,29 +502,29 @@
           -  4. 직접 설계
           -  5. pre trained model
           -  5. 고찰
-      - [1_1_transfer_with_ML_1_codes.ipynb](/code/8.ETC/99_과제_및_퀴즈/072x_과제/1_1_transfer_with_ML_1_codes.ipynb)
+      - [1_1_transfer_with_ML_1_codes.ipynb](/code/09.ETC/99_과제_및_퀴즈/072x_과제/1_1_transfer_with_ML_1_codes.ipynb)
           -  각 모델 불러오기
           -  데이터 준비
           -  머신러닝을 위한 각 모델별 예측
           -  각 머신러닝 모델 돌려보고 결과 확인
           -  전이 학습 with 머신러닝
-      - [2_1_transfer_mobilenet.ipynb](/code/8.ETC/99_과제_및_퀴즈/072x_과제/2_1_transfer_mobilenet.ipynb)
+      - [2_1_transfer_mobilenet.ipynb](/code/09.ETC/99_과제_및_퀴즈/072x_과제/2_1_transfer_mobilenet.ipynb)
           -  모바일 넷 전이 학습 with NN
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [3_1_finetune_mobilenet.ipynb](/code/8.ETC/99_과제_및_퀴즈/072x_과제/3_1_finetune_mobilenet.ipynb)
+      - [3_1_finetune_mobilenet.ipynb](/code/09.ETC/99_과제_및_퀴즈/072x_과제/3_1_finetune_mobilenet.ipynb)
           -  모바일 넷 파인 튜닝
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [4_1_from_scratch_NN.ipynb](/code/8.ETC/99_과제_및_퀴즈/072x_과제/4_1_from_scratch_NN.ipynb)
+      - [4_1_from_scratch_NN.ipynb](/code/09.ETC/99_과제_및_퀴즈/072x_과제/4_1_from_scratch_NN.ipynb)
           -  직접 구축하기
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
     - 0809_위클리_퀴즈_YOLO
-      - [week11_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/0809_위클리_퀴즈_YOLO/week11_박진형.ipynb)
+      - [week11_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/0809_위클리_퀴즈_YOLO/week11_박진형.ipynb)
           -  1. 라이브러리 불러오기
           -  2.train_solution_bounding_boxes.csv불러와서 확인해 볼것
           -  3. Train_images에서 5장 불러와서 확인해 볼것
@@ -544,7 +539,7 @@
           -  11. 지금까지 위에서는 이미지 한장을 하였다, 이제는 모든 이미지를 읽고 전처리한 후 YOLO 모델에 입력으로 설정하고, 신경망의 출력을 통해 신뢰도가 0.5 이상인 객체를 탐지하여 그 경계 상자, 클래스 ID, 신뢰도를 계산하고, 비cv2.dnn.NMSBoxes로 최종 경계 상자를 결정한 뒤 이를 이미지에 그려 시각화하는 함수를 만들것
           -  12. 테스트셋에서 무작위로 하나를 선택한 후, predict_yolo 함수를 사용하여 해당 이미지에서 객체를 탐지하고 시각화 할것
     - 99_과제
-      - [week10_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/99_과제/week10_박진형.ipynb)
+      - [week10_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/99_과제/week10_박진형.ipynb)
           -  데이터 불러오고 .head 와 .tail로 확인할것(시계열 주기성이 어떻게 되는지, 언제부터 언제까진지 확인하여야함)
           -  Month를 indexing 한다.(시계열 데이터는 날짜 칼럼을 indexing 하여야함)
           -  데이터 시각화 (비정상성 데이터인지 확인)
@@ -571,15 +566,15 @@
           -  예측 값 되돌리기(minmax scaling 때문)
           -  inverse_transform 사용 할 것
           -  예측 결과 시각화
-      - [week1_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/99_과제/week1_박진형.ipynb)
-      - [week2_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/99_과제/week2_박진형.ipynb)
-      - [week3_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/99_과제/week3_박진형.ipynb)
-      - [week4_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/99_과제/week4_박진형.ipynb)
-      - [week8_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/99_과제/week8_박진형.ipynb)
+      - [week1_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/99_과제/week1_박진형.ipynb)
+      - [week2_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/99_과제/week2_박진형.ipynb)
+      - [week3_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/99_과제/week3_박진형.ipynb)
+      - [week4_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/99_과제/week4_박진형.ipynb)
+      - [week8_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/99_과제/week8_박진형.ipynb)
           -  1. 데이터 불러오기
           - 4. 결측값 확인
           - 5. 데이터 인코딩 => 예를들어[남, 여] 같은 문자형 데이터는 쓸수 없기에 수치화 하여야함.
-      - [week9_박진형.ipynb](/code/8.ETC/99_과제_및_퀴즈/99_과제/week9_박진형.ipynb)
+      - [week9_박진형.ipynb](/code/09.ETC/99_과제_및_퀴즈/99_과제/week9_박진형.ipynb)
           -  라이브러리 Improt 및 데이터 불러오기
           -  이미지 사이즈 150,150으로 바꾸기
           -  문제 2
@@ -590,7 +585,7 @@
           -  Test Data set 평가
           -  훈련 모델 plot 그리기
     - 과제_박진형
-      - [0._계획.ipynb](/code/8.ETC/99_과제_및_퀴즈/과제_박진형/0._계획.ipynb)
+      - [0._계획.ipynb](/code/09.ETC/99_과제_및_퀴즈/과제_박진형/0._계획.ipynb)
           -  계획
           -  1. ML 전이 학습 결과
           -  2. NN 전이 학습 결과 (다양하게 많이 돌려 보진 못함)
@@ -598,49 +593,49 @@
           -  4. 직접 설계
           -  5. pre trained model
           -  5. 고찰
-      - [1_1_transfer_with_ML_1_codes.ipynb](/code/8.ETC/99_과제_및_퀴즈/과제_박진형/1_1_transfer_with_ML_1_codes.ipynb)
+      - [1_1_transfer_with_ML_1_codes.ipynb](/code/09.ETC/99_과제_및_퀴즈/과제_박진형/1_1_transfer_with_ML_1_codes.ipynb)
           -  각 모델 불러오기
           -  데이터 준비
           -  머신러닝을 위한 각 모델별 예측
           -  각 머신러닝 모델 돌려보고 결과 확인
           -  전이 학습 with 머신러닝
-      - [2_1_transfer_mobilenet.ipynb](/code/8.ETC/99_과제_및_퀴즈/과제_박진형/2_1_transfer_mobilenet.ipynb)
+      - [2_1_transfer_mobilenet.ipynb](/code/09.ETC/99_과제_및_퀴즈/과제_박진형/2_1_transfer_mobilenet.ipynb)
           -  모바일 넷 전이 학습 with NN
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [3_1_finetune_mobilenet.ipynb](/code/8.ETC/99_과제_및_퀴즈/과제_박진형/3_1_finetune_mobilenet.ipynb)
+      - [3_1_finetune_mobilenet.ipynb](/code/09.ETC/99_과제_및_퀴즈/과제_박진형/3_1_finetune_mobilenet.ipynb)
           -  모바일 넷 파인 튜닝
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [4_1_from_scratch_NN.ipynb](/code/8.ETC/99_과제_및_퀴즈/과제_박진형/4_1_from_scratch_NN.ipynb)
+      - [4_1_from_scratch_NN.ipynb](/code/09.ETC/99_과제_및_퀴즈/과제_박진형/4_1_from_scratch_NN.ipynb)
           -  직접 구축하기
           -  경로 불러오기
           -  트레인 데이터 확인
           -  테스트 데이터 확인
-      - [5_1_just_use_mobile.ipynb](/code/8.ETC/99_과제_및_퀴즈/과제_박진형/5_1_just_use_mobile.ipynb)
+      - [5_1_just_use_mobile.ipynb](/code/09.ETC/99_과제_및_퀴즈/과제_박진형/5_1_just_use_mobile.ipynb)
           -  경로 불러오기
-      - [6_1_모든모델_불러와_비교하기.ipynb](/code/8.ETC/99_과제_및_퀴즈/과제_박진형/6_1_모든모델_불러와_비교하기.ipynb)
+      - [6_1_모든모델_불러와_비교하기.ipynb](/code/09.ETC/99_과제_및_퀴즈/과제_박진형/6_1_모든모델_불러와_비교하기.ipynb)
           -  TEST 데이터로 확인하기
           -  모바일 넷 정답라벨
           -  모델 결과 비교
   - etc
-    - [240603_01_sampling.ipynb](/code/8.ETC/etc/240603_01_sampling.ipynb)
-    - [240603_02_hr_sampling_roc.ipynb](/code/8.ETC/etc/240603_02_hr_sampling_roc.ipynb)
-    - [240603_03_titanic_new_age.ipynb](/code/8.ETC/etc/240603_03_titanic_new_age.ipynb)
-    - [240604_00_mnist.ipynb](/code/8.ETC/etc/240604_00_mnist.ipynb)
-    - [240604_01_optimizer.ipynb](/code/8.ETC/etc/240604_01_optimizer.ipynb)
-- 9.Generative_Deep_Learning_2nd
-  - [2.3_다층_퍼셉트론_구현.ipynb](/code/9.Generative_Deep_Learning_2nd/2.3_다층_퍼셉트론_구현.ipynb)
-  - [2.4_합성곱_신경망.ipynb](/code/9.Generative_Deep_Learning_2nd/2.4_합성곱_신경망.ipynb)
-  - [3.1_VAE.ipynb](/code/9.Generative_Deep_Learning_2nd/3.1_VAE.ipynb)
+    - [240603_01_sampling.ipynb](/code/09.ETC/etc/240603_01_sampling.ipynb)
+    - [240603_02_hr_sampling_roc.ipynb](/code/09.ETC/etc/240603_02_hr_sampling_roc.ipynb)
+    - [240603_03_titanic_new_age.ipynb](/code/09.ETC/etc/240603_03_titanic_new_age.ipynb)
+    - [240604_00_mnist.ipynb](/code/09.ETC/etc/240604_00_mnist.ipynb)
+    - [240604_01_optimizer.ipynb](/code/09.ETC/etc/240604_01_optimizer.ipynb)
+- 10.Generative_Deep_Learning_2nd
+  - [2.3_다층_퍼셉트론_구현.ipynb](/code/10.Generative_Deep_Learning_2nd/2.3_다층_퍼셉트론_구현.ipynb)
+  - [2.4_합성곱_신경망.ipynb](/code/10.Generative_Deep_Learning_2nd/2.4_합성곱_신경망.ipynb)
+  - [3.1_VAE.ipynb](/code/10.Generative_Deep_Learning_2nd/3.1_VAE.ipynb)
       -  학습 출력
-  - [3.2_multivariable_normal_distribution.ipynb](/code/9.Generative_Deep_Learning_2nd/3.2_multivariable_normal_distribution.ipynb)
-  - [3.2_VAE_in_book.ipynb](/code/9.Generative_Deep_Learning_2nd/3.2_VAE_in_book.ipynb)
-  - [3._VAE_in_book_extra(faceA).ipynb](/code/9.Generative_Deep_Learning_2nd/3._VAE_in_book_extra(faceA).ipynb)
-  - [3.오토인코더.ipynb](/code/9.Generative_Deep_Learning_2nd/3.오토인코더.ipynb)
-  - [4._GAN.ipynb](/code/9.Generative_Deep_Learning_2nd/4._GAN.ipynb)
-  - [vae_done.ipynb](/code/9.Generative_Deep_Learning_2nd/vae_done.ipynb)
-  - [WGAN_GP-gptmade.ipynb](/code/9.Generative_Deep_Learning_2nd/WGAN_GP-gptmade.ipynb)
-  - [WGAN_GP.ipynb](/code/9.Generative_Deep_Learning_2nd/WGAN_GP.ipynb)
+  - [3.2_multivariable_normal_distribution.ipynb](/code/10.Generative_Deep_Learning_2nd/3.2_multivariable_normal_distribution.ipynb)
+  - [3.2_VAE_in_book.ipynb](/code/10.Generative_Deep_Learning_2nd/3.2_VAE_in_book.ipynb)
+  - [3._VAE_in_book_extra(faceA).ipynb](/code/10.Generative_Deep_Learning_2nd/3._VAE_in_book_extra(faceA).ipynb)
+  - [3.오토인코더.ipynb](/code/10.Generative_Deep_Learning_2nd/3.오토인코더.ipynb)
+  - [4._GAN.ipynb](/code/10.Generative_Deep_Learning_2nd/4._GAN.ipynb)
+  - [vae_done.ipynb](/code/10.Generative_Deep_Learning_2nd/vae_done.ipynb)
+  - [WGAN_GP-gptmade.ipynb](/code/10.Generative_Deep_Learning_2nd/WGAN_GP-gptmade.ipynb)
+  - [WGAN_GP.ipynb](/code/10.Generative_Deep_Learning_2nd/WGAN_GP.ipynb)
