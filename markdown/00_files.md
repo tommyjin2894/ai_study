@@ -221,13 +221,25 @@
       -  시계열 특성
       -  **정상성**
   - [02_ARIMA_분석.ipynb](/code/03_time_series/02_ARIMA_분석.ipynb)
-      -  Arima 분석
-  - [rag_feature.ipynb](/code/03_time_series/rag_feature.ipynb)
+      -  ARIMA
+      -  자기회귀 AR(auto regressive)
+      -  차분 (**integrated**)
+      -  이동 평균(Moving Average) - q
+      -  자기 상관성 확인 (Autocorrelation)
+      -  Augmented Dickey-Fuller 를 이용한 정상성 검정
+      -  차분에 대한 ADF
+      -  statsmodels
+  - [03_rag_feature.ipynb](/code/03_time_series/03_rag_feature.ipynb)
+      -  Lag Feature (지연 피쳐)
       -  이동평균선
-  - [seasonal.ipynb](/code/03_time_series/seasonal.ipynb)
-      -  그래프 확인을 위한 전처리
-      -  example
-  - [trend.ipynb](/code/03_time_series/trend.ipynb)
+      -  regplot(회귀선)
+  - [04_seasonal.ipynb](/code/03_time_series/04_seasonal.ipynb)
+      -  계절성 확인
+      -  주가 예측 모델 및 시각화
+      -  지수 변화율 분석 및 주기성 시각화
+      -  계절성 플롯(seasonal_plot)과 주기도(Periodogram)
+      -  주가 예측모델
+  - [05_trend.ipynb](/code/03_time_series/05_trend.ipynb)
       -  트렌드 예측
       -  잔차 모델링
       -  성능 평가
