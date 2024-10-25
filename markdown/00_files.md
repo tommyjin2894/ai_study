@@ -56,7 +56,7 @@
       -  RandomizedSearchCV
   - [04_Feature_Importance.ipynb](/code/01_machinelearing/04_Feature_Importance.ipynb)
       -  feature importance
-      -  2. 랜덤 포레스트 및 디시전 트리를 이용해서 정확도 구해보기
+      -  랜덤 포레스트 및 디시전 트리를 이용해서 정확도 구해보기
       -  랜덤 포레스트에서 가장 중요한 피쳐부터 하나씩 추가해서 비교해 보기
   - [05_PCA_주성분분석.ipynb](/code/01_machinelearing/05_PCA_주성분분석.ipynb)
       -  주성분 분석(차원 축소)
@@ -233,14 +233,10 @@
       -  Lag Feature (지연 피쳐)
       -  이동평균선
       -  regplot(회귀선)
-  - [04_seasonal.ipynb](/code/03_time_series/04_seasonal.ipynb)
-      -  계절성 확인
-      -  주가 예측 모델 및 시각화
-      -  지수 변화율 분석 및 주기성 시각화
-      -  계절성 플롯(seasonal_plot)과 주기도(Periodogram)
-      -  주가 예측모델
-  - [05_trend.ipynb](/code/03_time_series/05_trend.ipynb)
-      -  트렌드 예측
+  - [04_trend.ipynb](/code/03_time_series/04_trend.ipynb)
+      -  다항 특성
+      -  Moving Average Plots
+      -  트렌드 예측 (Trend, 추세)
       -  잔차 모델링
       -  성능 평가
       -  지연 피쳐 및 이동 평균 생성
@@ -248,6 +244,33 @@
       -  example
       -  함수정의
       -  전처리
+  - [05_seasonal.ipynb](/code/03_time_series/05_seasonal.ipynb)
+      -  Seasonality
+      -  계절성 확인
+      -  주가 예측 모델 및 시각화
+      -  지수 변화율 분석 및 주기성 시각화
+      -  계절성 플롯(seasonal_plot)과 주기도(Periodogram)
+      -  `scipy.signal.periodogram`
+      -  주가 예측모델 (주기학습)
+  - [06_Cycles.ipynb](/code/03_time_series/06_Cycles.ipynb)
+      -  Serial Dependence
+      -  Cycles(Serial Dependence 을 나타내는 일반적인 방법)
+      -  Lagged Series and Lag plots
+  - [07_Hybrid_model.ipynb](/code/03_time_series/07_Hybrid_model.ipynb)
+      -  Hybrid Model
+      -  **Components and Residuals**
+      -  Hybrid Forecasting with Residuals(잔차를 사용한 복합 예측)
+      -  Hybrids 알고리즘 디자인하기
+      -  피쳐 변환 알고리즘 1 : Linear Regression
+      -  타겟 변환 알고리즘 2 : Tree 모델 종류.
+      -  하이브리드 모델 (Linear Regression + DecisionTreeRegressor 의 잔차 )
+      -  트랜드(다항특성)를 고려하여 잔차와 함께 학습하기
+  - [08_Forecast_stratagy.ipynb](/code/03_time_series/08_Forecast_stratagy.ipynb)
+      -  예측 모델 정의하기
+      -  예측 기원 (forecast origin)
+      -  **forecast horizon**
+      -  용어정리
+      -  멀티 스텝 예측 전략!
 - 04_sequence
   - [00_크롤링.ipynb](/code/04_sequence/00_크롤링.ipynb)
   - [01_모델링(yes24).ipynb](/code/04_sequence/01_모델링(yes24).ipynb)
