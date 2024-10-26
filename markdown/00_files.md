@@ -213,14 +213,20 @@
       -  Loss
       -  AE 응용
       -  Mnist data를 이용한 AE
-- 03_time_series
-  - [01_time_series.ipynb](/code/03_time_series/01_time_series.ipynb)
+- 03_DeepLearning_layers
+  - [00_SoftMax.ipynb](/code/03_DeepLearning_layers/00_SoftMax.ipynb)
+  - [01_batch_norm.ipynb](/code/03_DeepLearning_layers/01_batch_norm.ipynb)
+  - [02_early_stop.ipynb](/code/03_DeepLearning_layers/02_early_stop.ipynb)
+  - [03_ReceptiveField.ipynb](/code/03_DeepLearning_layers/03_ReceptiveField.ipynb)
+  - [04_dropout.ipynb](/code/03_DeepLearning_layers/04_dropout.ipynb)
+- 04_time_series
+  - [01_time_series.ipynb](/code/04_time_series/01_time_series.ipynb)
       -  시계열 데이터
       -  다변량과 단변량
       -  시간 종속성 Time Dependence
       -  시계열 특성
       -  **정상성**
-  - [02_ARIMA_분석.ipynb](/code/03_time_series/02_ARIMA_분석.ipynb)
+  - [02_ARIMA_분석.ipynb](/code/04_time_series/02_ARIMA_분석.ipynb)
       -  ARIMA
       -  자기회귀 AR(auto regressive)
       -  차분 (**integrated**)
@@ -229,11 +235,11 @@
       -  Augmented Dickey-Fuller 를 이용한 정상성 검정
       -  차분에 대한 ADF
       -  statsmodels
-  - [03_rag_feature.ipynb](/code/03_time_series/03_rag_feature.ipynb)
+  - [03_rag_feature.ipynb](/code/04_time_series/03_rag_feature.ipynb)
       -  Lag Feature (지연 피쳐)
       -  이동평균선
       -  regplot(회귀선)
-  - [04_trend.ipynb](/code/03_time_series/04_trend.ipynb)
+  - [04_trend.ipynb](/code/04_time_series/04_trend.ipynb)
       -  다항 특성
       -  Moving Average Plots
       -  트렌드 예측 (Trend, 추세)
@@ -244,7 +250,7 @@
       -  example
       -  함수정의
       -  전처리
-  - [05_seasonal.ipynb](/code/03_time_series/05_seasonal.ipynb)
+  - [05_seasonal.ipynb](/code/04_time_series/05_seasonal.ipynb)
       -  Seasonality
       -  계절성 확인
       -  주가 예측 모델 및 시각화
@@ -252,11 +258,11 @@
       -  계절성 플롯(seasonal_plot)과 주기도(Periodogram)
       -  `scipy.signal.periodogram`
       -  주가 예측모델 (주기학습)
-  - [06_Cycles.ipynb](/code/03_time_series/06_Cycles.ipynb)
+  - [06_Cycles.ipynb](/code/04_time_series/06_Cycles.ipynb)
       -  Serial Dependence
       -  Cycles(Serial Dependence 을 나타내는 일반적인 방법)
       -  Lagged Series and Lag plots
-  - [07_Hybrid_model.ipynb](/code/03_time_series/07_Hybrid_model.ipynb)
+  - [07_Hybrid_model.ipynb](/code/04_time_series/07_Hybrid_model.ipynb)
       -  Hybrid Model
       -  **Components and Residuals**
       -  Hybrid Forecasting with Residuals(잔차를 사용한 복합 예측)
@@ -265,14 +271,14 @@
       -  타겟 변환 알고리즘 2 : Tree 모델 종류.
       -  하이브리드 모델 (Linear Regression + DecisionTreeRegressor 의 잔차 )
       -  트랜드(다항특성)를 고려하여 잔차와 함께 학습하기
-  - [08_Forecast_stratagy.ipynb](/code/03_time_series/08_Forecast_stratagy.ipynb)
+  - [08_Forecast_stratagy.ipynb](/code/04_time_series/08_Forecast_stratagy.ipynb)
       -  예측 모델 정의하기
       -  예측 기원 (forecast origin)
       -  **forecast horizon**
       -  용어정리
       -  멀티 스텝 예측 전략!
-- 04_sequence
-  - [01_Sequence.ipynb](/code/04_sequence/01_Sequence.ipynb)
+- 05_sequence
+  - [01_Sequence.ipynb](/code/05_sequence/01_Sequence.ipynb)
       -  크롤링
       -  불러오기
       -  가격 데이터 타입 변경
@@ -282,37 +288,37 @@
       -  상관관계 분석
       -  분포 확인
       -  다변량 분석 - 산점도 행렬
-  - [02_Sequence_모델링.ipynb](/code/04_sequence/02_Sequence_모델링.ipynb)
+  - [02_Sequence_모델링.ipynb](/code/05_sequence/02_Sequence_모델링.ipynb)
       -  Sequence 모델링
       -  전처리
       -  모델 설계 밑 구축
       -  예측 및 평가
-  - [03_word_embed_cluster.ipynb](/code/04_sequence/03_word_embed_cluster.ipynb)
+  - [03_word_embed_cluster.ipynb](/code/05_sequence/03_word_embed_cluster.ipynb)
       -  전처리
       -  **Tf-idf** <br>
       -  **Word2Vec**
       -  **FastText**
-- 05_visualization
-  - [00_개요.ipynb](/code/05_visualization/00_개요.ipynb)
-  - [240520_folium.ipynb](/code/05_visualization/240520_folium.ipynb)
-  - [240521_02_crime.ipynb](/code/05_visualization/240521_02_crime.ipynb)
-  - [240522_01_hr.ipynb](/code/05_visualization/240522_01_hr.ipynb)
-  - [240522_02_quatile.ipynb](/code/05_visualization/240522_02_quatile.ipynb)
-  - [240523_02__Matplotlib_.ipynb](/code/05_visualization/240523_02__Matplotlib_.ipynb)
-  - [240523_03_titanic.ipynb](/code/05_visualization/240523_03_titanic.ipynb)
-  - [240524_00_boxplot.ipynb](/code/05_visualization/240524_00_boxplot.ipynb)
-  - [240524_01_correlation.ipynb](/code/05_visualization/240524_01_correlation.ipynb)
-  - [240524_02_scaling.ipynb](/code/05_visualization/240524_02_scaling.ipynb)
-  - [240524_03_PCA.ipynb](/code/05_visualization/240524_03_PCA.ipynb)
-  - [240524_04_hr.ipynb](/code/05_visualization/240524_04_hr.ipynb)
-  - [240524_05_hr.ipynb](/code/05_visualization/240524_05_hr.ipynb)
-  - [240527_00_hr.ipynb](/code/05_visualization/240527_00_hr.ipynb)
-  - [_PCA_아이리스_데이터.ipynb](/code/05_visualization/_PCA_아이리스_데이터.ipynb)
-  - [시각화_10_folium_개인_연습_1.ipynb](/code/05_visualization/시각화_10_folium_개인_연습_1.ipynb)
-  - [시각화_10_folium_개인_연습_2.ipynb](/code/05_visualization/시각화_10_folium_개인_연습_2.ipynb)
-  - [시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb](/code/05_visualization/시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb)
+- 06_visualization
+  - [00_개요.ipynb](/code/06_visualization/00_개요.ipynb)
+  - [240520_folium.ipynb](/code/06_visualization/240520_folium.ipynb)
+  - [240521_02_crime.ipynb](/code/06_visualization/240521_02_crime.ipynb)
+  - [240522_01_hr.ipynb](/code/06_visualization/240522_01_hr.ipynb)
+  - [240522_02_quatile.ipynb](/code/06_visualization/240522_02_quatile.ipynb)
+  - [240523_02__Matplotlib_.ipynb](/code/06_visualization/240523_02__Matplotlib_.ipynb)
+  - [240523_03_titanic.ipynb](/code/06_visualization/240523_03_titanic.ipynb)
+  - [240524_00_boxplot.ipynb](/code/06_visualization/240524_00_boxplot.ipynb)
+  - [240524_01_correlation.ipynb](/code/06_visualization/240524_01_correlation.ipynb)
+  - [240524_02_scaling.ipynb](/code/06_visualization/240524_02_scaling.ipynb)
+  - [240524_03_PCA.ipynb](/code/06_visualization/240524_03_PCA.ipynb)
+  - [240524_04_hr.ipynb](/code/06_visualization/240524_04_hr.ipynb)
+  - [240524_05_hr.ipynb](/code/06_visualization/240524_05_hr.ipynb)
+  - [240527_00_hr.ipynb](/code/06_visualization/240527_00_hr.ipynb)
+  - [_PCA_아이리스_데이터.ipynb](/code/06_visualization/_PCA_아이리스_데이터.ipynb)
+  - [시각화_10_folium_개인_연습_1.ipynb](/code/06_visualization/시각화_10_folium_개인_연습_1.ipynb)
+  - [시각화_10_folium_개인_연습_2.ipynb](/code/06_visualization/시각화_10_folium_개인_연습_2.ipynb)
+  - [시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb](/code/06_visualization/시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb)
       -  특정 그래프만 강조
-  - [시각화_3_시각화_해보기.ipynb](/code/05_visualization/시각화_3_시각화_해보기.ipynb)
+  - [시각화_3_시각화_해보기.ipynb](/code/06_visualization/시각화_3_시각화_해보기.ipynb)
       -  1. 라이브러리 불러오기
       -  2. 파일 불러오기 및 info 로 정보 보기 판단하기 및 데이터 확인 하기 전처리
       -  3. 숫자데이터 확인하기
@@ -324,12 +330,12 @@
       -  4. Categorical 데이터
       -  1. Ticket (노미널 데이터)
       -  최종 데이터 및 저장하기
-  - [시각화_4__그래프만_모아서.ipynb](/code/05_visualization/시각화_4__그래프만_모아서.ipynb)
-  - [시각화_5_times_series.ipynb](/code/05_visualization/시각화_5_times_series.ipynb)
-  - [시각화_6_box_plot_IQR.ipynb](/code/05_visualization/시각화_6_box_plot_IQR.ipynb)
-  - [시각화_7_cv2_그림.ipynb](/code/05_visualization/시각화_7_cv2_그림.ipynb)
-  - [시각화_8_folium_1.ipynb](/code/05_visualization/시각화_8_folium_1.ipynb)
-  - [시각화_9_folium_2_과제.ipynb](/code/05_visualization/시각화_9_folium_2_과제.ipynb)
+  - [시각화_4__그래프만_모아서.ipynb](/code/06_visualization/시각화_4__그래프만_모아서.ipynb)
+  - [시각화_5_times_series.ipynb](/code/06_visualization/시각화_5_times_series.ipynb)
+  - [시각화_6_box_plot_IQR.ipynb](/code/06_visualization/시각화_6_box_plot_IQR.ipynb)
+  - [시각화_7_cv2_그림.ipynb](/code/06_visualization/시각화_7_cv2_그림.ipynb)
+  - [시각화_8_folium_1.ipynb](/code/06_visualization/시각화_8_folium_1.ipynb)
+  - [시각화_9_folium_2_과제.ipynb](/code/06_visualization/시각화_9_folium_2_과제.ipynb)
       -  1. 강력범죄 검거 건수와 발생 건수의 비율을 계산하여 "arrest_occurs_ratio" 열을 추가하시오. 만약 `NaN`이 있다면 0으로 채우시오.
       -  해답
       -   2. "arrest_occurs_ratio"가 가장 큰 경찰서를 찾으시오.
@@ -342,12 +348,6 @@
       -  해답 (다시 살펴보기)
       -   6. "금천구"의 "occurs_total"과 "arrest_total"를 평균으로 채우시오.
       -  7. "seoul_geo.json"을 이용하여 구별로 "arrest_total"을 반영한 Choropleth을 그리시오.
-- 06_layers
-  - [00_SoftMax.ipynb](/code/06_layers/00_SoftMax.ipynb)
-  - [01_batch_norm.ipynb](/code/06_layers/01_batch_norm.ipynb)
-  - [02_early_stop.ipynb](/code/06_layers/02_early_stop.ipynb)
-  - [03_ReceptiveField.ipynb](/code/06_layers/03_ReceptiveField.ipynb)
-  - [04_dropout.ipynb](/code/06_layers/04_dropout.ipynb)
 - 07_metrics
   - [11_confusion_mat.ipynb](/code/07_metrics/11_confusion_mat.ipynb)
       -  신경망
