@@ -272,17 +272,26 @@
       -  용어정리
       -  멀티 스텝 예측 전략!
 - 04_sequence
-  - [00_크롤링.ipynb](/code/04_sequence/00_크롤링.ipynb)
-  - [01_모델링(yes24).ipynb](/code/04_sequence/01_모델링(yes24).ipynb)
-  - [02_EDA.ipynb](/code/04_sequence/02_EDA.ipynb)
-  - [03__모델링_예시.ipynb](/code/04_sequence/03__모델링_예시.ipynb)
-      -  CNN 층  
-      - 
-      -  합성곱층 
-      - 
-  - [04_클러스터링1.ipynb](/code/04_sequence/04_클러스터링1.ipynb)
-  - [05_클러스터링2.ipynb](/code/04_sequence/05_클러스터링2.ipynb)
-  - [06_클러스터링3_직접.ipynb](/code/04_sequence/06_클러스터링3_직접.ipynb)
+  - [01_Sequence.ipynb](/code/04_sequence/01_Sequence.ipynb)
+      -  크롤링
+      -  불러오기
+      -  가격 데이터 타입 변경
+      -  날짜 데이터 타입 변경
+      -  결측 확인
+      -  데이터 정보 확인(고윳값)
+      -  상관관계 분석
+      -  분포 확인
+      -  다변량 분석 - 산점도 행렬
+  - [02_Sequence_모델링.ipynb](/code/04_sequence/02_Sequence_모델링.ipynb)
+      -  Sequence 모델링
+      -  전처리
+      -  모델 설계 밑 구축
+      -  예측 및 평가
+  - [03_word_embed_cluster.ipynb](/code/04_sequence/03_word_embed_cluster.ipynb)
+      -  전처리
+      -  **Tf-idf** <br>
+      -  **Word2Vec**
+      -  **FastText**
 - 05_visualization
   - [00_개요.ipynb](/code/05_visualization/00_개요.ipynb)
   - [240520_folium.ipynb](/code/05_visualization/240520_folium.ipynb)
