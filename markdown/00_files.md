@@ -299,6 +299,7 @@
       -  **Word2Vec**
       -  **FastText**
 - 06_visualization
+  - [00.PCA로_분석.ipynb](/code/06_visualization/00.PCA로_분석.ipynb)
   - [00_개요.ipynb](/code/06_visualization/00_개요.ipynb)
   - [240520_folium.ipynb](/code/06_visualization/240520_folium.ipynb)
   - [240521_02_crime.ipynb](/code/06_visualization/240521_02_crime.ipynb)
@@ -313,7 +314,6 @@
   - [240524_04_hr.ipynb](/code/06_visualization/240524_04_hr.ipynb)
   - [240524_05_hr.ipynb](/code/06_visualization/240524_05_hr.ipynb)
   - [240527_00_hr.ipynb](/code/06_visualization/240527_00_hr.ipynb)
-  - [_PCA_아이리스_데이터.ipynb](/code/06_visualization/_PCA_아이리스_데이터.ipynb)
   - [시각화_10_folium_개인_연습_1.ipynb](/code/06_visualization/시각화_10_folium_개인_연습_1.ipynb)
   - [시각화_10_folium_개인_연습_2.ipynb](/code/06_visualization/시각화_10_folium_개인_연습_2.ipynb)
   - [시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb](/code/06_visualization/시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb)
