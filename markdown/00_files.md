@@ -60,31 +60,19 @@
       -  랜덤 포레스트에서 가장 중요한 피쳐부터 하나씩 추가해서 비교해 보기
   - [05_PCA_주성분분석.ipynb](/code/01_machinelearing/05_PCA_주성분분석.ipynb)
       -  주성분 분석(차원 축소)
-  - [06_sns_시각화코드.ipynb](/code/01_machinelearing/06_sns_시각화코드.ipynb)
-      -  여유 있을 때 배우면 좋은 것
-      -  카토 그램
-      -  Matplotlib 시각화 all in one
-      -  라인 그래프
-      -  산점도
-      -  바 그래프
-      -  히스토그램
-      -  육각 히스토그램(hexbin)
-      -  박스, 바이올린 플롯
-      -  색상 선택하기
-      -  파일저장
-  - [07_knn.ipynb](/code/01_machinelearing/07_knn.ipynb)
+  - [06_knn.ipynb](/code/01_machinelearing/06_knn.ipynb)
       -  [KNN](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) (K-Neighbors-Classifier)
       -  knn 파라미터 (scikit-learn)
       -  KNN에서의 최적의 K값 찾기
       -  적당한 k값 구하기 with 교차 검증
-  - [08_decision_tree.ipynb](/code/01_machinelearing/08_decision_tree.ipynb)
+  - [07_decision_tree.ipynb](/code/01_machinelearing/07_decision_tree.ipynb)
       -  Decision Tree (DecisionTreeClassifier)
       -  불순도
       -  분류 vs 회귀 : DecisionTreeClassifier vs DecisionTreeRegressor
-  - [09_SVM.ipynb](/code/01_machinelearing/09_SVM.ipynb)
+  - [08_SVM.ipynb](/code/01_machinelearing/08_SVM.ipynb)
       -  SVM (Support Vector Machine)
       -  주요 키워드
-  - [10_ensemble.ipynb](/code/01_machinelearing/10_ensemble.ipynb)
+  - [09_ensemble.ipynb](/code/01_machinelearing/09_ensemble.ipynb)
       -  Ensemble
       -  Bagging (Bootstrap Aggragating)
       -  Bagging : Random Forest
@@ -95,7 +83,7 @@
       -  Gradient Boosting
       -  Gradient Boosting : AdaBoost
       -  Gradient Boosting : XGBoost
-  - [11_회귀_예시.ipynb](/code/01_machinelearing/11_회귀_예시.ipynb)
+  - [10_회귀_예시.ipynb](/code/01_machinelearing/10_회귀_예시.ipynb)
       -  데이터 로드
       -  결측확인 (missingno as msno)
       -  데이터 스플릿
@@ -108,7 +96,7 @@
       -  Random Forest Regressor
       -  XGBoost Regressor
       -  오답 확인
-  - [12_분류_예시.ipynb](/code/01_machinelearing/12_분류_예시.ipynb)
+  - [11_분류_예시.ipynb](/code/01_machinelearing/11_분류_예시.ipynb)
       -  데이터 로드
       -  결측확인 (missingno as msno)
       -  데이터 스플릿
@@ -121,6 +109,8 @@
       -  Random Forest Classifier
       -  XGBoost Classifier
       -  오답 확인
+  - [12_스케일링 종류.ipynb](/code/01_machinelearing/12_스케일링 종류.ipynb)
+  - [240524_03_PCA.ipynb](/code/01_machinelearing/240524_03_PCA.ipynb)
 - 02_DeepLearning
   - [01_deep_learning.ipynb](/code/02_DeepLearning/01_deep_learning.ipynb)
       -  딥러닝
@@ -299,41 +289,33 @@
       -  **Word2Vec**
       -  **FastText**
 - 06_visualization
-  - [00.PCA로_분석.ipynb](/code/06_visualization/00.PCA로_분석.ipynb)
-  - [00_개요.ipynb](/code/06_visualization/00_개요.ipynb)
-  - [240520_folium.ipynb](/code/06_visualization/240520_folium.ipynb)
-  - [240521_02_crime.ipynb](/code/06_visualization/240521_02_crime.ipynb)
-  - [240522_01_hr.ipynb](/code/06_visualization/240522_01_hr.ipynb)
-  - [240522_02_quatile.ipynb](/code/06_visualization/240522_02_quatile.ipynb)
-  - [240523_02__Matplotlib_.ipynb](/code/06_visualization/240523_02__Matplotlib_.ipynb)
-  - [240523_03_titanic.ipynb](/code/06_visualization/240523_03_titanic.ipynb)
-  - [240524_00_boxplot.ipynb](/code/06_visualization/240524_00_boxplot.ipynb)
-  - [240524_01_correlation.ipynb](/code/06_visualization/240524_01_correlation.ipynb)
-  - [240524_02_scaling.ipynb](/code/06_visualization/240524_02_scaling.ipynb)
-  - [240524_03_PCA.ipynb](/code/06_visualization/240524_03_PCA.ipynb)
+  - [00_sns_시각화코드.ipynb](/code/06_visualization/00_sns_시각화코드.ipynb)
+      -  여유 있을 때 배우면 좋은 것
+      -  카토 그램
+      -  Matplotlib 시각화 all in one
+      -  라인 그래프
+      -  산점도
+      -  바 그래프
+      -  히스토그램
+      -  육각 히스토그램(hexbin)
+      -  박스, 바이올린 플롯
+      -  색상 선택하기
+      -  파일저장
+  - [01_PCA_시각화.ipynb](/code/06_visualization/01_PCA_시각화.ipynb)
+      -  pca 시각화
+  - [02_지도 시각화(folium).ipynb](/code/06_visualization/02_지도 시각화(folium).ipynb)
+      -  데이터에서 지도 시각화 및 json 다루기
+      -  지도 시각화
+  - [03_사분위.ipynb](/code/06_visualization/03_사분위.ipynb)
+      -  사분위
+  - [04_boxplots.ipynb](/code/06_visualization/04_boxplots.ipynb)
+  - [05.ipynb](/code/06_visualization/05.ipynb)
+  - [06_correlation.ipynb](/code/06_visualization/06_correlation.ipynb)
+  - [07_cv.ipynb](/code/06_visualization/07_cv.ipynb)
   - [240524_04_hr.ipynb](/code/06_visualization/240524_04_hr.ipynb)
   - [240524_05_hr.ipynb](/code/06_visualization/240524_05_hr.ipynb)
-  - [240527_00_hr.ipynb](/code/06_visualization/240527_00_hr.ipynb)
   - [시각화_10_folium_개인_연습_1.ipynb](/code/06_visualization/시각화_10_folium_개인_연습_1.ipynb)
   - [시각화_10_folium_개인_연습_2.ipynb](/code/06_visualization/시각화_10_folium_개인_연습_2.ipynb)
-  - [시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb](/code/06_visualization/시각화_2_혼란한_Matplotlib에서_질서_찾기.ipynb)
-      -  특정 그래프만 강조
-  - [시각화_3_시각화_해보기.ipynb](/code/06_visualization/시각화_3_시각화_해보기.ipynb)
-      -  1. 라이브러리 불러오기
-      -  2. 파일 불러오기 및 info 로 정보 보기 판단하기 및 데이터 확인 하기 전처리
-      -  3. 숫자데이터 확인하기
-      -  3-1. 요금과 나이에 관련한 데이터
-      -  3-2 가족수와 요금과 관련한 데이터의 연관성 보기
-      -  3-3 결측치가 많은 나이 데이터를 보고 결측치 해결하기
-      -  기존코드
-      -  
-      -  4. Categorical 데이터
-      -  1. Ticket (노미널 데이터)
-      -  최종 데이터 및 저장하기
-  - [시각화_4__그래프만_모아서.ipynb](/code/06_visualization/시각화_4__그래프만_모아서.ipynb)
-  - [시각화_5_times_series.ipynb](/code/06_visualization/시각화_5_times_series.ipynb)
-  - [시각화_6_box_plot_IQR.ipynb](/code/06_visualization/시각화_6_box_plot_IQR.ipynb)
-  - [시각화_7_cv2_그림.ipynb](/code/06_visualization/시각화_7_cv2_그림.ipynb)
   - [시각화_8_folium_1.ipynb](/code/06_visualization/시각화_8_folium_1.ipynb)
   - [시각화_9_folium_2_과제.ipynb](/code/06_visualization/시각화_9_folium_2_과제.ipynb)
       -  1. 강력범죄 검거 건수와 발생 건수의 비율을 계산하여 "arrest_occurs_ratio" 열을 추가하시오. 만약 `NaN`이 있다면 0으로 채우시오.
