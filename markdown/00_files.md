@@ -341,10 +341,12 @@
       -  Inception Net 구조
       -  인셉션 모듈 구조 확인
       -  inception net + 머신러닝 분류 알고리즘 적용
+  - [05_ResNet.ipynb](/code/07_pretrained_model_수정중/05_ResNet.ipynb)
+      -  Residual Block
+      -  Skip Connection (입력값 을 출력에 더하여 전달) 의 효과
+      -  ResNet 모델 학습 과정
+      -  ResNet 프리 트레인드 모델 이용하기
   - 03_CNN_base_pretrained_model
-    - 5_ResNet
-      - [_01_PreTrained_ResNet_Design.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/5_ResNet/_01_PreTrained_ResNet_Design.ipynb)
-      - [_02_Pre_trained_ResNet50.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/5_ResNet/_02_Pre_trained_ResNet50.ipynb)
     - 6_MobileNet
       - [_02_MobileNet_depth_wise.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/6_MobileNet/_02_MobileNet_depth_wise.ipynb)
       - [_03_MobileNet.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/6_MobileNet/_03_MobileNet.ipynb)
