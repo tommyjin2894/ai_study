@@ -243,7 +243,7 @@
       -  Lag Feature (지연 피쳐)
       -  이동평균선
       -  regplot(회귀선)
-  - [04_trend.ipynb](/code/04_time_series/04_trend.ipynb)
+  - [05_trend.ipynb](/code/04_time_series/05_trend.ipynb)
       -  다항 특성
       -  Moving Average Plots
       -  트렌드 예측 (Trend, 추세)
@@ -254,7 +254,11 @@
       -  example
       -  함수정의
       -  전처리
-  - [05_seasonal.ipynb](/code/04_time_series/05_seasonal.ipynb)
+  - [06_Cycles.ipynb](/code/04_time_series/06_Cycles.ipynb)
+      -  Serial Dependence
+      -  Cycles(Serial Dependence 을 나타내는 일반적인 방법)
+      -  Lagged Series and Lag plots
+  - [07_seasonal.ipynb](/code/04_time_series/07_seasonal.ipynb)
       -  Seasonality
       -  계절성 확인
       -  주가 예측 모델 및 시각화
@@ -262,11 +266,7 @@
       -  계절성 플롯(seasonal_plot)과 주기도(Periodogram)
       -  `scipy.signal.periodogram`
       -  주가 예측모델 (주기학습)
-  - [06_Cycles.ipynb](/code/04_time_series/06_Cycles.ipynb)
-      -  Serial Dependence
-      -  Cycles(Serial Dependence 을 나타내는 일반적인 방법)
-      -  Lagged Series and Lag plots
-  - [07_Hybrid_model.ipynb](/code/04_time_series/07_Hybrid_model.ipynb)
+  - [08_Hybrid_model.ipynb](/code/04_time_series/08_Hybrid_model.ipynb)
       -  Hybrid Model
       -  **Components and Residuals**
       -  Hybrid Forecasting with Residuals(잔차를 사용한 복합 예측)
@@ -275,7 +275,7 @@
       -  타겟 변환 알고리즘 2 : Tree 모델 종류.
       -  하이브리드 모델 (Linear Regression + DecisionTreeRegressor 의 잔차 )
       -  트랜드(다항특성)를 고려하여 잔차와 함께 학습하기
-  - [08_Forecast_stratagy.ipynb](/code/04_time_series/08_Forecast_stratagy.ipynb)
+  - [09_Forecast_stratagy.ipynb](/code/04_time_series/09_Forecast_stratagy.ipynb)
       -  예측 모델 정의하기
       -  예측 기원 (forecast origin)
       -  **forecast horizon**
@@ -326,82 +326,61 @@
       -  boxplots
   - [04_cv2_그림그리기.ipynb](/code/06_visualization/04_cv2_그림그리기.ipynb)
       -  cv2 그림그리기
-- 07_pretrained_model_수정중
-  - [01_cnn_based_LeNet.ipynb](/code/07_pretrained_model_수정중/01_cnn_based_LeNet.ipynb)
+- 07_Pretrained_CNN
+  - [00_img_prep.ipynb](/code/07_Pretrained_CNN/00_img_prep.ipynb)
+      -  사진 불러오기
+      -  이미지 가로 세로 맞추기 : 패딩
+      -  이미지 가로 세로 맞추기 : 패딩
+      -  워핑
+  - [01_img_featuremap.ipynb](/code/07_Pretrained_CNN/01_img_featuremap.ipynb)
+      -  특성 맵 확인하기
+  - [02_LeNet.ipynb](/code/07_Pretrained_CNN/02_LeNet.ipynb)
       -  LeNet 구조
       -  CNN 의 1 by 1 필터
       -  lenet 실습
-  - [02_cnn_based_AlexNet.ipynb](/code/07_pretrained_model_수정중/02_cnn_based_AlexNet.ipynb)
+  - [03_AlexNet.ipynb](/code/07_Pretrained_CNN/03_AlexNet.ipynb)
       -  alexnet
-  - [03_cnn_based_VGG16.ipynb](/code/07_pretrained_model_수정중/03_cnn_based_VGG16.ipynb)
+  - [04_VGG16.ipynb](/code/07_Pretrained_CNN/04_VGG16.ipynb)
       -  feature map
       -  사전 학습 모형을 통한 이미지 분류 - VGG16
-  - [04_cnn_based_inception(ggl)Net.ipynb](/code/07_pretrained_model_수정중/04_cnn_based_inception(ggl)Net.ipynb)
+  - [05_inception(ggl)Net.ipynb](/code/07_Pretrained_CNN/05_inception(ggl)Net.ipynb)
       -  Inception Net
       -  Inception Net 구조
       -  인셉션 모듈 구조 확인
       -  inception net + 머신러닝 분류 알고리즘 적용
-  - [05_ResNet.ipynb](/code/07_pretrained_model_수정중/05_ResNet.ipynb)
+  - [06_ResNet.ipynb](/code/07_Pretrained_CNN/06_ResNet.ipynb)
       -  Residual Block
       -  Skip Connection (입력값 을 출력에 더하여 전달) 의 효과
       -  ResNet 모델 학습 과정
       -  ResNet 프리 트레인드 모델 이용하기
-  - 03_CNN_base_pretrained_model
-    - 6_MobileNet
-      - [_02_MobileNet_depth_wise.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/6_MobileNet/_02_MobileNet_depth_wise.ipynb)
-      - [_03_MobileNet.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/6_MobileNet/_03_MobileNet.ipynb)
-    - 7_DenseNet
-      - [7.03.PreTrained_DenseNet.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/7_DenseNet/7.03.PreTrained_DenseNet.ipynb)
-    - 8_EfficientNet
-      - [7.03.PreTrained_EfficientNet.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/8_EfficientNet/7.03.PreTrained_EfficientNet.ipynb)
-    - 9_img_prep
-      - [7.04.Pretrained_Test_Image_preprocessing_p.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/9_img_prep/7.04.Pretrained_Test_Image_preprocessing_p.ipynb)
-      - [7.04.Pre_trained_Image_preprocessing.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/9_img_prep/7.04.Pre_trained_Image_preprocessing.ipynb)
-      - [7.05.Pretrained_Test_Image_preprocessing.ipynb](/code/07_pretrained_model_수정중/03_CNN_base_pretrained_model/9_img_prep/7.05.Pretrained_Test_Image_preprocessing.ipynb)
-          -  이미지 패딩
-  - 04_CNN_피쳐맵_및_전이학습
-    - [01_Inception_to_ML.ipynb](/code/07_pretrained_model_수정중/04_CNN_피쳐맵_및_전이학습/01_Inception_to_ML.ipynb)
-    - [02_FetureMap.ipynb](/code/07_pretrained_model_수정중/04_CNN_피쳐맵_및_전이학습/02_FetureMap.ipynb)
-    - [03_MobileNet_전이_학습.ipynb](/code/07_pretrained_model_수정중/04_CNN_피쳐맵_및_전이학습/03_MobileNet_전이_학습.ipynb)
-    - [04_MobileNet_일부_파인튠.ipynb](/code/07_pretrained_model_수정중/04_CNN_피쳐맵_및_전이학습/04_MobileNet_일부_파인튠.ipynb)
-  - 05_RNN
-    - [5.0.SeqData_Anal.ipynb](/code/07_pretrained_model_수정중/05_RNN/5.0.SeqData_Anal.ipynb)
-    - [5.0.SeqData_Anal_AutoArima.ipynb](/code/07_pretrained_model_수정중/05_RNN/5.0.SeqData_Anal_AutoArima.ipynb)
-  - 06_Seq2Seq
-    - [_02_LM_seq2seq.ipynb](/code/07_pretrained_model_수정중/06_Seq2Seq/_02_LM_seq2seq.ipynb)
-  - 07_Transformer
-    - [_00_positioning_embedding.ipynb](/code/07_pretrained_model_수정중/07_Transformer/_00_positioning_embedding.ipynb)
-    - [_01_self_Attention.ipynb](/code/07_pretrained_model_수정중/07_Transformer/_01_self_Attention.ipynb)
-    - [_02_Transformer_imdb.ipynb](/code/07_pretrained_model_수정중/07_Transformer/_02_Transformer_imdb.ipynb)
-  - 08_Bert
-    - [7.06.LM_BERTopic_En.ipynb](/code/07_pretrained_model_수정중/08_Bert/7.06.LM_BERTopic_En.ipynb)
-  - 09_Object_Detection
-    - [_01_OD_NMS.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_01_OD_NMS.ipynb)
-    - [_02_OD_SSD_mAP.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_02_OD_SSD_mAP.ipynb)
-    - [_03_OD_SSD_example.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_03_OD_SSD_example.ipynb)
-    - [_04_ReceptiveField.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_04_ReceptiveField.ipynb)
-    - [_05_Semantic_Upsampling_Transposed.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_05_Semantic_Upsampling_Transposed.ipynb)
-    - [_06_Semantic_Segmentation.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_06_Semantic_Segmentation.ipynb)
-    - [_07_Semantic_Performance.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_07_Semantic_Performance.ipynb)
-    - [_08_OD_RCNN_Offset.ipynb](/code/07_pretrained_model_수정중/09_Object_Detection/_08_OD_RCNN_Offset.ipynb)
-  - 10_YOLO
-    - [7.04.self.ipynb](/code/07_pretrained_model_수정중/10_YOLO/7.04.self.ipynb)
-    - [7.05.OD_yolo_for_class.ipynb](/code/07_pretrained_model_수정중/10_YOLO/7.05.OD_yolo_for_class.ipynb)
-    - [7.05.z_주석.ipynb](/code/07_pretrained_model_수정중/10_YOLO/7.05.z_주석.ipynb)
-  - 11_ChatGPT_API
-    - [8.01.LLM_ChatGPT_API.ipynb](/code/07_pretrained_model_수정중/11_ChatGPT_API/8.01.LLM_ChatGPT_API.ipynb)
-    - [8.01.LLM_ChatGPT_API_Chatbot.ipynb](/code/07_pretrained_model_수정중/11_ChatGPT_API/8.01.LLM_ChatGPT_API_Chatbot.ipynb)
-  - 11_모델_응용
-    - [8.01.Model_Util_CNN_TextAna.ipynb](/code/07_pretrained_model_수정중/11_모델_응용/8.01.Model_Util_CNN_TextAna.ipynb)
-  - 12_Private_chat
-    - [8.02.Llmal.ipynb](/code/07_pretrained_model_수정중/12_Private_chat/8.02.Llmal.ipynb)
-    - [8.02.LnagChain_Text_Summarize.ipynb](/code/07_pretrained_model_수정중/12_Private_chat/8.02.LnagChain_Text_Summarize.ipynb)
-    - [_01_GPT_2.ipynb](/code/07_pretrained_model_수정중/12_Private_chat/_01_GPT_2.ipynb)
-    - [_02_llama_3_bllossom.ipynb](/code/07_pretrained_model_수정중/12_Private_chat/_02_llama_3_bllossom.ipynb)
-  - 13_NER
-    - [8.02.NER.ipynb](/code/07_pretrained_model_수정중/13_NER/8.02.NER.ipynb)
-  - 14_VQA
-    - [7.02.VQA.ipynb](/code/07_pretrained_model_수정중/14_VQA/7.02.VQA.ipynb)
+  - [07_mobile_Net.ipynb](/code/07_Pretrained_CNN/07_mobile_Net.ipynb)
+      -  Mobile Net
+      -  Depthwise Separable Convolution
+      -  PointWise Convolution
+      -  MoblieNet Pretrained Model
+  - [08_DenseNet.ipynb](/code/07_Pretrained_CNN/08_DenseNet.ipynb)
+      -  DenseNet
+  - [09_EfficientNet.ipynb](/code/07_Pretrained_CNN/09_EfficientNet.ipynb)
+      -  EfficientNet
+  - [10_cnn_transfer_learning.ipynb](/code/07_Pretrained_CNN/10_cnn_transfer_learning.ipynb)
+      -  Pretrained 모델 with 머신러닝
+      -  분류 알고리즘 연결 및 예측
+      -  파인 튜닝
+- 08_pretrained_RNN
+  - [01_time_rnn.ipynb](/code/08_pretrained_RNN/01_time_rnn.ipynb)
+      -  ARIMA 모델(pmdarima)
+      -  ARIMA
+      -  RNN 모델
+      -  LSTM 모델
+  - [02_LSTM모델_설계.ipynb](/code/08_pretrained_RNN/02_LSTM모델_설계.ipynb)
+      -  LSTM 모델 설계
+  - [03_**Transformer**.ipynb](/code/08_pretrained_RNN/03_**Transformer**.ipynb)
+      -  **Transformer**
+      -  Transformer 전체적인 구성
+      -  Positional Encoding layer
+      -  Self Attention layer
+      -  Encoder Decoder Attention
+      -  실습 imdb
 - 09.ETC
   - [7.02.VQA.ipynb](/code/09.ETC/7.02.VQA.ipynb)
   - [_간이세미나_1._딥러닝에서_배치_크기의_역할.ipynb](/code/09.ETC/_간이세미나_1._딥러닝에서_배치_크기의_역할.ipynb)
@@ -613,6 +592,36 @@
     - [240603_03_titanic_new_age.ipynb](/code/09.ETC/etc/240603_03_titanic_new_age.ipynb)
     - [240604_00_mnist.ipynb](/code/09.ETC/etc/240604_00_mnist.ipynb)
     - [240604_01_optimizer.ipynb](/code/09.ETC/etc/240604_01_optimizer.ipynb)
+- 09_pretrained_model_수정중
+  - 08_Bert
+    - [7.06.LM_BERTopic_En.ipynb](/code/09_pretrained_model_수정중/08_Bert/7.06.LM_BERTopic_En.ipynb)
+  - 09_Object_Detection
+    - [_01_OD_NMS.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_01_OD_NMS.ipynb)
+    - [_02_OD_SSD_mAP.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_02_OD_SSD_mAP.ipynb)
+    - [_03_OD_SSD_example.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_03_OD_SSD_example.ipynb)
+    - [_04_ReceptiveField.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_04_ReceptiveField.ipynb)
+    - [_05_Semantic_Upsampling_Transposed.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_05_Semantic_Upsampling_Transposed.ipynb)
+    - [_06_Semantic_Segmentation.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_06_Semantic_Segmentation.ipynb)
+    - [_07_Semantic_Performance.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_07_Semantic_Performance.ipynb)
+    - [_08_OD_RCNN_Offset.ipynb](/code/09_pretrained_model_수정중/09_Object_Detection/_08_OD_RCNN_Offset.ipynb)
+  - 10_YOLO
+    - [7.04.self.ipynb](/code/09_pretrained_model_수정중/10_YOLO/7.04.self.ipynb)
+    - [7.05.OD_yolo_for_class.ipynb](/code/09_pretrained_model_수정중/10_YOLO/7.05.OD_yolo_for_class.ipynb)
+    - [7.05.z_주석.ipynb](/code/09_pretrained_model_수정중/10_YOLO/7.05.z_주석.ipynb)
+  - 11_ChatGPT_API
+    - [8.01.LLM_ChatGPT_API.ipynb](/code/09_pretrained_model_수정중/11_ChatGPT_API/8.01.LLM_ChatGPT_API.ipynb)
+    - [8.01.LLM_ChatGPT_API_Chatbot.ipynb](/code/09_pretrained_model_수정중/11_ChatGPT_API/8.01.LLM_ChatGPT_API_Chatbot.ipynb)
+  - 11_모델_응용
+    - [8.01.Model_Util_CNN_TextAna.ipynb](/code/09_pretrained_model_수정중/11_모델_응용/8.01.Model_Util_CNN_TextAna.ipynb)
+  - 12_Private_chat
+    - [8.02.Llmal.ipynb](/code/09_pretrained_model_수정중/12_Private_chat/8.02.Llmal.ipynb)
+    - [8.02.LnagChain_Text_Summarize.ipynb](/code/09_pretrained_model_수정중/12_Private_chat/8.02.LnagChain_Text_Summarize.ipynb)
+    - [_01_GPT_2.ipynb](/code/09_pretrained_model_수정중/12_Private_chat/_01_GPT_2.ipynb)
+    - [_02_llama_3_bllossom.ipynb](/code/09_pretrained_model_수정중/12_Private_chat/_02_llama_3_bllossom.ipynb)
+  - 13_NER
+    - [8.02.NER.ipynb](/code/09_pretrained_model_수정중/13_NER/8.02.NER.ipynb)
+  - 14_VQA
+    - [7.02.VQA.ipynb](/code/09_pretrained_model_수정중/14_VQA/7.02.VQA.ipynb)
 - 10.Generative_Deep_Learning_2nd
   - [2.3_다층_퍼셉트론_구현.ipynb](/code/10.Generative_Deep_Learning_2nd/2.3_다층_퍼셉트론_구현.ipynb)
   - [2.4_합성곱_신경망.ipynb](/code/10.Generative_Deep_Learning_2nd/2.4_합성곱_신경망.ipynb)
