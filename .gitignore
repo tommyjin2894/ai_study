@@ -1,6 +1,6 @@
 # to ignores
 __PDFs
-
+00_files.md
 *.png
 *.pdf
 *.csv
