@@ -29,6 +29,7 @@ plt.rcParams["axes.unicode_minus"] = False
 <details>
 <summary>🧑‍💻list🧑‍💻</summary>
 
+
 ### 전체 코드 파일
 
 - 00_basics
