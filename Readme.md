@@ -518,9 +518,8 @@ plt.rcParams["axes.unicode_minus"] = False
 </details>
 
 ## AI study
-- ### [Notion 정리 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
-- ### [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a)
-- ### [전체 파일 구조](markdown/00_files.md)
+- ### [Notion 전체 내용 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-134f678f80468007b265d54d5952da14)
+- ### [Notion 정리 내용 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a)
 
 ## 프로 젝트 정리 Git
 - [project1](https://github.com/tommyjin2894/KDT_project1)
@@ -529,10 +528,15 @@ plt.rcParams["axes.unicode_minus"] = False
     - [서비스](https://github.com/tommyjin2894/project_3_service)
     - [훈련 및 결과](https://github.com/tommyjin2894/project_3_git)
 
-## 요약정리 목차
-
-- ### [마이닝 알고리즘](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EB%A7%88%EC%9D%B4%EB%8B%9D-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
-
+## 아래 내용 요약 목차
+- [데이터 전처리 및 분석 단계](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A0%84%EC%B2%98%EB%A6%AC-%EB%B0%8F-%EB%B6%84%EC%84%9D-%EB%8B%A8%EA%B3%84)
+- [마이닝 알고리즘](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EB%A7%88%EC%9D%B4%EB%8B%9D-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-1)
+- [샘플링 기법](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EC%83%98%ED%94%8C%EB%A7%81-%EA%B8%B0%EB%B2%95)
+- [딥러닝](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EB%94%A5%EB%9F%AC%EB%8B%9D)
+- [모델 평가](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EB%AA%A8%EB%8D%B8-%ED%8F%89%EA%B0%80)
+- [분류 문제](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EB%B6%84%EB%A5%98-%EB%AC%B8%EC%A0%9C)
+- [회귀 문제](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%ED%9A%8C%EA%B7%80-%EB%AC%B8%EC%A0%9C)
+- [시계열 데이터](https://github.com/tommyjin2894/ai_study?tab=readme-ov-file#%EC%8B%9C%EA%B3%84%EC%97%B4-%EB%8D%B0%EC%9D%B4%ED%84%B0)
 ## 내용 요약 정리
 
 
