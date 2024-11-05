@@ -517,25 +517,72 @@ plt.rcParams["axes.unicode_minus"] = False
 
 </details>
 
-### AI study
-- [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
-- [전체 파일 구조](markdown/00_files.md)
+## AI study
+- ### [Notion 정리 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a?pvs=4)
+- ### [Notion 링크](https://royal-offer-53a.notion.site/KDT-2024-05-2024-09-10bf678f80468069b4e1e2f0a631131a)
+- ### [전체 파일 구조](markdown/00_files.md)
 
-### 내용 요약 정리
-- [1. 기초](markdown/01_basics.md)
-- [2. 머신러닝](markdown/02_ml.md)
-- [3. 샘플링](markdown/03_sampling.md)
-- [4. 딥러닝](markdown/04_dl.md)
-- [5. 모델 평가](markdown/05_metrics.md)
-- [6. 분류 및 회귀 문제](markdown/06_diversity.markdown)
-- [7. 시계열](markdown/07_time_series.md)
-
-### 프로 젝트
+## 프로 젝트 정리 Git
 - [project1](https://github.com/tommyjin2894/KDT_project1)
 - [project2](https://github.com/tommyjin2894/KDT_project2)
 - project3
     - [서비스](https://github.com/tommyjin2894/project_3_service)
     - [훈련 및 결과](https://github.com/tommyjin2894/project_3_git)
+
+## 요약정리 목차
+
+
+## 내용 요약 정리
+
+### 마이닝 알고리즘
+- 머신러닝 모델(지도 학습)   
+    |모델|이름|설명|
+    |---|---|---|
+    |분류|Decision Tree|트리구조로 데이터를 분류, 조건 분기|
+    |-|Random Forest|앙상블 기법중 baseline Bagging 중 하나 <br> 여러개의 DT로 구성|
+    |-|KNN|가까운 K 개의 데이터를 기반으로 결정 <br> baseline L1 및 L2 거리|
+    |-|SVM|클래스 간의 경계를 최대화하여 초평면을 찾는다.|
+    |회귀|Linear Regression|선형 관계 모델링|
+    |-|Logistic Regression|이진 분류를 위한 회귀 분석 기법,<br> baseline 확률로 출력값을 변환|
+    |인공 신경망|NN|여러층의 뉴런|
+    |기타|AdaBoost|약한 학습기 x N = 강한 학습기|
+    |-|XGBoost|Gradient Boosting Machines 의 효율적이고 강력하게 개선|
+
+
+- 비지도 학습
+    |종류|이름|설명|
+    |-|-|-|
+    |클러스터링|k-means|비슷한 포인트를 가깝게 위치|
+    |-|계층적 클러스터링|트리 구조로 조직화|
+    |연관 규칙|Apriori 알고리즘|자주 발생 하는 연관 집합|
+    |-|FP-Growth|Apriori 보다 효율적인 |
+    |차원 축소|PCA|데이터를 압축, 저차원으로|
+    |-|t-SNE|2~3 차원으로 시각화, 비슷한 데이터 그룹화|
+        baseline 클러스터링 : 유사도 기준 L1(manhatten), L2(Euclidean) 으로 군집화
+
+
+- 다양한 기법
+    |종류|이름|설명|
+    |---|---|---|
+    |기법|K-fold 교차 검증|점수 평균|
+    |-|Grid search|모든 경우의수를 본다|
+    |-|Randomized search|랜덤한 경우의수를 본다|
+    |앙상블|bagging<br> (bootstrap aggregating)|1. baseline N 개의 샘플을 뽑기<br>->집어넣고 N 개의 샘플을 뽑는다. <br> 2. 중복이 생길 수 있음|
+    |-|Boosting|약한 학습기 X N = 강한 학습기 <br>AdaBoost, XGBoost, Lgith GBM, Cat     Boost 등|
+    |-|Stacking|여러 개의 기초모델의 예측<br>종합하여 새로운 메타모델 생성|
+
+
+- K-fold 교차 검증
+    - 훈련 데이터를 k 개로 분할해 번갈아 가면서 훈련 평가
+      |학습 모델|데이터1|데이터2|데이터3|데이터4|데이터5|
+      | ---| --- | --- | --- | --- | --- |
+      | 학습 1 | train | train | train | train | test |
+      | 학습 2 | train | train | train | test | train |
+      | 학습 3 | train | train | test | train | train |
+      | 학습 4 | train | test | train | train | train |
+      | 학습 5 | test | train | train | train | train |
+
+
 
 ### 참고 링크
 - [roboflow](https://roboflow.com/) <br>
