@@ -169,6 +169,8 @@ plt.rcParams["axes.unicode_minus"] = False
         - SMOTEENN
             - 다수의 class는 SMOTE 방식으로 줄이고, 
             - 소수의 class는 ENN 방식으로 늘림
+    
+    ### **샘플링 기법은 test 데이터 에서만 적용을 시켜야만 한다.**
 
     
 ### 딥러닝
