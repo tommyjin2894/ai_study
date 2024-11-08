@@ -44,6 +44,13 @@
       -  횡단면 및 종단 데이터 (Cross-sectional and Longitudinal Data)
   - [08_Confusion_Matrix.ipynb](/code/00_basics/08_Confusion_Matrix.ipynb)
       -  Precision 과 recall 을 봐야한다.
+  - [09_샘플링.ipynb](/code/00_basics/09_샘플링.ipynb)
+      -  데이터 불균형
+      -  Random Under Sampler
+      -  Edited Nearest Neighbours(언더샘플링)
+      -  Random Over Sampler
+      -  SMOTE(Synthetic Minority Over-sampling Technique)
+      -  SMOTEENN(Combining Over and Under Sampling)
 - 01_machinelearing
   - [01_상관과_회귀.ipynb](/code/01_machinelearing/01_상관과_회귀.ipynb)
       -  상관계수 (Correlation Coefficient)
@@ -322,7 +329,7 @@
       -  파일저장
   - [01_PCA_시각화.ipynb](/code/06_visualization/01_PCA_시각화.ipynb)
       -  pca 시각화
-  - [02_지도 시각화(folium).ipynb](/code/06_visualization/02_지도 시각화(folium).ipynb)
+  - [02_지도_시각화(folium).ipynb](/code/06_visualization/02_지도_시각화(folium).ipynb)
       -  데이터에서 지도 시각화 및 json 다루기
       -  지도 시각화
   - [03_boxplots.ipynb](/code/06_visualization/03_boxplots.ipynb)

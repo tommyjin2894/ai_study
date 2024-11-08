@@ -10,6 +10,7 @@
     - [06_공분산과_상관계수.ipynb](/code/00_basics/06_공분산과_상관계수.ipynb)
     - [07_data_유형.ipynb](/code/00_basics/07_data_유형.ipynb)
     - [08_Confusion_Matrix.ipynb](/code/00_basics/08_Confusion_Matrix.ipynb)
+    - [09_샘플링.ipynb](/code/00_basics/09_샘플링.ipynb)
 - 01_machinelearing
     - [01_상관과_회귀.ipynb](/code/01_machinelearing/01_상관과_회귀.ipynb)
     - [02_교차검증.ipynb](/code/01_machinelearing/02_교차검증.ipynb)
@@ -55,7 +56,7 @@
 - 06_visualization
     - [00_sns_시각화코드.ipynb](/code/06_visualization/00_sns_시각화코드.ipynb)
     - [01_PCA_시각화.ipynb](/code/06_visualization/01_PCA_시각화.ipynb)
-    - [02_지도 시각화(folium).ipynb](/code/06_visualization/02_지도 시각화(folium).ipynb)
+    - [02_지도_시각화(folium).ipynb](/code/06_visualization/02_지도_시각화(folium).ipynb)
     - [03_boxplots.ipynb](/code/06_visualization/03_boxplots.ipynb)
     - [04_cv2_그림그리기.ipynb](/code/06_visualization/04_cv2_그림그리기.ipynb)
 - 07_Pretrained_CNN
