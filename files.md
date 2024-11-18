@@ -11,6 +11,7 @@
     - [07_data_유형.ipynb](/code/00_basics/07_data_유형.ipynb)
     - [08_Confusion_Matrix.ipynb](/code/00_basics/08_Confusion_Matrix.ipynb)
     - [09_샘플링.ipynb](/code/00_basics/09_샘플링.ipynb)
+    - [10_MLE(Maximum_liklihood)_BCE_CCE.ipynb](/code/00_basics/10_MLE(Maximum_liklihood)_BCE_CCE.ipynb)
 - 01_machinelearing
     - [01_상관과_회귀.ipynb](/code/01_machinelearing/01_상관과_회귀.ipynb)
     - [02_교차검증.ipynb](/code/01_machinelearing/02_교차검증.ipynb)

@@ -51,6 +51,10 @@
       -  Random Over Sampler
       -  SMOTE(Synthetic Minority Over-sampling Technique)
       -  SMOTEENN(Combining Over and Under Sampling)
+  - [10_MLE(Maximum_liklihood)_BCE_CCE.ipynb](/code/00_basics/10_MLE(Maximum_liklihood)_BCE_CCE.ipynb)
+      -  **Likelihood Function**
+      -  **Binary Cross-Entropy (BCE)**
+      -  **Categorical Cross-Entropy(CCE)**
 - 01_machinelearing
   - [01_상관과_회귀.ipynb](/code/01_machinelearing/01_상관과_회귀.ipynb)
       -  상관계수 (Correlation Coefficient)
